@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="bg-[var(--brand-ink)] text-[color:var(--sand-soft)]/70 py-16 px-6 md:px-12 text-sm">
+    <footer className="bg-[#004d4c] text-[color:var(--sand-soft)]/70 py-16 px-6 md:px-12 text-sm">
       <div className="mx-auto max-w-[1400px] grid md:grid-cols-3 gap-10">
         <div>
           <p className="font-display text-2xl tracking-[0.3em] text-[color:var(--sand-soft)]">
