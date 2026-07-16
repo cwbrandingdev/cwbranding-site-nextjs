@@ -8,7 +8,7 @@ export function PartnersSection() {
       <div className="mx-auto max-w-[1400px]">
         <Reveal>
           <h2 className="font-display text-5xl md:text-7xl lg:text-8xl">
-            <span className="italic text-[var(--brand)]">Nossos</span>{" "}
+            <span className="italic text-[#004A4A]">Nossos</span>{" "}
             <span className="text-[var(--brand-ink)]">Parceiros</span>
           </h2>
         </Reveal>
@@ -21,7 +21,7 @@ export function PartnersSection() {
                     [ Cliente {i + 1} ]
                   </div>
                 </div>
-                <p className="mt-3 text-sm tracking-widest uppercase text-[var(--brand-deep)]">
+                <p className="mt-3 text-sm tracking-widest uppercase text-[#004A4A]">
                   Parceiro {i + 1}
                 </p>
               </a>
