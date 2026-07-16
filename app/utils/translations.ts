@@ -97,7 +97,7 @@ export const translations = {
       "Escolha a assinatura ideal para elevar o posicionamento da sua marca",
     pricingPopularTag: "Mais Recomendado",
     pricingInvestment: "Investimento",
-    pricingPeriod: "/ a partir",
+    pricingPeriod: "/ hora",
     pricingButton: "Quero este plano",
     plans: [
       {
@@ -153,7 +153,7 @@ export const translations = {
         title: "Essencial",
         description:
           "Para quem quer presença digital com organização e consistência.",
-        price: "3.599",
+        price: "4",
         features: [
           "social media",
           "materiais gráficos",
@@ -166,7 +166,7 @@ export const translations = {
       {
         title: "Premium",
         description: "Para marcas que buscam resultados ainda mais robustos.",
-        price: "4.599",
+        price: "6",
         features: [
           "todos os serviços do pacote Essencial",
           "Landing Page",
@@ -178,7 +178,7 @@ export const translations = {
       {
         title: "Premium",
         description: "Para marcas que buscam resultados ainda mais robustos.",
-        price: "4.599",
+        price: "8",
         features: [
           "todos os serviços do pacote Essencial",
           "Landing Page",
@@ -331,14 +331,14 @@ export const translations = {
       "Escolha a assinatura ideal para elevar o posicionamento da sua marca",
     pricingSdrPopularTag: "Mais Recomendado",
     pricingSdrInvestment: "Investimento",
-    pricingSdrPeriod: "/ a partir",
+    pricingSdrPeriod: "/ hour",
     pricingSdrButton: "Quero este plano",
     plansSdr: [
       {
         title: "Essencial",
         description:
           "Para quem quer presença digital com organização e consistência.",
-        price: "3.599",
+        price: "4",
         features: [
           "social media",
           "materiais gráficos",
@@ -351,7 +351,7 @@ export const translations = {
       {
         title: "Premium",
         description: "Para marcas que buscam resultados ainda mais robustos.",
-        price: "4.599",
+        price: "6",
         features: [
           "todos os serviços do pacote Essencial",
           "Landing Page",
@@ -363,7 +363,7 @@ export const translations = {
       {
         title: "Premium",
         description: "Para marcas que buscam resultados ainda mais robustos.",
-        price: "4.599",
+        price: "8",
         features: [
           "todos os serviços do pacote Essencial",
           "Landing Page",
