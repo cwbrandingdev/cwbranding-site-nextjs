@@ -18,7 +18,8 @@ body {
   font-family: "Fraunces", serif;
 }
 
-@keyframes marquee {
+/* --- MARQUEE ESQUERDA (Original) --- */
+@keyframes marqueeLeft {
   from {
     transform: translateX(0);
   }
@@ -26,11 +27,31 @@ body {
     transform: translateX(-50%);
   }
 }
+
+/* --- MARQUEE DIREITA (Novo) --- */
+@keyframes marqueeRight {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Classe base para os tracks */
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee 40s linear infinite;
 }
+
+/* Classes de direção e velocidade */
+.marquee-track.to-left {
+  animation: marqueeLeft 40s linear infinite;
+}
+.marquee-track.to-right {
+  animation: marqueeRight 40s linear infinite;
+}
+
 .marquee-track.slow {
   animation-duration: 70s;
 }
