@@ -13,32 +13,32 @@ export function ServiceCard({ title, desc, index }: ServiceCardProps) {
   return (
     <motion.a
       href="#"
-      initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
+      viewport={{ once: true, margin: "-40px" }}
       transition={{
-        duration: 0.8,
-        delay: (index % 4) * 0.08,
+        duration: 0.7,
+        delay: (index % 2) * 0.05,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="group relative bg-card border border-border rounded-sm overflow-hidden flex flex-col"
+      className="group relative bg-white border border-[#D5E8E8] rounded-2xl p-6 md:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:shadow-[#004A4A]/5 hover:-translate-y-1"
     >
-      <div className="aspect-[4/5] bg-green-200/60 relative overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center text-[var(--brand-deep)]/50 text-[10px] tracking-[0.3em] uppercase">
-          [ Imagem ]
-        </div>
-        <div className="absolute inset-0 bg-[var(--brand-deep)]/0 group-hover:bg-[var(--brand-deep)]/20 transition-colors duration-500" />
-      </div>
-      <div className="p-6 flex-1 flex flex-col bg-green-200/60">
-        <h3 className="font-display text-2xl text-[var(--brand-ink)]">
+      <div>
+        <h3 className="font-display text-2xl font-semibold text-[#004A4A]">
           {title}
         </h3>
-        <p className="mt-3 text-sm leading-relaxed text-muted-foreground line-clamp-4">
+        <p className="mt-4 text-sm md:text-base leading-relaxed text-[#004A4A]/80">
           {desc}
         </p>
-        <span className="mt-6 inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase text-[#004D4C] group-hover:gap-3 transition-all">
-          Saiba mais <ArrowUpRight className="size-3.5 text-[#004D4C]" />
+      </div>
+
+      <div className="mt-6 pt-4 border-t border-[#D5E8E8]/50 flex items-center justify-between">
+        <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-[#004A4A] group-hover:text-emerald-600 transition-colors">
+          Saiba mais
         </span>
+        <div className="size-8 rounded-full bg-[#EBF5F5] group-hover:bg-[#004A4A] flex items-center justify-center transition-all duration-300 group-hover:rotate-45">
+          <ArrowUpRight className="size-4 text-[#004A4A] group-hover:text-white transition-colors" />
+        </div>
       </div>
     </motion.a>
   );
