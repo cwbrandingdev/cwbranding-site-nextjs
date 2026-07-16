@@ -13,7 +13,7 @@ const marqueeB = [
 
 export function Marquee() {
   return (
-    <section className="bg-green-200/60 text-[#004D4C] py-14 overflow-hidden select-none">
+    <section className="bg-[#EBF5F5] text-[#004D4C] py-14 overflow-hidden select-none">
       <div className="overflow-hidden">
         <div className="marquee-track to-right font-display text-5xl md:text-7xl">
           {[...marqueeA, ...marqueeA, ...marqueeA].map((t, i) => (
