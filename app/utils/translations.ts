@@ -126,6 +126,18 @@ export const translations = {
         tagline: "A experiência completa",
         popular: true,
       },
+      {
+        title: "Premium",
+        description: "Para marcas que buscam resultados ainda mais robustos.",
+        price: "4.599",
+        features: [
+          "todos os serviços do pacote Essencial",
+          "Landing Page",
+          "Tráfego Pago",
+        ],
+        tagline: "A experiência completa",
+        popular: true,
+      },
     ],
 
     // Footer
@@ -239,6 +251,18 @@ export const translations = {
           "photoshoot",
         ],
         tagline: "Where it all begins",
+      },
+      {
+        title: "Premium",
+        description: "For brands looking for even more robust results.",
+        price: "4,599",
+        features: [
+          "all services from the Essential plan",
+          "Landing Page",
+          "Paid Traffic",
+        ],
+        tagline: "The complete experience",
+        popular: true,
       },
       {
         title: "Premium",

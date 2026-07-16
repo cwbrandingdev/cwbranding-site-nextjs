@@ -17,8 +17,6 @@ const carouselImages = [
   "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80",
 ];
 
-const fixedAddress = "Rua Ébano Pereira, 11, Sala 1401, Curitiba, PR, Brasil";
-
 export function SpaceSection() {
   const { t } = useLanguage();
 
@@ -77,28 +75,6 @@ export function SpaceSection() {
               </a>
             </div>
           </Reveal>
-
-          <hr className="my-10 border-white/10" />
-
-          <div className="space-y-4">
-            <h4 className="text-lg font-medium text-emerald-300 flex items-center gap-2">
-              <MapPin className="size-5" /> {t.spaceLocation}
-            </h4>
-
-            <div className="relative w-full h-[280px] rounded-xl overflow-hidden shadow-2xl border border-white/10">
-              <iframe
-                title="Google Maps"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                loading="lazy"
-                allowFullScreen
-                src={`https://maps.google.com/maps?q=${encodeURIComponent(
-                  fixedAddress,
-                )}&t=&z=17&ie=UTF8&iwloc=&output=embed`}
-              />
-            </div>
-          </div>
         </div>
       </section>
     </div>
