@@ -18,6 +18,10 @@ export function PartnersSection() {
               {t.partnersTitleLine2}
             </span>
           </h2>
+          <p className="text-muted-foreground">
+            Lorem ipsum Lorem ipsumLorem ipsumLorem ipsum Lorem ipsum Lorem
+            ipsumLorem ipsumLorem ipsumLorem ipsum Lorem ipsumLorem ipsumLorem
+          </p>
         </Reveal>
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
           {Array.from({ length: 8 }).map((_, i) => (
