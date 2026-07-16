@@ -67,7 +67,7 @@ export function Hero() {
             cwbranding
           </h1>
           <p className="font-display font-medium text-[color:var(--sand-soft)]/60 text-base md:text-2xl tracking-[0.3em] mt-3 pl-1 md:pl-2">
-            CWB / SP / YYZ
+            CWB / SP / TOR
           </p>
         </div>
       </motion.div>
