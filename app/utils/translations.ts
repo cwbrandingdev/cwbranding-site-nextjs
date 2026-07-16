@@ -61,31 +61,26 @@ export const translations = {
       },
       {
         id: 4,
-
         title: "Landing Pages",
         desc: "Páginas web específicas criadas para converter visitantes em leads ou clientes através de uma ação desejada.",
       },
       {
         id: 5,
-
         title: "Assessoria de Marketing",
         desc: "Consultoria estratégica para empresas desenvolverem e implementarem planos de marketing eficazes.",
       },
       {
         id: 6,
-
         title: "Ensaios Fotográficos",
         desc: "Produção de fotografias profissionais para materiais de marketing, redes sociais e comunicação corporativa.",
       },
       {
         id: 7,
-
         title: "Materiais Gráficos",
         desc: "Peças visuais impressas ou digitais — folders, banners, cartões, apresentações e demais materiais de apoio.",
       },
       {
         id: 8,
-
         title: "Cobertura de Eventos",
         desc: "Planejamento e execução da cobertura de eventos institucionais ou promocionais da marca.",
       },
@@ -102,7 +97,7 @@ export const translations = {
       "Escolha a assinatura ideal para elevar o posicionamento da sua marca",
     pricingPopularTag: "Mais Recomendado",
     pricingInvestment: "Investimento",
-    pricingPeriod: "/ mês",
+    pricingPeriod: "/ a partir",
     pricingButton: "Quero este plano",
     plans: [
       {
@@ -145,6 +140,54 @@ export const translations = {
       },
     ],
 
+    pricingSdrTitleLine1: "Planos",
+    pricingSdrTitleLine2: "SDR",
+    pricingSdrSubtitle:
+      "Escolha a assinatura ideal para elevar o posicionamento da sua marca",
+    pricingSdrPopularTag: "Mais Recomendado",
+    pricingSdrInvestment: "Investimento",
+    pricingSdrPeriod: "/ a partir",
+    pricingSdrButton: "Quero este plano",
+    plansSdr: [
+      {
+        title: "Essencial",
+        description:
+          "Para quem quer presença digital com organização e consistência.",
+        price: "3.599",
+        features: [
+          "social media",
+          "materiais gráficos",
+          "roteiros",
+          "identidade visual",
+          "ensaio fotográfico",
+        ],
+        tagline: "O início de tudo",
+      },
+      {
+        title: "Premium",
+        description: "Para marcas que buscam resultados ainda mais robustos.",
+        price: "4.599",
+        features: [
+          "todos os serviços do pacote Essencial",
+          "Landing Page",
+          "Tráfego Pago",
+        ],
+        tagline: "A experiência completa",
+        popular: true,
+      },
+      {
+        title: "Premium",
+        description: "Para marcas que buscam resultados ainda mais robustos.",
+        price: "4.599",
+        features: [
+          "todos os serviços do pacote Essencial",
+          "Landing Page",
+          "Tráfego Pago",
+        ],
+        tagline: "A experiência completa",
+        popular: true,
+      },
+    ],
     footerDescription: "A sua agência de marketing. Curitiba — PR.",
     footerNavTitle: "Navegação",
     footerContactTitle: "Contato",
@@ -239,7 +282,7 @@ export const translations = {
       "Choose the ideal subscription to elevate your brand's positioning",
     pricingPopularTag: "Most Recommended",
     pricingInvestment: "Investment",
-    pricingPeriod: "/ month",
+    pricingPeriod: "/ starting",
     pricingButton: "I want this plan",
     plans: [
       {
