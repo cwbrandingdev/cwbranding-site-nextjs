@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Menu, Search, ChevronDown } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
+import Image from "next/image";
 
 export function Header() {
   const { language, setLanguage, t } = useLanguage();
@@ -35,7 +36,12 @@ export function Header() {
           href="#"
           className="font-display text-2xl tracking-[0.35em] font-medium"
         >
-          CWBRANDING<sup className="text-[10px] tracking-normal">®</sup>
+          <Image
+            src="/cwbrandinglogo.png"
+            alt="Logo da CWBRanding"
+            width={250}
+            height={250}
+          />{" "}
         </a>
 
         <div className="flex items-center gap-6">
