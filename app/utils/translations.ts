@@ -1,6 +1,5 @@
 export const translations = {
   PT: {
-    // Header e Geral
     services: "Serviços",
     about: "Sobre Nós",
     contact: "Fale com a gente",
@@ -8,13 +7,11 @@ export const translations = {
     country: "BRASIL",
     discover: "Descubra",
 
-    // Hero
     heroTitleLine1: "SUA",
     heroTitleLine2: "AGÊNCIA DE",
     heroTitleLine3: "MARKETING",
-    heroSubtitle: "CWB / SP / YYZ",
+    heroSubtitle: "CWB / SP / TOR",
 
-    // Marquee
     marqueeA: [
       "#SejaAUTÊNTICO",
       "#SejaESTRATÉGICO",
@@ -28,7 +25,6 @@ export const translations = {
       "#SejaVERDADEIRO",
     ],
 
-    // About Section
     aboutTitleLine1: "Quem",
     aboutTitleLine2: "Somos",
     aboutParagraph1:
@@ -36,13 +32,11 @@ export const translations = {
     aboutParagraph2:
       "Somos especialistas em criar uma presença digital marcante, que ajuda nossos parceiros a se destacarem no seu setor com estratégia, design e execução impecável.",
 
-    // Partners Section
     partnersTitleLine1: "Nossos",
     partnersTitleLine2: "Parceiros",
     partnerLabel: "Parceiro",
     clientLabel: "Cliente",
 
-    // Services Section
     servicesTitleLine1: "Nossos",
     servicesTitleLine2: "Serviços",
     servicesHeadline:
@@ -51,46 +45,57 @@ export const translations = {
       "A CWBranding combina criatividade, dados e execução para entregar soluções completas de marketing e branding, ajudando marcas a se destacarem no seu setor com verdade e consistência.",
     servicesList: [
       {
+        id: 1,
         title: "Social Media",
         desc: "Criação e gestão de conteúdo para redes sociais, incluindo estratégias de engajamento e crescimento de audiência.",
       },
       {
+        id: 2,
         title: "Identidade Visual",
         desc: "Conjunto de elementos gráficos que representam visualmente uma marca — logo, cores, tipografia e padrões visuais.",
       },
       {
+        id: 3,
         title: "Gestão de Tráfego",
         desc: "Planejamento e execução de campanhas de mídia paga para direcionar visitantes qualificados para a empresa.",
       },
       {
+        id: 4,
+
         title: "Landing Pages",
         desc: "Páginas web específicas criadas para converter visitantes em leads ou clientes através de uma ação desejada.",
       },
       {
+        id: 5,
+
         title: "Assessoria de Marketing",
         desc: "Consultoria estratégica para empresas desenvolverem e implementarem planos de marketing eficazes.",
       },
       {
+        id: 6,
+
         title: "Ensaios Fotográficos",
         desc: "Produção de fotografias profissionais para materiais de marketing, redes sociais e comunicação corporativa.",
       },
       {
+        id: 7,
+
         title: "Materiais Gráficos",
         desc: "Peças visuais impressas ou digitais — folders, banners, cartões, apresentações e demais materiais de apoio.",
       },
       {
+        id: 8,
+
         title: "Cobertura de Eventos",
         desc: "Planejamento e execução da cobertura de eventos institucionais ou promocionais da marca.",
       },
     ],
 
-    // Space Section
     spaceTitle: "Nosso Espaço",
     spaceDescription:
       "Confiança se constrói com solidez e transparência. Nossa sede, em frente ao Palácio Avenida, no coração de Curitiba, é a prova de que somos uma empresa real e consolidada — um espaço onde estratégias ganham vida e parcerias duradouras se fortalecem.",
     spaceLocation: "Localização",
 
-    // Pricing Section
     pricingTitleLine1: "Nossos",
     pricingTitleLine2: "Planos",
     pricingSubtitle:
@@ -140,7 +145,6 @@ export const translations = {
       },
     ],
 
-    // Footer
     footerDescription: "A sua agência de marketing. Curitiba — PR.",
     footerNavTitle: "Navegação",
     footerContactTitle: "Contato",
@@ -148,7 +152,6 @@ export const translations = {
   },
 
   EN: {
-    // Header and General
     services: "Services",
     about: "About Us",
     contact: "Get in touch",
@@ -156,17 +159,14 @@ export const translations = {
     country: "CANADA",
     discover: "Discover",
 
-    // Hero
     heroTitleLine1: "YOUR",
     heroTitleLine2: "MARKETING",
     heroTitleLine3: "AGENCY",
-    heroSubtitle: "CWB / SP / YYZ",
+    heroSubtitle: "CWB / SP / TOR",
 
-    // Marquee
     marqueeA: ["#BeAUTHENTIC", "#BeSTRATEGIC", "#BeCREATIVE", "#BeMEMORABLE"],
     marqueeB: ["#BeDIGITAL", "#BeBOLD", "#BeCONSISTENT", "#BeTRUE"],
 
-    // About Section
     aboutTitleLine1: "Who",
     aboutTitleLine2: "We Are",
     aboutParagraph1:
@@ -174,13 +174,11 @@ export const translations = {
     aboutParagraph2:
       "We are specialists in creating a striking digital presence, helping our partners stand out in their industry with strategy, design, and flawless execution.",
 
-    // Partners Section
     partnersTitleLine1: "Our",
     partnersTitleLine2: "Partners",
     partnerLabel: "Partner",
     clientLabel: "Client",
 
-    // Services Section
     servicesTitleLine1: "Our",
     servicesTitleLine2: "Services",
     servicesHeadline:
@@ -222,13 +220,11 @@ export const translations = {
       },
     ],
 
-    // Space Section
     spaceTitle: "Our Space",
     spaceDescription:
       "Trust is built on solidity and transparency. Our headquarters, located in front of Palácio Avenida, in the heart of Curitiba, is proof that we are a real and consolidated company — a space where strategies come to life and lasting partnerships grow stronger.",
     spaceLocation: "Location",
 
-    // Pricing Section
     pricingTitleLine1: "Our",
     pricingTitleLine2: "Plans",
     pricingSubtitle:
@@ -278,7 +274,6 @@ export const translations = {
       },
     ],
 
-    // Footer
     footerDescription: "Your marketing agency. Curitiba — PR.",
     footerNavTitle: "Navigation",
     footerContactTitle: "Contact",
