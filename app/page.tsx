@@ -6,6 +6,7 @@ import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { Marquee } from "./components/Marquee";
 import { PartnersSection } from "./components/PartnerSection";
+import PricingSection from "./components/PricingSection";
 import { ServicesSection } from "./components/ServiceSection";
 import { SpaceSection } from "./components/SpaceSection";
 
@@ -19,6 +20,7 @@ export default function Home() {
       <Marquee />
       <SpaceSection />
       <PartnersSection />
+      <PricingSection />
       <Footer />
     </div>
   );
