@@ -1,9 +1,12 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import { useLanguage } from "../context/LanguageContext";
 
 export function Hero() {
+  const { language, setLanguage, t } = useLanguage();
+
   const heroRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const { scrollYProgress } = useScroll({
@@ -57,11 +60,16 @@ export function Hero() {
 
       <motion.div
         style={{ scale: brandScale, opacity: brandOpacity }}
-        className="absolute inset-0 flex items-center justify-center px-6 z-20"
+        className="absolute inset-0 flex flex-col items-center justify-center px-6 z-20"
       >
-        <h1 className="font-display font-medium text-[color:var(--sand-soft)] leading-[0.9] text-center text-[18vw] md:text-[15vw] tracking-[-0.03em]">
-          cwbranding
-        </h1>
+        <div className="flex flex-col items-start max-w-[90vw] md:max-w-[75vw]">
+          <h1 className="font-display font-medium text-[color:var(--sand-soft)] leading-[0.9] text-[18vw] md:text-[15vw] tracking-[-0.03em]">
+            cwbranding
+          </h1>
+          <p className="font-display font-medium text-[color:var(--sand-soft)]/60 text-base md:text-2xl tracking-[0.3em] mt-3 pl-1 md:pl-2">
+            CWB / SP / YYZ
+          </p>
+        </div>
       </motion.div>
 
       <div className="absolute bottom-12 left-6 md:left-12 z-20 text-[color:var(--sand-soft)] max-w-xl">
@@ -71,11 +79,11 @@ export function Hero() {
           transition={{ delay: 0.6, duration: 1 }}
           className="font-display text-4xl md:text-6xl leading-[1.05]"
         >
-          A SUA
+          {t.heroTitleLine1}
           <br />
-          AGÊNCIA
+          {t.heroTitleLine2}
           <br />
-          DE MARKETING
+          {t.heroTitleLine3}
         </motion.h2>
       </div>
     </section>

@@ -1,15 +1,22 @@
 "use client";
 
+import { useLanguage } from "../context/LanguageContext";
 import { Reveal } from "./ui/Reveal";
 
 export function PartnersSection() {
+  const { t } = useLanguage();
+
   return (
     <section className="py-28 md:py-40 px-6 md:px-12">
       <div className="mx-auto max-w-[1400px]">
         <Reveal>
           <h2 className="font-display text-5xl md:text-7xl lg:text-8xl">
-            <span className="italic text-[#004A4A]">Nossos</span>{" "}
-            <span className="text-[var(--brand-ink)]">Parceiros</span>
+            <span className="italic text-[#004A4A]">
+              {t.partnersTitleLine1}
+            </span>{" "}
+            <span className="text-[var(--brand-ink)]">
+              {t.partnersTitleLine2}
+            </span>
           </h2>
         </Reveal>
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -21,9 +28,6 @@ export function PartnersSection() {
                     [ Cliente {i + 1} ]
                   </div>
                 </div>
-                <p className="mt-3 text-sm tracking-widest uppercase text-[#004A4A]">
-                  Parceiro {i + 1}
-                </p>
               </a>
             </Reveal>
           ))}

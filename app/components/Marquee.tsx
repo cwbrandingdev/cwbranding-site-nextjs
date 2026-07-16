@@ -1,32 +1,29 @@
-const marqueeA = [
-  "#SejaAUTÊNTICO",
-  "#SejaESTRATÉGICO",
-  "#SejaCRIATIVO",
-  "#SejaMARCANTE",
-];
-const marqueeB = [
-  "#SejaDIGITAL",
-  "#SejaOUSADO",
-  "#SejaCONSISTENTE",
-  "#SejaVERDADEIRO",
-];
+"use client";
+
+import { useLanguage } from "../context/LanguageContext";
 
 export function Marquee() {
+  const { t } = useLanguage();
+
+  // Garante que se as arrays não existirem, o código não quebre
+  const listA = t.marqueeA || [];
+  const listB = t.marqueeB || [];
+
   return (
     <section className="bg-[#EBF5F5] text-[#004D4C] py-14 overflow-hidden select-none">
       <div className="overflow-hidden">
         <div className="marquee-track to-right font-display text-5xl md:text-7xl">
-          {[...marqueeA, ...marqueeA, ...marqueeA].map((t, i) => (
+          {[...listA, ...listA, ...listA].map((item, i) => (
             <span key={i} className="italic">
-              {t}
+              {item}
             </span>
           ))}
         </div>
       </div>
       <div className="overflow-hidden mt-4">
         <div className="marquee-track to-left font-display text-5xl md:text-7xl text-[#004D4C]">
-          {[...marqueeB, ...marqueeB, ...marqueeB].map((t, i) => (
-            <span key={i}>{t}</span>
+          {[...listB, ...listB, ...listB].map((item, i) => (
+            <span key={i}>{item}</span>
           ))}
         </div>
       </div>

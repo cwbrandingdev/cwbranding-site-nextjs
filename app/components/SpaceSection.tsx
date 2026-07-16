@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowUpRight, MapPin } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
 import { Reveal } from "./ui/Reveal";
 import {
   Carousel,
@@ -19,6 +20,8 @@ const carouselImages = [
 const fixedAddress = "Rua Ébano Pereira, 11, Sala 1401, Curitiba, PR, Brasil";
 
 export function SpaceSection() {
+  const { t } = useLanguage();
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 max-h-auto bg-[#004A4A] text-white">
       <section className="flex items-center justify-center py-12 lg:py-0 px-6">
@@ -54,26 +57,23 @@ export function SpaceSection() {
 
           <Reveal delay={0.1}>
             <h3 className="font-display text-3xl md:text-5xl text-white font-semibold leading-tight text-center lg:text-left">
-              Nosso Espaço
+              {t.spaceTitle}
             </h3>
           </Reveal>
 
           <Reveal delay={0.2}>
             <p className="mt-6 text-base md:text-lg leading-relaxed text-zinc-200 text-center lg:text-left">
-              Confiança se constrói com solidez e transparência. Nossa sede, em
-              frente ao Palácio Avenida, no coração de Curitiba, é a prova de
-              que somos uma empresa real e consolidada — um espaço onde
-              estratégias ganham vida e parcerias duradouras se fortalecem.
+              {t.spaceDescription}
             </p>
           </Reveal>
 
           <Reveal delay={0.3}>
             <div className="mt-8 flex justify-center lg:justify-start">
               <a
-                href="#"
+                href="http://wa.me/41996250984"
                 className="inline-flex items-center gap-3 border border-emerald-400 rounded-full px-7 py-3 text-sm tracking-[0.2em] uppercase text-emerald-300 hover:bg-emerald-400 hover:text-[#004A4A] transition font-medium"
               >
-                Descubra <ArrowUpRight className="size-4" />
+                {t.discover} <ArrowUpRight className="size-4" />
               </a>
             </div>
           </Reveal>
@@ -82,7 +82,7 @@ export function SpaceSection() {
 
           <div className="space-y-4">
             <h4 className="text-lg font-medium text-emerald-300 flex items-center gap-2">
-              <MapPin className="size-5" /> Localização
+              <MapPin className="size-5" /> {t.spaceLocation}
             </h4>
 
             <div className="relative w-full h-[280px] rounded-xl overflow-hidden shadow-2xl border border-white/10">
