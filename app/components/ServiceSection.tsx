@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useLanguage } from "../context/LanguageContext";
 import { Reveal } from "./ui/Reveal";
 import { ServiceCard } from "./ui/ServiceCard";
@@ -7,7 +8,6 @@ import { ServiceCard } from "./ui/ServiceCard";
 export function ServicesSection() {
   const { t } = useLanguage();
 
-  // Obtém a lista de serviços traduzida do contexto
   const services = t.servicesList || [];
 
   return (
@@ -20,7 +20,7 @@ export function ServicesSection() {
           <div>
             <Reveal>
               <h2 className="font-display text-5xl md:text-7xl lg:text-8xl">
-                <span className="italic text-emerald-300">
+                <span className="italic text-[#E8C39E]">
                   {t.servicesTitleLine1}
                 </span>{" "}
                 <span className="text-white">{t.servicesTitleLine2}</span>
@@ -51,14 +51,14 @@ export function ServicesSection() {
           </div>
         </div>
 
-        {/* Renderização dinâmica dos cards utilizando a tradução */}
         <div className="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((s, i) => (
             <ServiceCard
               key={s.title}
               index={i}
-              title={s.title} // Corrigido aqui para pegar o título de cada serviço individual
-              desc={s.desc} // Corrigido aqui para pegar a descrição de cada serviço individual
+              title={s.title}
+              desc={s.desc}
+              id={s.id}
             />
           ))}
         </div>
