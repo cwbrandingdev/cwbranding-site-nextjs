@@ -13,7 +13,6 @@ import { SpaceSection } from "./components/SpaceSection";
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Header />
       <Hero />
       <ServicesSection />
       <AboutSection />
@@ -21,7 +20,6 @@ export default function Home() {
       <SpaceSection />
       <PartnersSection />
       <PricingSection />
-      <Footer />
     </div>
   );
 }
