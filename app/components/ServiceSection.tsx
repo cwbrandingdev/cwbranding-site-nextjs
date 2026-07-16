@@ -42,30 +42,44 @@ export function ServicesSection() {
   return (
     <section
       id="servicos"
-      className="relative py-28 md:py-40 px-6 md:px-12 bg-green-200/60"
+      className="relative py-28 md:py-40 px-6 md:px-12 bg-[#004A4A]"
     >
       <div className="mx-auto max-w-[1400px]">
-        <Reveal>
-          <h2 className="font-display text-5xl md:text-7xl lg:text-8xl">
-            <span className="italic text-[#004D4C]">Nossos</span>{" "}
-            <span className="text-green-700/60">Serviços</span>
-          </h2>
-        </Reveal>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div>
+            <Reveal>
+              <h2 className="font-display text-5xl md:text-7xl lg:text-8xl">
+                <span className="italic text-emerald-300">Nossos</span>{" "}
+                <span className="text-white">Serviços</span>
+              </h2>
+            </Reveal>
 
-        <div className="mt-16 grid md:grid-cols-2 gap-10 md:gap-20 max-w-5xl">
-          <Reveal delay={0.1}>
-            <p className="font-display text-2xl md:text-3xl leading-snug  text-[#004D4C]">
-              Transformamos sua visão em resultados concretos por meio da união
-              entre estratégia, design e presença digital.
-            </p>
-          </Reveal>
-          <Reveal delay={0.2}>
-            <p className="text-base md:text-lg leading-relaxed  text-[#004D4C]">
-              A CWBranding combina criatividade, dados e execução para entregar
-              soluções completas de marketing e branding, ajudando marcas a se
-              destacarem no seu setor com verdade e consistência.
-            </p>
-          </Reveal>
+            <div className="mt-10 space-y-6 max-w-xl">
+              <Reveal delay={0.1}>
+                <p className="font-display text-2xl md:text-3xl leading-snug text-white font-medium">
+                  Transformamos sua visão em resultados concretos por meio da
+                  união entre estratégia, design e presença digital.
+                </p>
+              </Reveal>
+
+              <Reveal delay={0.2}>
+                <p className="text-base md:text-lg leading-relaxed text-zinc-300">
+                  A CWBranding combina criatividade, dados e execução para
+                  entregar soluções completas de marketing e branding, ajudando
+                  marcas a se destacarem no seu setor com verdade e
+                  consistência.
+                </p>
+              </Reveal>
+            </div>
+          </div>
+
+          <div className="w-full h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-2xl border border-white/80">
+            <img
+              src="/equipecwbranding.avif"
+              alt="Processo Criativo CWBranding"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
 
         <div className="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
