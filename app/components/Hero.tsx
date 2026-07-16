@@ -28,7 +28,6 @@ export function Hero() {
       ref={heroRef}
       className="relative h-[100vh] w-full overflow-hidden bg-[var(--brand-ink)]"
     >
-      {/* Elemento de Vídeo de Fundo */}
       <video
         ref={videoRef}
         autoPlay
@@ -41,7 +40,6 @@ export function Hero() {
         Seu navegador não suporta vídeos.
       </video>
 
-      {/* Gradientes decorativos originais por cima do vídeo */}
       <div className="absolute inset-0 bg-gradient-to-br from-[var(--brand-deep)]/70 via-[var(--brand-ink)]/50 to-black/80 z-10 pointer-events-none">
         <div
           className="absolute inset-0 opacity-30 mix-blend-overlay"
@@ -52,13 +50,11 @@ export function Hero() {
         />
       </div>
 
-      {/* Overlay do Scroll */}
       <motion.div
         style={{ opacity: overlayOpacity }}
         className="absolute inset-0 bg-black z-10 pointer-events-none"
       />
 
-      {/* Título de Background (cwbranding) */}
       <motion.div
         style={{ scale: brandScale, opacity: brandOpacity }}
         className="absolute inset-0 flex items-center justify-center px-6 z-20"
@@ -68,7 +64,6 @@ export function Hero() {
         </h1>
       </motion.div>
 
-      {/* Textos Principais (A SUA AGÊNCIA...) */}
       <div className="absolute bottom-12 left-6 md:left-12 z-20 text-[color:var(--sand-soft)] max-w-xl">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
