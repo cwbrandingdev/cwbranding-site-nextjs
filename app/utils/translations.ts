@@ -325,6 +325,55 @@ export const translations = {
       },
     ],
 
+    pricingSdrTitleLine1: "Planos",
+    pricingSdrTitleLine2: "SDR",
+    pricingSdrSubtitle:
+      "Escolha a assinatura ideal para elevar o posicionamento da sua marca",
+    pricingSdrPopularTag: "Mais Recomendado",
+    pricingSdrInvestment: "Investimento",
+    pricingSdrPeriod: "/ a partir",
+    pricingSdrButton: "Quero este plano",
+    plansSdr: [
+      {
+        title: "Essencial",
+        description:
+          "Para quem quer presença digital com organização e consistência.",
+        price: "3.599",
+        features: [
+          "social media",
+          "materiais gráficos",
+          "roteiros",
+          "identidade visual",
+          "ensaio fotográfico",
+        ],
+        tagline: "O início de tudo",
+      },
+      {
+        title: "Premium",
+        description: "Para marcas que buscam resultados ainda mais robustos.",
+        price: "4.599",
+        features: [
+          "todos os serviços do pacote Essencial",
+          "Landing Page",
+          "Tráfego Pago",
+        ],
+        tagline: "A experiência completa",
+        popular: true,
+      },
+      {
+        title: "Premium",
+        description: "Para marcas que buscam resultados ainda mais robustos.",
+        price: "4.599",
+        features: [
+          "todos os serviços do pacote Essencial",
+          "Landing Page",
+          "Tráfego Pago",
+        ],
+        tagline: "A experiência completa",
+        popular: true,
+      },
+    ],
+
     footerDescription: "Your marketing agency. Curitiba — PR.",
     footerNavTitle: "Navigation",
     footerContactTitle: "Contact",
