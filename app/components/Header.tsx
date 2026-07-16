@@ -52,7 +52,6 @@ export function Header() {
             <Search className="size-4" />
           </button>
 
-          {/* Seletor de Idioma Dropdown */}
           <div className="relative">
             <button
               onClick={toggleDropdown}
