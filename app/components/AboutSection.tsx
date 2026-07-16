@@ -16,7 +16,7 @@ export function AboutSection() {
         <div className="lg:col-span-6">
           <Reveal>
             <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95]">
-              <span className="italic opacity-80 text-white">
+              <span className="italic opacity-80 text-[#E8C39E]">
                 {t.aboutTitleLine1}
               </span>
               <br />
