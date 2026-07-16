@@ -187,34 +187,42 @@ export const translations = {
       "CWBranding combines creativity, data, and execution to deliver complete marketing and branding solutions, helping brands stand out in their industry with truth and consistency.",
     servicesList: [
       {
+        id: 1,
         title: "Social Media",
         desc: "Creation and management of social media content, including engagement and audience growth strategies.",
       },
       {
+        id: 2,
         title: "Visual Identity",
         desc: "A set of graphic elements that visually represent a brand — logo, colors, typography, and visual patterns.",
       },
       {
+        id: 3,
         title: "Traffic Management",
         desc: "Planning and execution of paid media campaigns to drive qualified visitors to your business.",
       },
       {
+        id: 4,
         title: "Landing Pages",
         desc: "Specific web pages created to convert visitors into leads or clients through a desired action.",
       },
       {
+        id: 5,
         title: "Marketing Advisory",
         desc: "Strategic consulting for businesses to develop and implement effective marketing plans.",
       },
       {
+        id: 6,
         title: "Photoshoots",
         desc: "Professional photo production for marketing materials, social networks, and corporate communication.",
       },
       {
+        id: 7,
         title: "Graphic Materials",
         desc: "Printed or digital visual pieces — folders, banners, business cards, presentations, and other supporting materials.",
       },
       {
+        id: 8,
         title: "Event Coverage",
         desc: "Planning and execution of institutional or promotional event coverage for the brand.",
       },
