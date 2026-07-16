@@ -36,12 +36,14 @@ export function AboutSection() {
             </p>
           </Reveal>
           <Reveal delay={0.3}>
-            <a
-              href="http://wa.me/41996250984"
-              className="inline-flex items-center gap-3 mt-6 border border-[color:var(--sand-soft)]/60 rounded-full px-7 py-3 text-sm tracking-[0.2em] uppercase hover:bg-[color:var(--sand-soft)] hover:text-[var(--brand-deep)] transition"
-            >
-              Fale com a gente <ArrowUpRight className="size-4" />
-            </a>
+            <button className="inline-flex bg-white text-[#004D4C] items-center gap-3 mt-6 border border-[color:var(--sand-soft)]/60 rounded-full px-7 py-3 text-sm tracking-[0.2em] uppercase hover:bg-[color:var(--sand-soft)] hover:text-[#004D4C] transition">
+              <a
+                href="http://wa.me/41996250984"
+                className="inline-flex items-center gap-3"
+              >
+                Fale com a gente <ArrowUpRight className="size-4" />
+              </a>
+            </button>
           </Reveal>
         </div>
       </div>
