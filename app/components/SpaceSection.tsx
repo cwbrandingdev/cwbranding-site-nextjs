@@ -10,6 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Image from "next/image";
 
 const carouselImages = [
   "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
@@ -46,11 +47,13 @@ export function SpaceSection() {
       <section className="flex flex-col justify-center py-16 md:py-24 px-6 md:px-16 lg:px-24 border-t lg:border-t-0 lg:border-l border-white/10">
         <div className="max-w-[600px] mx-auto w-full">
           <Reveal>
-            <div className="size-20 rounded-full border-2 border-emerald-400/50 flex items-center justify-center mb-8 mx-auto lg:mx-0">
-              <span className="font-display text-2xl italic text-emerald-300">
-                cw
-              </span>
-            </div>
+            <Image
+              src="/pfpcwbranding.png"
+              alt="Foto de perfil da CWBranding"
+              width={100}
+              height={100}
+              className="rounded-full"
+            />
           </Reveal>
 
           <Reveal delay={0.1}>
