@@ -1,15 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, Search, ChevronDown } from "lucide-react";
+import { Menu, X, Search, ChevronDown } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import Image from "next/image";
 
 export function Header() {
   const { language, setLanguage, t } = useLanguage();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const handleLanguageChange = (lang: "PT" | "EN") => {
     setLanguage(lang);
@@ -17,7 +19,7 @@ export function Header() {
   };
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 bg-gradient-to-b from-[#006867] to-[#004A4A] text-[color:var(--sand-soft)]">
+    <div className="fixed top-0 inset-x-0 z-50 bg-gradient-to-b from-[#006867] to-[#004A4A] text-[color:var(--sand-soft)]">
       <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between px-6 md:px-10 text-[13px] tracking-[0.18em] uppercase">
         <nav className="hidden md:flex items-center gap-10">
           <a href="#servicos" className="hover:opacity-70 transition-opacity">
@@ -28,8 +30,12 @@ export function Header() {
           </a>
         </nav>
 
-        <button className="md:hidden" aria-label="Menu">
-          <Menu />
+        <button
+          className="md:hidden hover:opacity-70 transition-opacity"
+          onClick={toggleMenu}
+          aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
+        >
+          {isMenuOpen ? <X className="size-6" /> : <Menu className="size-6" />}
         </button>
 
         <a
@@ -88,6 +94,36 @@ export function Header() {
           </div>
         </div>
       </div>
-    </header>
+
+      {isMenuOpen && (
+        <div className="fixed inset-0 top-16 z-40 bg-[#004A4A] md:hidden transition-all duration-300 ease-in-out border-t border-white/5">
+          <nav className="flex flex-col p-6 gap-6 text-[14px] tracking-[0.18em] uppercase">
+            <a
+              href="#servicos"
+              onClick={toggleMenu}
+              className="py-2 border-b border-white/5 hover:opacity-70 transition-opacity"
+            >
+              {t.services}
+            </a>
+            <a
+              href="#sobre"
+              onClick={toggleMenu}
+              className="py-2 border-b border-white/5 hover:opacity-70 transition-opacity"
+            >
+              {t.about}
+            </a>
+            <a
+              href="https://wa.me/41996250984"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={toggleMenu}
+              className="py-2 border-b border-white/5 hover:opacity-70 transition-opacity"
+            >
+              {t.contact}
+            </a>
+          </nav>
+        </div>
+      )}
+    </div>
   );
 }
