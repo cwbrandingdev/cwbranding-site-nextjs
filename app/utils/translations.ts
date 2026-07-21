@@ -7,9 +7,9 @@ export const translations = {
     country: "BRASIL",
     discover: "Descubra",
 
-    heroTitleLine1: "SUA",
-    heroTitleLine2: "AGÊNCIA DE",
-    heroTitleLine3: "MARKETING",
+    heroTitleLine1: "SUA ESTARÉGIA",
+    heroTitleLine2: "POR TRÁS DA",
+    heroTitleLine3: "SUA EMPRESA",
     heroSubtitle: "CWB / SP / TOR",
 
     marqueeA: [
