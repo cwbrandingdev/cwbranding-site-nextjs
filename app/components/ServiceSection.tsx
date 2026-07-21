@@ -1,12 +1,38 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "../context/LanguageContext";
 import { Reveal } from "./ui/Reveal";
 import { ServiceCard } from "./ui/ServiceCard";
 
+function useGridColumns() {
+  const [columns, setColumns] = useState(1);
+
+  useEffect(() => {
+    const update = () => {
+      if (window.matchMedia("(min-width: 1024px)").matches) setColumns(4);
+      else if (window.matchMedia("(min-width: 768px)").matches) setColumns(2);
+      else setColumns(1);
+    };
+
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
+  return columns;
+}
+
+function isCheckerboardImageCard(index: number, columns: number) {
+  const row = Math.floor(index / columns);
+  const col = index % columns;
+  return (row + col) % 2 === 0;
+}
+
 export function ServicesSection() {
   const { t } = useLanguage();
+  const columns = useGridColumns();
 
   const services = t.servicesList || [];
 
@@ -59,6 +85,7 @@ export function ServicesSection() {
               title={s.title}
               desc={s.desc}
               id={s.id}
+              isImageCard={isCheckerboardImageCard(i, columns)}
             />
           ))}
         </div>

@@ -9,13 +9,18 @@ interface ServiceCardProps {
   title: string;
   desc: string;
   index: number;
+  isImageCard?: boolean;
 }
 
 const MotionLink = motion.create(Link);
 
-export function ServiceCard({ id, title, desc, index }: ServiceCardProps) {
-  // Descobre se o card atual deve ser o de imagem (índices ímpares: 1, 3, 5...)
-  const isImageCard = index % 2 !== 0;
+export function ServiceCard({
+  id,
+  title,
+  desc,
+  index,
+  isImageCard = false,
+}: ServiceCardProps) {
 
   // Imagem de placeholder baseada no ID do serviço para não repetir sempre a mesma foto
   const imageUrl = `https://picsum.photos/id/${Number(id) * 10 + 10}/600/450`;
