@@ -28,11 +28,7 @@ export default function PricingSection() {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`relative bg-[#D5E8E8] border border-[var(--brand-ink)]/10 p-8 md:p-10 transition-all duration-300 hover:border-[#004d4c]/30 flex flex-col justify-between ${
-                plan.popular
-                  ? "shadow-lg shadow-[var(--brand-ink)]/5 ring-2 ring-[#E8C39E] !border-[#E8C39E]"
-                  : ""
-              }`}
+              className="relative bg-[#D5E8E8] p-8 md:p-10 transition-all duration-300 shadow-lg shadow-[var(--brand-ink)]/5 ring-2 ring-[#E8C39E] border border-[#E8C39E] flex flex-col justify-between"
             >
               {plan.popular && (
                 <span className="absolute -top-3 right-8 bg-[#E8C39E] text-[#004d4c] text-[10px] uppercase tracking-widest px-3 py-1 font-semibold rounded-full shadow-sm">
@@ -94,7 +90,7 @@ export default function PricingSection() {
                   className={`w-full py-4 text-center block text-xs uppercase tracking-widest transition-all duration-300 border ${
                     plan.popular
                       ? "bg-[#E8C39E] text-[#004d4c] font-semibold border-[#E8C39E] hover:bg-[#004d4c] hover:text-white hover:border-[#004d4c]"
-                      : "border-[var(--brand-ink)] text-[var(--brand-ink)] hover:bg-[var(--brand-ink)] hover:text-[var(--sand-soft)]"
+                      : "border-[var(--brand-ink)] text-[var(--brand-ink)] border-[#E8C39E] border-1x' hover:bg-[var(--brand-ink)] hover:text-[var(--sand-soft)]"
                   }`}
                 >
                   {t.pricingButton}
@@ -122,10 +118,8 @@ export default function PricingSection() {
           {plansSdr.map((plan, index) => (
             <div
               key={index}
-              className={`relative bg-[#D5E8E8] border border-[var(--brand-ink)]/10 p-8 md:p-10 transition-all duration-300 hover:border-[#004d4c]/30 flex flex-col justify-between ${
-                plan.popular
-                  ? "shadow-lg shadow-[var(--brand-ink)]/5 ring-2 ring-[#E8C39E] !border-[#E8C39E]"
-                  : ""
+              className={`relative bg-[#D5E8E8] border border-[#E8C39E] ring-2 ring-[#E8C39E] p-8 md:p-10 transition-all duration-300 flex flex-col justify-between ${
+                plan.popular ? "shadow-lg shadow-[var(--brand-ink)]/5" : ""
               }`}
             >
               {plan.popular && (
