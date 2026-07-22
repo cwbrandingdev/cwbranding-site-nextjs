@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { useLanguage } from "../context/LanguageContext";
 
 export function Hero() {
-  const { language, setLanguage, t } = useLanguage();
+  const { t } = useLanguage();
 
   const heroRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -39,7 +39,7 @@ export function Hero() {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
-        <source src="/videofundo.mp4" type="video/mp4" />
+        <source src="/cwbranding/videofundo.mp4" type="video/mp4" />
         Seu navegador não suporta vídeos.
       </video>
 
@@ -63,29 +63,18 @@ export function Hero() {
         className="absolute inset-0 flex flex-col items-center justify-center px-6 z-20"
       >
         <div className="flex flex-col items-start max-w-[90vw] md:max-w-[75vw]">
-          <h1 className="font-display font-medium text-[color:var(--sand-soft)] leading-[0.9] text-[18vw] md:text-[15vw] tracking-[-0.03em]">
-            cwbranding
+          <h1 className="font-display font-medium text-[color:var(--sand-soft)] leading-[1.05] text-5xl md:text-7xl lg:text-8xl tracking-[-0.02em]">
+            {t.heroTitleLine1}
+            <br />
+            {t.heroTitleLine2}
+            <br />
+            {t.heroTitleLine3}
           </h1>
           <p className="font-display font-medium text-[color:var(--sand-soft)]/60 text-base md:text-2xl tracking-[0.3em] mt-3 pl-1 md:pl-2">
             CWB / SP / TOR
           </p>
         </div>
       </motion.div>
-
-      <div className="absolute bottom-12 left-6 md:left-12 z-20 text-[color:var(--sand-soft)] max-w-xl">
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 1 }}
-          className="font-display text-4xl md:text-6xl leading-[1.05]"
-        >
-          {t.heroTitleLine1}
-          <br />
-          {t.heroTitleLine2}
-          <br />
-          {t.heroTitleLine3}
-        </motion.h2>
-      </div>
     </section>
   );
 }
