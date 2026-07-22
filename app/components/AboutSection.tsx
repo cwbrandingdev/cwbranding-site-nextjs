@@ -3,7 +3,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import { Reveal } from "./ui/Reveal";
-
+import Image from "next/image";
 export function AboutSection() {
   const { t } = useLanguage();
 
@@ -15,6 +15,11 @@ export function AboutSection() {
       <div className="mx-auto max-w-[1400px] grid lg:grid-cols-12 gap-12 items-start">
         <div className="lg:col-span-6">
           <Reveal>
+            <div className="flex flex-row items-center gap-4">
+              <div>
+              <Image className="h-48 w-32" src="/cwbranding/pinhao.png" alt="Pinhão" width={0} height={0} />
+              </div>
+              <div>
             <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95]">
               <span className="italic opacity-80 text-[#E8C39E]">
                 {t.aboutTitleLine1}
@@ -22,6 +27,8 @@ export function AboutSection() {
               <br />
               <span className="text-white">{t.aboutTitleLine2}</span>
             </h2>
+            </div>
+            </div>
           </Reveal>
         </div>
         <div className="lg:col-span-6 space-y-6 text-lg md:text-xl leading-relaxed text-white">
