@@ -43,7 +43,7 @@ export function Header() {
           className="font-display text-2xl tracking-[0.35em] font-medium"
         >
           <Image
-            src="/cwbrandinglogo.png"
+            src="/cwbranding/cwbrandinglogo.png"
             alt="Logo da CWBRanding"
             width={200}
             height={200}
