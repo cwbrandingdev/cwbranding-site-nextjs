@@ -48,7 +48,7 @@ export function SpaceSection() {
         <div className="max-w-[600px] mx-auto w-full">
           <Reveal>
             <Image
-              src="/pfpcwbranding.png"
+              src="/cwbranding/cwbnossolocal.png"
               alt="Foto de perfil da CWBranding"
               width={100}
               height={100}
