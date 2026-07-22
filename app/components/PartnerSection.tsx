@@ -3,22 +3,12 @@
 import { useLanguage } from "../context/LanguageContext";
 import { Reveal } from "./ui/Reveal";
 
-interface ImageProps {
-  url: string;
-}
+const partnerImages = Array.from(
+  { length: 24 },
+  (_, i) => `/parceiros-cwbranding/${i + 1}.png`,
+);
 
 export function PartnersSection() {
-  const images: ImageProps[] = [
-    { url: "/parceiros-cwbranding/apmarine.avif" },
-    { url: "/parceiros-cwbranding/petbras.avif" },
-    { url: "/parceiros-cwbranding/swarovski.avif" },
-    { url: "/parceiros-cwbranding/imuv.avif" },
-    { url: "/parceiros-cwbranding/deconsultec.avif" },
-    { url: "/parceiros-cwbranding/estriaszero.avif" },
-    { url: "/parceiros-cwbranding/lotusflora.avif" },
-    { url: "/parceiros-cwbranding/mimus-patisserie.avif" },
-  ];
-
   const { t } = useLanguage();
 
   return (
@@ -35,24 +25,17 @@ export function PartnersSection() {
           </h2>
           <p className="text-muted-foreground">{t.partnersParagraph1}</p>
         </Reveal>
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
-          {images.map((image, i) => (
-            <Reveal key={i} delay={i * 0.05}>
-              <a href="#" className="group block">
-                <div className="aspect-square bg-[var(--sand)] overflow-hidden relative">
-                  {image.url ? (
-                    <img
-                      src={image.url}
-                      alt={`Cliente ${i + 1}`}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 flex items-center justify-center text-[var(--brand-deep)]/50 text-xs tracking-[0.3em] uppercase group-hover:scale-105 transition-transform duration-700">
-                      [ Cliente {i + 1} ]
-                    </div>
-                  )}
-                </div>
-              </a>
+
+        <div className="mt-16 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+          {partnerImages.map((url, i) => (
+            <Reveal key={url} delay={i * 0.03}>
+              <div className="group aspect-square bg-[var(--sand)] overflow-hidden relative p-4">
+                <img
+                  src={url}
+                  alt={`${t.partnerLabel} ${i + 1}`}
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
             </Reveal>
           ))}
         </div>
