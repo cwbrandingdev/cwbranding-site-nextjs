@@ -45,8 +45,8 @@ export function Header() {
           <Image
             src="/cwbrandinglogo.png"
             alt="Logo da CWBRanding"
-            width={250}
-            height={250}
+            width={200}
+            height={200}
           />{" "}
         </a>
 
@@ -60,9 +60,7 @@ export function Header() {
             {t.contact}
           </a>
 
-          <button aria-label="Buscar" className="hover:opacity-70">
-            <Search className="size-4" />
-          </button>
+         
 
           <div className="relative">
             <button
