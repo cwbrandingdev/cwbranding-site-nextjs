@@ -41,9 +41,9 @@ export function ServicesSection() {
             </div>
           </div>
 
-          <div className="w-full h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-2xl border border-white/80">
+          <div className="w-full h-[450px] md:h-[450px]mb-16 rounded-2xl overflow-hidden ">
             <img
-              src="/cwbranding/cwbranding.avif"
+              src="/cwbranding/servicos.png"
               alt="Processo Criativo CWBranding"
               className="w-full h-full object-cover"
             />
