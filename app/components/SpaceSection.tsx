@@ -13,9 +13,16 @@ import {
 import Image from "next/image";
 
 const carouselImages = [
-  "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
-  "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80",
-  "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80",
+ "/fotos-espaco/1.png",
+ "/fotos-espaco/2.png",
+ "/fotos-espaco/3.png",
+ "/fotos-espaco/4.png",
+ "/fotos-espaco/5.png",
+ "/fotos-espaco/6.png",
+ "/fotos-espaco/7.png",
+ "/fotos-espaco/8.png",
+ "/fotos-espaco/9.png",
+ "/fotos-espaco/10.png",
 ];
 
 export function SpaceSection() {
