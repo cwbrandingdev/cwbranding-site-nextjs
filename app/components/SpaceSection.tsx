@@ -13,16 +13,16 @@ import {
 import Image from "next/image";
 
 const carouselImages = [
- "/fotos-espaco/1.png",
- "/fotos-espaco/2.png",
- "/fotos-espaco/3.png",
- "/fotos-espaco/4.png",
- "/fotos-espaco/5.png",
- "/fotos-espaco/6.png",
- "/fotos-espaco/7.png",
- "/fotos-espaco/8.png",
- "/fotos-espaco/9.png",
- "/fotos-espaco/10.png",
+  "/fotos-espaco/1.png",
+  "/fotos-espaco/2.png",
+  "/fotos-espaco/3.png",
+  "/fotos-espaco/4.png",
+  "/fotos-espaco/5.png",
+  "/fotos-espaco/6.png",
+  "/fotos-espaco/7.png",
+  "/fotos-espaco/8.png",
+  "/fotos-espaco/9.png",
+  "/fotos-espaco/10.png",
 ];
 
 export function SpaceSection() {
@@ -53,15 +53,17 @@ export function SpaceSection() {
 
       <section className="flex flex-col justify-center py-16 md:py-24 px-6 md:px-16 lg:px-24 border-t lg:border-t-0 lg:border-l border-white/10">
         <div className="max-w-[600px] mx-auto w-full">
-          <Reveal>
-            <Image
-              src="/cwbranding/cwbnossolocal.png"
-              alt="Foto de perfil da CWBranding"
-              width={100}
-              height={100}
-              className="rounded-full"
-            />
-          </Reveal>
+          <div className="flex justify-center lg:justify-start lg:-ml-7">
+            <Reveal>
+              <Image
+                src="/cwbranding/cwbnossolocal.png"
+                alt="Foto de perfil da CWBranding"
+                width={100}
+                height={100}
+                className="rounded-full"
+              />
+            </Reveal>
+          </div>
 
           <Reveal delay={0.1}>
             <h3 className="font-display text-3xl md:text-5xl text-white font-semibold leading-tight text-center lg:text-left">
