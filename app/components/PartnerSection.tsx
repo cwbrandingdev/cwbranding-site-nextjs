@@ -74,7 +74,7 @@ export function PartnersSection() {
             <span className="italic text-[#004A4A]">
               {t.partnersTitleLine1}
             </span>{" "}
-            <span className="text-[var(--brand-ink)]">
+            <span className="text-[#004A4A]">
               {t.partnersTitleLine2}
             </span>
           </h2>
