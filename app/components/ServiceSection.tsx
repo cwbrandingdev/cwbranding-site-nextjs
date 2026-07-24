@@ -41,7 +41,7 @@ export function ServicesSection() {
             </div>
           </div>
 
-          <div className="flex h-[300px] w-full items-center justify-center md:h-[450px] lg:h-[620px] xl:h-[700px] lg:justify-end lg:w-[calc(100%+max(0px,(100vw-1600px)/2))]">
+          <div className="flex h-[300px] w-full items-center justify-center md:h-[450px] lg:h-[620px] xl:mr-64 xl:h-[700px] lg:justify-end lg:w-full mb-36">
             <img
               src="/cwbranding/servicos.png"
               alt="Processo Criativo CWBranding"
