@@ -1,4 +1,6 @@
+import { getServiceImageUrl } from "@/app/utils/serviceImages";
 import { translations } from "@/app/utils/translations";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ChevronLeft,
@@ -70,10 +72,12 @@ export default async function ServicesPage({ params }: ProjectProps) {
             </header>
 
             <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden border border-white/10 bg-white/5 shadow-2xl">
-              <img
-                src="https://picsum.photos/1200/675"
+              <Image
+                src={getServiceImageUrl(servico.id)}
                 alt={servico.title}
-                className="w-full h-full object-cover opacity-85 hover:opacity-100 transition-opacity duration-500"
+                fill
+                sizes="(max-width: 1024px) 100vw, 60vw"
+                className="object-cover opacity-85 hover:opacity-100 transition-opacity duration-500"
               />
             </div>
 

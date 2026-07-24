@@ -2,7 +2,9 @@
 
 import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import { getServiceImageUrl } from "@/app/utils/serviceImages";
 
 interface ServiceCardProps {
   id: string | number;
@@ -14,11 +16,11 @@ interface ServiceCardProps {
 const MotionLink = motion.create(Link);
 
 export function ServiceCard({ id, title, desc, index }: ServiceCardProps) {
-  const imageUrl = `https://picsum.photos/id/${Number(id) * 10 + 10}/600/450`;
+  const imageUrl = getServiceImageUrl(id);
 
   return (
     <MotionLink
-      href={`/servicos/${id}`}
+      href={``}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
@@ -29,10 +31,12 @@ export function ServiceCard({ id, title, desc, index }: ServiceCardProps) {
       }}
       className="group relative h-96 border border-white/10 rounded-2xl flex flex-col justify-end overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#004D4C]/20 hover:-translate-y-1 decoration-transparent"
     >
-      <img
+      <Image
         src={imageUrl}
         alt={title}
-        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+        fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+        className="object-cover transition-transform duration-700 group-hover:scale-110"
       />
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-all duration-500 group-hover:from-[#004D4C]/95 group-hover:via-[#004D4C]/90" />
@@ -48,14 +52,6 @@ export function ServiceCard({ id, title, desc, index }: ServiceCardProps) {
               {desc}
             </p>
 
-            <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150">
-              <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-white hover:text-[#E8C39E] transition-colors">
-                Saiba mais
-              </span>
-              <div className="size-8 rounded-full bg-white/10 flex items-center justify-center transition-all duration-300 group-hover:rotate-45">
-                <ArrowUpRight className="size-4 text-[#E8C39E]" />
-              </div>
-            </div>
           </div>
         </div>
       </div>
