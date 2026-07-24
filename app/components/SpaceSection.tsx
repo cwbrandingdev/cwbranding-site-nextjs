@@ -53,7 +53,7 @@ export function SpaceSection() {
 
       <section className="flex flex-col justify-center py-16 md:py-24 px-6 md:px-16 lg:px-24 border-t lg:border-t-0 lg:border-l border-white/10">
         <div className="max-w-[600px] mx-auto w-full">
-          <div className="flex justify-center lg:justify-start lg:-ml-7">
+          <div className="flex justify-center lg:justify-start">
             <Reveal>
               <Image
                 src="/cwbranding/cwbnossolocal.png"
@@ -66,13 +66,13 @@ export function SpaceSection() {
           </div>
 
           <Reveal delay={0.1}>
-            <h3 className="font-display text-3xl md:text-5xl text-white font-semibold leading-tight text-center lg:text-left">
+            <h3 className="font-display text-3xl py-4 md:text-5xl text-white font-semibold leading-tight text-center lg:text-left">
               {t.spaceTitle}
             </h3>
           </Reveal>
 
           <Reveal delay={0.2}>
-            <p className="mt-6 text-base md:text-lg leading-relaxed text-zinc-200 text-center lg:text-left">
+            <p className="text-base md:text-lg leading-relaxed text-zinc-200 text-center lg:text-left">
               {t.spaceDescription}
             </p>
           </Reveal>
