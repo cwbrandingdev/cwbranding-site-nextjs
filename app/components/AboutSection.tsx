@@ -17,8 +17,8 @@ export function AboutSection() {
           <Reveal>
             <div className="flex flex-row items-center gap-4">
               <div>
-              <Image className="h-48 w-32" src="/cwbranding/pinhao.png" alt="Pinhão" width={0} height={0} />
-              </div>
+              <Image src="/cwbranding/pinhao.png" alt="Pinhão" width={130} height={200} sizes="(max-width: 640px) 80px, (max-width: 768px) 110px, 150px" className="w-[80px] sm:w-[110px] md:w-[130px] lg:w-[150px] h-auto"   />    
+            </div>
               <div>
             <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95]">
               <span className="italic opacity-80 text-[#E8C39E]">
