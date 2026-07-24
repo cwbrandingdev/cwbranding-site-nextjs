@@ -12,10 +12,10 @@ export function ServicesSection() {
   return (
     <section
       id="servicos"
-      className="relative py-28 md:py-40 px-6 md:px-12 bg-[#004A4A]"
+      className="relative overflow-hidden bg-[#004A4A] py-28 md:py-40 pl-6 md:pl-12 pr-4 md:pr-5"
     >
-      <div className="mx-auto max-w-[1400px]">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="mx-auto max-w-[1600px]">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] lg:gap-14 xl:gap-16">
           <div>
             <Reveal>
               <h2 className="font-display text-5xl md:text-7xl lg:text-8xl">
@@ -41,11 +41,11 @@ export function ServicesSection() {
             </div>
           </div>
 
-          <div className="w-full h-[450px] md:h-[450px]mb-16 rounded-2xl overflow-hidden ">
+          <div className="flex h-[300px] w-full items-center justify-center md:h-[450px] lg:h-[620px] xl:h-[700px] lg:justify-end lg:w-[calc(100%+max(0px,(100vw-1600px)/2))]">
             <img
               src="/cwbranding/servicos.png"
               alt="Processo Criativo CWBranding"
-              className="w-full h-full object-cover"
+              className="h-full w-full object-contain lg:object-right"
             />
           </div>
         </div>
