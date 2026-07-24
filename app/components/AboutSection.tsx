@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import { Reveal } from "./ui/Reveal";
 import Image from "next/image";
+import { FaInstagram } from "react-icons/fa";
 export function AboutSection() {
   const { t } = useLanguage();
 
@@ -41,10 +42,10 @@ export function AboutSection() {
           <Reveal delay={0.3}>
             <button className="inline-flex bg-white text-[#004D4C] items-center gap-3 mt-6 border border-[color:var(--sand-soft)]/60 rounded-full px-7 py-3 text-sm tracking-[0.2em] uppercase hover:bg-[color:var(--sand-soft)] hover:text-[#004D4C] transition">
               <a
-                href="http://wa.me/41996250984"
+                href="https://www.instagram.com/agenciacwbranding/"
                 className="inline-flex items-center gap-3"
               >
-                {t.contact} <ArrowUpRight className="size-4" />
+                Instagram <FaInstagram  className="size-4"/>  
               </a>
             </button>
           </Reveal>
