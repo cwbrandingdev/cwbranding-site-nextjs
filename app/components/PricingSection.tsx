@@ -7,11 +7,9 @@ export default function PricingSection() {
   const { t, language } = useLanguage();
 
   const plans = t.plans || [];
-  const plansSdr = t.plansSdr || [];
 
   return (
     <section className="bg-[#EBF5F5] py-16 px-6 md:px-12">
-      {/* SECTION 1: Standard Plans */}
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display tracking-tight text-[#004d4c]">
@@ -25,149 +23,105 @@ export default function PricingSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
-          {plans.map((plan, index) => (
-            <div
-              key={index}
-              className="relative bg-[#D5E8E8] p-8 md:p-10 transition-all duration-300 shadow-lg shadow-[var(--brand-ink)]/5 ring-2 ring-[#E8C39E] border border-[#E8C39E] flex flex-col justify-between"
-            >
-              <div>
-                <span className="text-xs uppercase tracking-widest text-[#004d4c] font-medium">
-                  {plan.tagline}
-                </span>
+          {plans.map((plan, index) => {
+            const highlighted = "highlighted" in plan && plan.highlighted;
 
-                <h3 className="text-3xl font-display mt-1 mb-4 text-[#004d4c]">
-                  {plan.title}
-                </h3>
-
-                <p className="text-sm leading-relaxed opacity-90 mb-8 font-light text-[var(--brand-ink)]">
-                  {plan.description}
-                </p>
-
-                <hr className="border-[var(--brand-ink)]/10 my-6" />
-
-                <ul className="space-y-4 mb-10">
-                  {plan.features.map((feature, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-start text-xs uppercase tracking-wider text-[var(--brand-ink)]"
-                    >
-                      <span className="inline-block w-1.5 h-1.5 bg-[#E8C39E] rotate-45 mr-3 mt-1.5 flex-shrink-0" />
-                      <span className="opacity-80">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div>
-                <div className="mb-6">
-                  <span className="text-xs uppercase tracking-wider opacity-60 text-[var(--brand-ink)]">
-                    {t.pricingInvestment}
+            return (
+              <div
+                key={index}
+                className={`relative p-8 md:p-10 transition-all duration-300 shadow-lg shadow-[var(--brand-ink)]/5 ring-2 ring-[#E8C39E] border border-[#E8C39E] flex flex-col justify-between rounded-sm ${
+                  highlighted
+                    ? "bg-[#004d4c] text-white"
+                    : "bg-white text-[#004d4c]"
+                }`}
+              >
+                <div>
+                  <span className="text-xs uppercase tracking-widest text-[#E8C39E] font-medium">
+                    {plan.tagline}
                   </span>
 
-                  <div className="flex items-baseline mt-1">
-                    <span className="text-lg font-light font-display text-[var(--brand-ink)]">
-                      {language === "PT" ? "R$ " : "$ "}
-                    </span>
+                  <h3
+                    className={`text-3xl font-display mt-1 mb-4 ${
+                      highlighted ? "text-white" : "text-[#004d4c]"
+                    }`}
+                  >
+                    {plan.title}
+                  </h3>
 
-                    <span className="text-4xl md:text-5xl font-display tracking-tight text-[#004d4c]">
-                      {plan.price}
-                    </span>
+                  <p
+                    className={`text-sm leading-relaxed mb-8 font-light italic ${
+                      highlighted ? "text-white/90" : "text-[#004d4c]/90"
+                    }`}
+                  >
+                    {plan.description}
+                  </p>
 
-                    <span className="text-xs opacity-60 ml-2 text-[var(--brand-ink)]">
-                      {t.pricingPeriod}
-                    </span>
-                  </div>
+                  {"subHeader" in plan && plan.subHeader && (
+                    <p className="text-xs italic text-[#E8C39E] mb-4">
+                      {plan.subHeader}
+                    </p>
+                  )}
+
+                  <hr
+                    className={`my-6 ${
+                      highlighted
+                        ? "border-white/20"
+                        : "border-[var(--brand-ink)]/10"
+                    }`}
+                  />
+
+                  <ul className="space-y-4 mb-10">
+                    {plan.features.map((feature, idx) => (
+                      <li
+                        key={idx}
+                        className={`flex items-start text-xs uppercase tracking-wider ${
+                          highlighted
+                            ? "text-white/90"
+                            : "text-[var(--brand-ink)]"
+                        }`}
+                      >
+                        <span className="inline-block w-1.5 h-1.5 bg-[#E8C39E] rotate-45 mr-3 mt-1.5 flex-shrink-0" />
+                        <span className="opacity-80">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
-                <a
-                  href="http://wa.me/41996250984"
-                  className="w-full py-4 text-center block text-xs uppercase tracking-widest transition-all duration-300 border bg-[#E8C39E] text-[#004d4c] font-semibold border-[#E8C39E] hover:bg-[#004d4c] hover:text-white hover:border-[#004d4c]"
-                >
-                  {t.pricingButton}
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+                <div>
+                  <div className="mb-6">
+                    <div className="flex items-baseline">
+                      <span className="text-lg font-light font-display text-[#E8C39E]">
+                        {language === "PT" ? "R$ " : "$ "}
+                      </span>
 
-      {/* SECTION 2: SDR Plans */}
-      <div className="pt-16 max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display tracking-tight text-[#004d4c]">
-            <span className="italic">{t.pricingSdrTitleLine1}</span>{" "}
-            {t.pricingSdrTitleLine2}
-          </h2>
+                      <span className="text-4xl md:text-5xl font-display tracking-tight text-[#E8C39E]">
+                        {plan.price}
+                      </span>
 
-          <p className="mt-4 text-sm uppercase tracking-widest opacity-80 max-w-md mx-auto">
-            {t.pricingSdrSubtitle}
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
-          {plansSdr.map((plan, index) => (
-            <div
-              key={index}
-              className="relative bg-[#D5E8E8] border border-[#E8C39E] ring-2 ring-[#E8C39E] p-8 md:p-10 transition-all duration-300 flex flex-col justify-between"
-            >
-              <div>
-                <span className="text-xs uppercase tracking-widest text-[#004d4c] font-medium">
-                  {plan.tagline}
-                </span>
-
-                <h3 className="text-3xl font-display mt-1 mb-4 text-[#004d4c]">
-                  {plan.title}
-                </h3>
-
-                <p className="text-sm leading-relaxed opacity-90 mb-8 font-light text-[var(--brand-ink)]">
-                  {plan.description}
-                </p>
-
-                <hr className="border-[var(--brand-ink)]/10 my-6" />
-
-                <ul className="space-y-4 mb-10">
-                  {plan.features.map((feature, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-start text-xs uppercase tracking-wider text-[var(--brand-ink)]"
-                    >
-                      <span className="inline-block w-1.5 h-1.5 bg-[#E8C39E] rotate-45 mr-3 mt-1.5 flex-shrink-0" />
-                      <span className="opacity-80">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div>
-                <div className="mb-6">
-                  <span className="text-xs uppercase tracking-wider opacity-60 text-[var(--brand-ink)]">
-                    {t.pricingSdrInvestment}
-                  </span>
-
-                  <div className="flex items-baseline mt-1">
-                    <span className="text-lg font-light font-display text-[var(--brand-ink)]">
-                      {language === "PT" ? "R$ " : "$ "}
-                    </span>
-
-                    <span className="text-4xl md:text-5xl font-display tracking-tight text-[#004d4c]">
-                      {plan.price}
-                    </span>
-
-                    <span className="text-xs opacity-60 ml-2 text-[var(--brand-ink)]">
-                      {t.pricingSdrPeriod}
-                    </span>
+                      <span
+                        className={`text-xs ml-2 ${
+                          highlighted ? "text-white/60" : "opacity-60"
+                        }`}
+                      >
+                        {t.pricingPeriod}
+                      </span>
+                    </div>
                   </div>
-                </div>
 
-                <a
-                  href="http://wa.me/41996250984"
-                  className="w-full py-4 text-center block text-xs uppercase tracking-widest transition-all duration-300 border bg-[#E8C39E] text-[#004d4c] font-semibold border-[#E8C39E] hover:bg-[#004d4c] hover:text-white hover:border-[#004d4c]"
-                >
-                  {t.pricingSdrButton}
-                </a>
+                  <a
+                    href="http://wa.me/41996250984"
+                    className={`w-full py-4 text-center block text-xs uppercase tracking-widest transition-all duration-300 border font-semibold ${
+                      highlighted
+                        ? "bg-[#E8C39E] text-[#004d4c] border-[#E8C39E] hover:bg-white hover:text-[#004d4c] hover:border-white"
+                        : "bg-[#E8C39E] text-[#004d4c] border-[#E8C39E] hover:bg-[#004d4c] hover:text-white hover:border-[#004d4c]"
+                    }`}
+                  >
+                    {t.pricingButton}
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
