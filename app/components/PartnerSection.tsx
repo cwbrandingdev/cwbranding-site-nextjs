@@ -22,11 +22,11 @@ function PartnerLogo({
   alt: string;
 }) {
   return (
-    <div className="group shrink-0 aspect-square w-[calc((100vw-3rem-1rem)/2)] sm:w-[calc((min(100vw-4rem,1400px)-2*1.25rem)/3)] lg:w-[calc((min(100vw-6rem,1400px)-5*1.5rem)/6)] bg-[var(--sand)] overflow-hidden p-5 md:p-7 transition-transform duration-500 hover:scale-105">
+    <div className="group shrink-0 relative w-32 sm:w-40 md:w-48 lg:w-[calc((min(100vw-6rem,1400px)-5*1.5rem)/6)] aspect-square bg-[var(--sand)] overflow-hidden p-3 sm:p-5 md:p-7 transition-transform duration-500 hover:scale-105 flex items-center justify-center">
       <img
         src={url}
         alt={alt}
-        className="w-full h-full object-contain"
+        className="max-w-full max-h-full w-auto h-auto object-contain block"
         draggable={false}
       />
     </div>
