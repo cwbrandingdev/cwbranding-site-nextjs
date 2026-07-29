@@ -40,7 +40,7 @@ export const translations = {
 
     servicesTitleLine1: "Nossos",
     servicesTitleLine2: "Serviços",
-    serviceMainImage:"/cwbranding/mainservicesimagept.png",
+    serviceMainImage: "/cwbranding/mainservicesimagept.png",
     servicesHeadline:
       "Transformamos sua visão em resultados concretos por meio da união entre estratégia, design e presença digital.",
     servicesDescription:
@@ -102,37 +102,43 @@ export const translations = {
     plans: [
       {
         title: "Posicionamento",
-        description:
-          "Sua empresa passa a ser percebida pelo valor que entrega. Para empresas que já cresceram financeiramente e agora precisam que sua marca cresça na mesma proporção.",
+        qualification:
+          "Para empresas que precisam estruturar sua presença e posicionamento no mercado.",
         price: "5.699",
         features: [
           "Diagnóstico estratégico de marca",
-          "Posicionamento mensal",
+          "Planejamento mensal",
+          "Conteúdos diários",
           "Produção de conteúdo premium",
           "Gestão de mídia paga",
+          "Landing page",
           "Encontro estratégico mensal",
+          "Assessoria de Branding e Posicionamento",
         ],
-        tagline: "Modelo 01",
+        tagline: "Projeto",
       },
       {
         title: "Escala",
-        description:
-          "Sua comunicação começa a gerar crescimento consistente. Para empresas que querem transformar posicionamento em oportunidades comerciais recorrentes.",
+        qualification:
+          "Para empresas que já possuem operação e querem acelerar crescimento e aquisição.",
         price: "7.999",
         features: [
           "Inteligência de demanda",
           "Estrutura inicial de geração de leads",
           "Relatórios estratégicos quinzenais",
+          "Relatório diário de alcance",
+          "Qualificação de audiência",
           "Otimização contínua de campanhas",
           "Planejamento comercial integrado",
+          "10 Horas semanais de SDR",
         ],
-        tagline: "Modelo 02",
-        subHeader: "Tudo do Posicionamento, mais:",
+        tagline: "Projeto",
+        subHeader: "Projeto Posicionamento +",
       },
       {
         title: "Liderança",
-        description:
-          "Sua marca se torna referência no mercado. Para empresas que querem ocupar a liderança do seu mercado através de marca, estratégia e crescimento comercial.",
+        qualification:
+          "Para empresas que precisam de uma estrutura completa de marketing e geração de demanda.",
         price: "9.999",
         features: [
           "Qualificação ativa de oportunidades",
@@ -140,15 +146,21 @@ export const translations = {
           "Reuniões semanais",
           "Produção audiovisual premium",
           "Canal estratégico direto",
+          "Dashboard de gestão",
+          "Funil de vendas",
+          "20 Horas semanais de SDR",
         ],
-        tagline: "Modelo 03",
-        subHeader: "Tudo da Escala, mais:",
+        tagline: "Projeto",
+        subHeader: "Projeto Escala +",
         highlighted: true,
       },
     ],
     footerDescription: "A sua agência de marketing. Curitiba — PR.",
     footerNavTitle: "Navegação",
     footerContactTitle: "Contato",
+    footerAddress:
+      "Rua Ébano Pereira, 11, Conj. 1401\nCentro — Curitiba, PR — 80410-240",
+    footerViewMap: "Ver no mapa",
     footerRights: "Todos os direitos reservados.",
   },
 
@@ -162,7 +174,7 @@ export const translations = {
 
     heroTitleLine1: "THE STRATEGY",
     heroTitleLine2: "BEHIND",
-    heroTitleLine3: "YOUR BRAND",
+    heroTitleLine3: "YOUR COMPANY",
     heroSubtitle: "CWB / SP / TOR",
 
     marqueeA: ["#BeAUTHENTIC", "#BeSTRATEGIC", "#BeCREATIVE", "#BeMEMORABLE"],
@@ -184,7 +196,7 @@ export const translations = {
 
     servicesTitleLine1: "Our",
     servicesTitleLine2: "Services",
-    serviceMainImage:"/cwbranding/mainservicesimageen.png",
+    serviceMainImage: "/cwbranding/mainservicesimageen.png",
 
     servicesHeadline:
       "We transform your vision into concrete results by uniting strategy, design, and digital presence.",
@@ -247,49 +259,56 @@ export const translations = {
     plans: [
       {
         title: "Positioning",
-        description:
-          "Your company starts to be perceived for the value it delivers. For companies that have already grown financially and now need their brand to grow at the same pace.",
+        qualification:
+          "For companies that need to structure their presence and market positioning.",
         price: "5,699",
         features: [
           "Strategic brand diagnosis",
-          "Monthly positioning",
+          "Monthly planning",
+          "Daily content",
           "Premium content production",
           "Paid media management",
+          "Landing page",
           "Monthly strategic meeting",
+          "Branding and positioning advisory",
         ],
-        tagline: "Model 01",
+        tagline: "Project",
       },
       {
         title: "Scale",
-        description:
-          "Your communication starts generating consistent growth. For companies that want to turn positioning into recurring commercial opportunities.",
+        qualification:
+          "For companies that already have operations and want to accelerate growth and acquisition.",
         price: "7,999",
-        subHeader: "Everything in Positioning, plus:",
-
         features: [
           "Demand intelligence",
           "Initial lead generation structure",
           "Biweekly strategic reports",
+          "Daily reach report",
+          "Audience qualification",
           "Continuous campaign optimization",
           "Integrated commercial planning",
+          "10 weekly hours of SDR",
         ],
-        tagline: "Model 02",
+        tagline: "Project",
+        subHeader: "Positioning Project +",
       },
       {
         title: "Leadership",
-        description:
-          "Your brand becomes a market reference. For companies that want to occupy market leadership through brand, strategy, and commercial growth.",
+        qualification:
+          "For companies that need a complete marketing and demand generation structure.",
         price: "9,999",
-        subHeader: "Everything in Scale, plus:",
-
         features: [
           "Active opportunity qualification",
           "Dedicated Senior Manager",
           "Weekly meetings",
           "Premium audiovisual production",
           "Direct strategic channel",
+          "Management dashboard",
+          "Sales funnel",
+          "20 weekly hours of SDR",
         ],
-        tagline: "Model 03",
+        tagline: "Project",
+        subHeader: "Scale Project +",
         highlighted: true,
       },
     ],
@@ -297,6 +316,9 @@ export const translations = {
     footerDescription: "Your marketing agency. Curitiba — PR.",
     footerNavTitle: "Navigation",
     footerContactTitle: "Contact",
+    footerAddress:
+      "Rua Ébano Pereira, 11, Suite 1401\nDowntown — Curitiba, PR — 80410-240, Brazil",
+    footerViewMap: "View on map",
     footerRights: "All rights reserved.",
   },
 };
