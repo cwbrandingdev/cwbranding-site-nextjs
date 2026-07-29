@@ -43,7 +43,7 @@ export function ServicesSection() {
 
           <div className="flex h-[300px] w-full items-center justify-center md:h-[450px] lg:h-[620px] xl:mr-64 xl:h-[700px] lg:justify-end lg:w-full mb-36">
             <img
-              src="/cwbranding/servicos.png"
+              src={t.serviceMainImage}
               alt="Processo Criativo CWBranding"
               className="h-full w-full object-contain lg:object-right"
             />

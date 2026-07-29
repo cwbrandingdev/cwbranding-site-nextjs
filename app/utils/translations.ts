@@ -11,7 +11,6 @@ export const translations = {
     heroTitleLine2: "POR TRÁS DA",
     heroTitleLine3: "SUA EMPRESA",
     heroSubtitle: "CWB / SP / TOR",
-
     marqueeA: [
       "#SejaAUTÊNTICO",
       "#SejaESTRATÉGICO",
@@ -41,6 +40,7 @@ export const translations = {
 
     servicesTitleLine1: "Nossos",
     servicesTitleLine2: "Serviços",
+    serviceMainImage:"/cwbranding/mainservicesimagept.png",
     servicesHeadline:
       "Transformamos sua visão em resultados concretos por meio da união entre estratégia, design e presença digital.",
     servicesDescription:
@@ -101,44 +101,48 @@ export const translations = {
     pricingButton: "Quero este plano",
     plans: [
       {
-        title: "Autoridade",
+        title: "Posicionamento",
         description:
-          "Para marcas que precisam parecer — e ser — do tamanho que já são.",
+          "Sua empresa passa a ser percebida pelo valor que entrega. Para empresas que já cresceram financeiramente e agora precisam que sua marca cresça na mesma proporção.",
         price: "5.699",
         features: [
-          "Estratégia de marca e posicionamento mensal",
-          "Conteúdo com produção editorial completa",
-          "Gestão de tráfego com foco em posicionamento",
-          "1 encontro estratégico mensal",
+          "Diagnóstico estratégico de marca",
+          "Posicionamento mensal",
+          "Produção de conteúdo premium",
+          "Gestão de mídia paga",
+          "Encontro estratégico mensal",
         ],
-        tagline: "Pacote 01",
+        tagline: "Modelo 01",
       },
       {
-        title: "Aceleração",
+        title: "Escala",
         description:
-          "Para marcas com autoridade que querem virar isso em pipeline.",
+          "Sua comunicação começa a gerar crescimento consistente. Para empresas que querem transformar posicionamento em oportunidades comerciais recorrentes.",
         price: "7.999",
-        subHeader: "Tudo do Autoridade, mais:",
         features: [
-          "Inteligência de Demanda inicial: leads organizados e priorizados",
-          "Relatório quinzenal de performance",
-          "Testes contínuos de campanha",
+          "Inteligência de demanda",
+          "Estrutura inicial de geração de leads",
+          "Relatórios estratégicos quinzenais",
+          "Otimização contínua de campanhas",
+          "Planejamento comercial integrado",
         ],
-        tagline: "Pacote 02",
+        tagline: "Modelo 02",
+        subHeader: "Tudo do Posicionamento, mais:",
       },
       {
-        title: "Domínio",
+        title: "Liderança",
         description:
-          "Para marcas que querem virar referência com um motor comercial afiado.",
+          "Sua marca se torna referência no mercado. Para empresas que querem ocupar a liderança do seu mercado através de marca, estratégia e crescimento comercial.",
         price: "9.999",
-        subHeader: "Tudo da Aceleração, mais:",
         features: [
-          "Inteligência de Demanda completa: qualificação ativa e agendamento",
-          "Gestor de conta sênior dedicado",
-          "Encontros semanais e canal direto",
+          "Qualificação ativa de oportunidades",
+          "Gestor Sênior dedicado",
+          "Reuniões semanais",
           "Produção audiovisual premium",
+          "Canal estratégico direto",
         ],
-        tagline: "Pacote 03",
+        tagline: "Modelo 03",
+        subHeader: "Tudo da Escala, mais:",
         highlighted: true,
       },
     ],
@@ -180,6 +184,8 @@ export const translations = {
 
     servicesTitleLine1: "Our",
     servicesTitleLine2: "Services",
+    serviceMainImage:"/cwbranding/mainservicesimageen.png",
+
     servicesHeadline:
       "We transform your vision into concrete results by uniting strategy, design, and digital presence.",
     servicesDescription:
@@ -240,44 +246,50 @@ export const translations = {
     pricingButton: "I want this plan",
     plans: [
       {
-        title: "Authority",
+        title: "Positioning",
         description:
-          "For brands that need to look — and be — the size they already are.",
+          "Your company starts to be perceived for the value it delivers. For companies that have already grown financially and now need their brand to grow at the same pace.",
         price: "5,699",
         features: [
-          "Monthly brand strategy and positioning",
-          "Content with full editorial production",
-          "Traffic management focused on positioning",
-          "1 monthly strategic meeting",
+          "Strategic brand diagnosis",
+          "Monthly positioning",
+          "Premium content production",
+          "Paid media management",
+          "Monthly strategic meeting",
         ],
-        tagline: "Package 01",
+        tagline: "Model 01",
       },
       {
-        title: "Acceleration",
+        title: "Scale",
         description:
-          "For brands with authority that want to turn it into pipeline.",
+          "Your communication starts generating consistent growth. For companies that want to turn positioning into recurring commercial opportunities.",
         price: "7,999",
-        subHeader: "Everything in Authority, plus:",
+        subHeader: "Everything in Positioning, plus:",
+
         features: [
-          "Initial Demand Intelligence: organized and prioritized leads",
-          "Biweekly performance report",
-          "Continuous campaign testing",
+          "Demand intelligence",
+          "Initial lead generation structure",
+          "Biweekly strategic reports",
+          "Continuous campaign optimization",
+          "Integrated commercial planning",
         ],
-        tagline: "Package 02",
+        tagline: "Model 02",
       },
       {
-        title: "Dominance",
+        title: "Leadership",
         description:
-          "For brands that want to become a reference with a sharp commercial engine.",
+          "Your brand becomes a market reference. For companies that want to occupy market leadership through brand, strategy, and commercial growth.",
         price: "9,999",
-        subHeader: "Everything in Acceleration, plus:",
+        subHeader: "Everything in Scale, plus:",
+
         features: [
-          "Full Demand Intelligence: active qualification and scheduling",
-          "Dedicated senior account manager",
-          "Weekly meetings and direct channel",
+          "Active opportunity qualification",
+          "Dedicated Senior Manager",
+          "Weekly meetings",
           "Premium audiovisual production",
+          "Direct strategic channel",
         ],
-        tagline: "Package 03",
+        tagline: "Model 03",
         highlighted: true,
       },
     ],
