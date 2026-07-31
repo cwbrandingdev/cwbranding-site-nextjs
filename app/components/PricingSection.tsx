@@ -47,7 +47,13 @@ export default function PricingSection() {
                   >
                     {plan.title}
                   </h3>
-
+                  <p
+                    className={`text-sm leading-relaxed mb-8 font-light italic ${
+                      highlighted ? "text-white/90" : "text-[#004d4c]/90"
+                    }`}
+                  >
+                    {plan.description}
+                  </p>
                   {"qualification" in plan && plan.qualification && (
                     <p
                       className={`text-sm leading-relaxed mb-8 ${

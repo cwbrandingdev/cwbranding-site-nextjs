@@ -105,8 +105,8 @@ export const translations = {
     plans: [
       {
         title: "Posicionamento",
-        qualification:
-          "Para empresas que precisam estruturar sua presença e posicionamento no mercado.",
+        description:
+        "Para empresas que precisam estruturar sua presença e posicionamento no mercado.Sua empresa passa a ser percebida pelo valor que entrega.",
         price: "5.699",
         features: [
           "Diagnóstico estratégico de marca",
@@ -122,8 +122,8 @@ export const translations = {
       },
       {
         title: "Escala",
-        qualification:
-          "Para empresas que já possuem operação e querem acelerar crescimento e aquisição.",
+        description:
+        "Para empresas que já possuem operação e querem acelerar crescimento e aquisição. Sua comunicação começa a gerar crescimento consistente. ",
         price: "7.999",
         features: [
           "Inteligência de demanda",
@@ -140,8 +140,9 @@ export const translations = {
       },
       {
         title: "Liderança",
-        qualification:
-          "Para empresas que precisam de uma estrutura completa de marketing e geração de demanda.",
+        description:
+          "Para empresas que precisam de uma estrutura completa de marketing e geração de demanda. Sua marca se torna referência no mercado.",
+       
         price: "9.999",
         features: [
           "Qualificação ativa de oportunidades",
@@ -265,8 +266,8 @@ export const translations = {
     plans: [
       {
         title: "Positioning",
-        qualification:
-          "For companies that need to structure their presence and market positioning.",
+        description:
+          "For companies that need to structure their presence and market positioning. Your company starts to be perceived for the value it delivers.",
         price: "5,699",
         features: [
           "Strategic brand diagnosis",
@@ -282,8 +283,8 @@ export const translations = {
       },
       {
         title: "Scale",
-        qualification:
-          "For companies that already have operations and want to accelerate growth and acquisition.",
+        description:
+        "For companies that already have operations and want to accelerate growth and acquisition. Your communication starts generating consistent growth.",
         price: "7,999",
         features: [
           "Demand intelligence",
@@ -300,8 +301,8 @@ export const translations = {
       },
       {
         title: "Leadership",
-        qualification:
-          "For companies that need a complete marketing and demand generation structure.",
+        description:
+        "For companies that need a complete marketing and demand generation structure. Your brand becomes a market reference.",
         price: "9,999",
         features: [
           "Active opportunity qualification",
