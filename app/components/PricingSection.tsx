@@ -54,15 +54,7 @@ export default function PricingSection() {
                   >
                     {plan.description}
                   </p>
-                  {"qualification" in plan && plan.qualification && (
-                    <p
-                      className={`text-sm leading-relaxed mb-8 ${
-                        highlighted ? "text-white" : "text-[#004d4c]"
-                      }`}
-                    >
-                      {plan.qualification} 
-                    </p>
-                  )}
+                 
 
                   {"subHeader" in plan && plan.subHeader && (
                     <p className="text-xs italic text-[#E8C39E] mb-4">
