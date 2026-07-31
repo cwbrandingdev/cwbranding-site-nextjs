@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
@@ -96,6 +97,18 @@ export default function RootLayout({
             href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Inter:wght@300..700&display=swap"
             rel="stylesheet"
           />
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=AW-18362264746"
+            strategy="afterInteractive"
+          />
+          <Script id="google-gtag" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-18362264746');
+            `}
+          </Script>
         </head>
         <body>
           <Header />
