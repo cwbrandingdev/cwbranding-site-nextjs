@@ -21,13 +21,14 @@ export function Header() {
   return (
     <div className="fixed top-0 inset-x-0 z-50 bg-gradient-to-b from-[#006867] to-[#004A4A] text-[color:var(--sand-soft)]">
       <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between px-6 md:px-10 text-[13px] tracking-[0.18em] uppercase">
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden md:flex items-center gap-8">
           <a href="#servicos" className="hover:opacity-70 transition-opacity">
             {t.services}
           </a>
           <a href="#sobre" className="hover:opacity-70 transition-opacity">
             {t.about}
           </a>
+       
         </nav>
 
         <button
@@ -110,6 +111,7 @@ export function Header() {
             >
               {t.about}
             </a>
+       
             <a
               href="https://wa.me/41996250984"
               target="_blank"

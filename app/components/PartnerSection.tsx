@@ -67,7 +67,7 @@ export function PartnersSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-28 md:py-40 px-6 md:px-12 overflow-hidden">
+    <section id="clientes" className="scroll-mt-16 py-28 md:py-40 px-6 md:px-12 overflow-hidden">
       <div className="mx-auto max-w-[1400px]">
         <Reveal>
           <h2 className="font-display text-5xl md:text-7xl lg:text-8xl">
