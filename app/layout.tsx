@@ -12,18 +12,17 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 export const metadata: Metadata = {
   metadataBase: new URL("https://cwbranding.com.br"),
   title: {
-    default: "CWBranding — Agência de Marketing Digital",
+    default: "CWBranding — A sua estratégia.",
     template: "%s | CWBranding",
   },
   description:
-    "A sua agência de marketing. Especialistas em Social Media, Identidade Visual, Gestão de Tráfego Pago e Branding.",
+    "A sua agência de estratégia. Especialistas em Social Media, Identidade Visual, Gestão de Tráfego Pago e Branding.",
   keywords: [
-    "Agência de Marketing",
+    "Agência de Branding",
     "Social Media",
     "Identidade Visual",
     "Gestão de Tráfego",
     "Branding",
-    "Marketing Digital",
   ],
   authors: [{ name: "CWBranding" }],
   creator: "CWBranding",
@@ -37,9 +36,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "CWBranding — Agência de Marketing Digital",
+    title: "CWBranding — A sua estratégia.",
     description:
-      "A sua agência de marketing. Especialistas em Social Media, Identidade Visual, Gestão de Tráfego Pago e Branding.",
+      "A sua agência de estratégia. Especialistas em Social Media, Identidade Visual, Gestão de Tráfego Pago e Branding.",
     url: "https://cwbranding.com.br",
     siteName: "CWBranding",
     locale: "pt_BR",
@@ -49,15 +48,15 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "CWBranding — Agência de Marketing",
+        alt: "CWBranding — A sua estratégia.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CWBranding — Agência de Marketing Digital",
+    title: "CWBranding — A sua estratégia",
     description:
-      "A sua agência de marketing. Especialistas em Social Media, Identidade Visual, Gestão de Tráfego Pago e Branding.",
+      "A sua agência de estratégia. Especialistas em Social Media, Identidade Visual, Gestão de Tráfego Pago e Branding.",
     images: ["/og-image.jpg"],
   },
   robots: {
