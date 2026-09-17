@@ -275,11 +275,12 @@ export const translations = {
     pricingButton: "I want this plan",
     plans: [
       {
-        title: "",
-        description: "",
-        price: "",
-        features: [],
-        tagline: "",
+        title: "Essential",
+        description:
+          "For companies that are just starting out and want to organize their digital presence with consistency and professionalism from day one.",
+        price: "3,599",
+        features: ["45 pieces of content", "30 Stories", "15 feed posts", "No paid traffic"],
+        tagline: "Project",
       },
       {
         title: "Positioning",
