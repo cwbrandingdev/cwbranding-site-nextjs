@@ -10,7 +10,7 @@ export default function PricingSection() {
 
   return (
     <section id="planos" className="scroll-mt-16 bg-[#EBF5F5] py-16 px-6 md:px-12">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display tracking-tight text-[#004d4c]">
             <span className="italic">{t.pricingTitleLine1}</span>{" "}
@@ -22,7 +22,7 @@ export default function PricingSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
           {plans.map((plan, index) => {
             const highlighted = "highlighted" in plan && plan.highlighted;
 

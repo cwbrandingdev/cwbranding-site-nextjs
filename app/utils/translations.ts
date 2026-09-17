@@ -1,3 +1,5 @@
+import { title } from "process";
+
 export const translations = {
   PT: {
     services: "Serviços",
@@ -104,9 +106,17 @@ export const translations = {
     pricingButton: "Quero este plano",
     plans: [
       {
+        title: "Essencial",
+        description:
+          "Para empresas que estão começando e querem organizar sua presença digital com consistência e profissionalismo desde o início.",
+        price: "3.599",
+        features: ["45 conteudos", "30 Stories", "15 feed", "Sem trafego pago"],
+        tagline: "Projeto",
+      },
+      {
         title: "Posicionamento",
         description:
-        "Para empresas que precisam estruturar sua presença e posicionamento no mercado.Sua empresa passa a ser percebida pelo valor que entrega.",
+          "Para empresas que precisam estruturar sua presença e posicionamento no mercado.Sua empresa passa a ser percebida pelo valor que entrega.",
         price: "5.699",
         features: [
           "Diagnóstico estratégico de marca",
@@ -123,7 +133,7 @@ export const translations = {
       {
         title: "Escala",
         description:
-        "Para empresas que já possuem operação e querem acelerar crescimento e aquisição. Sua comunicação começa a gerar crescimento consistente. ",
+          "Para empresas que já possuem operação e querem acelerar crescimento e aquisição. Sua comunicação começa a gerar crescimento consistente. ",
         price: "7.999",
         features: [
           "Inteligência de demanda",
@@ -142,7 +152,7 @@ export const translations = {
         title: "Liderança",
         description:
           "Para empresas que precisam de uma estrutura completa de marketing e geração de demanda. Sua marca se torna referência no mercado.",
-       
+
         price: "9.999",
         features: [
           "Qualificação ativa de oportunidades",
@@ -265,6 +275,13 @@ export const translations = {
     pricingButton: "I want this plan",
     plans: [
       {
+        title: "",
+        description: "",
+        price: "",
+        features: [],
+        tagline: "",
+      },
+      {
         title: "Positioning",
         description:
           "For companies that need to structure their presence and market positioning. Your company starts to be perceived for the value it delivers.",
@@ -284,7 +301,7 @@ export const translations = {
       {
         title: "Scale",
         description:
-        "For companies that already have operations and want to accelerate growth and acquisition. Your communication starts generating consistent growth.",
+          "For companies that already have operations and want to accelerate growth and acquisition. Your communication starts generating consistent growth.",
         price: "7,999",
         features: [
           "Demand intelligence",
@@ -302,7 +319,7 @@ export const translations = {
       {
         title: "Leadership",
         description:
-        "For companies that need a complete marketing and demand generation structure. Your brand becomes a market reference.",
+          "For companies that need a complete marketing and demand generation structure. Your brand becomes a market reference.",
         price: "9,999",
         features: [
           "Active opportunity qualification",
