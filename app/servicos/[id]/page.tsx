@@ -2,6 +2,7 @@ import { getServiceImageUrl } from "@/app/utils/serviceImages";
 import { translations } from "@/app/utils/translations";
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import {
   ChevronLeft,
   Calendar,
@@ -12,6 +13,42 @@ import {
 
 interface ProjectProps {
   params: Promise<{ id: string }>;
+}
+
+export async function generateMetadata({
+  params,
+}: ProjectProps): Promise<Metadata> {
+  const { id } = await params;
+  const servico = translations.PT.servicesList.find(
+    (p) => String(p.id) === String(id),
+  );
+
+  if (!servico) {
+    return { title: "Serviço não encontrado" };
+  }
+
+  const imageUrl = getServiceImageUrl(servico.id);
+  const url = `/servicos/${servico.id}`;
+
+  return {
+    title: servico.title,
+    description: servico.desc,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title: `${servico.title} | CWBranding`,
+      description: servico.desc,
+      url,
+      images: [{ url: imageUrl, width: 1200, height: 800, alt: servico.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${servico.title} | CWBranding`,
+      description: servico.desc,
+      images: [imageUrl],
+    },
+  };
 }
 
 export default async function ServicesPage({ params }: ProjectProps) {

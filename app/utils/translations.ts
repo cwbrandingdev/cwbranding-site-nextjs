@@ -110,7 +110,7 @@ export const translations = {
         description:
           "Para empresas que estão começando e querem organizar sua presença digital com consistência e profissionalismo desde o início.",
         price: "3.599",
-        features: ["45 conteudos", "30 Stories", "15 feed", "Sem trafego pago"],
+        features: ["45 conteúdos", "30 Stories", "15 feed", "Sem tráfego pago"],
         tagline: "Projeto",
       },
       {
@@ -279,7 +279,12 @@ export const translations = {
         description:
           "For companies that are just starting out and want to organize their digital presence with consistency and professionalism from day one.",
         price: "3,599",
-        features: ["45 pieces of content", "30 Stories", "15 feed posts", "No paid traffic"],
+        features: [
+          "45 pieces of content",
+          "30 Stories",
+          "15 feed posts",
+          "No paid traffic",
+        ],
         tagline: "Project",
       },
       {
