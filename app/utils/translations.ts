@@ -73,7 +73,7 @@ export const translations = {
       },
       {
         id: 5,
-        title: "Assessoria de Marketing",
+        title: "Agência de Marketing",
         desc: "Consultoria estratégica para empresas desenvolverem e implementarem planos de marketing eficazes.",
       },
       {
@@ -111,7 +111,7 @@ export const translations = {
           "Para empresas que estão começando e querem organizar sua presença digital com consistência e profissionalismo desde o início.",
         price: "3.599",
         features: ["45 conteúdos", "30 Stories", "15 feed", "Sem tráfego pago"],
-        tagline: "Projeto",
+        tagline: "Pacote",
       },
       {
         title: "Posicionamento",
@@ -126,9 +126,9 @@ export const translations = {
           "Gestão de mídia paga",
           "Landing page",
           "Encontro estratégico mensal",
-          "Assessoria de Branding e Posicionamento",
+          "Agência de Branding e Posicionamento",
         ],
-        tagline: "Projeto",
+        tagline: "Pacote",
       },
       {
         title: "Escala",
@@ -145,8 +145,8 @@ export const translations = {
           "Planejamento comercial integrado",
           "10 Horas semanais de SDR",
         ],
-        tagline: "Projeto",
-        subHeader: "Projeto Posicionamento +",
+        tagline: "Pacote",
+        subHeader: "Pacote Posicionamento +",
       },
       {
         title: "Liderança",
@@ -164,12 +164,12 @@ export const translations = {
           "Funil de vendas",
           "20 Horas semanais de SDR",
         ],
-        tagline: "Projeto",
+        tagline: "Pacote",
         subHeader: "Projeto Escala +",
         highlighted: true,
       },
     ],
-    footerDescription: "A sua agência de marketing. Curitiba — PR.",
+    footerDescription: "A sua agência  de marketing. Curitiba — PR.",
     footerNavTitle: "Navegação",
     footerContactTitle: "Contato",
     footerAddress:
@@ -285,7 +285,7 @@ export const translations = {
           "15 feed posts",
           "No paid traffic",
         ],
-        tagline: "Project",
+        tagline: "Package",
       },
       {
         title: "Positioning",
@@ -302,7 +302,7 @@ export const translations = {
           "Monthly strategic meeting",
           "Branding and positioning advisory",
         ],
-        tagline: "Project",
+        tagline: "Package",
       },
       {
         title: "Scale",
@@ -319,7 +319,7 @@ export const translations = {
           "Integrated commercial planning",
           "10 weekly hours of SDR",
         ],
-        tagline: "Project",
+        tagline: "Package",
         subHeader: "Positioning Project +",
       },
       {
@@ -337,7 +337,7 @@ export const translations = {
           "Sales funnel",
           "20 weekly hours of SDR",
         ],
-        tagline: "Project",
+        tagline: "Package",
         subHeader: "Scale Project +",
         highlighted: true,
       },

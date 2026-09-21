@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description:
     "A sua agência de estratégia. Especialistas em Social Media, Identidade Visual, Gestão de Tráfego Pago e Branding.",
   keywords: [
-    "Agência de Branding",
+    "agência de Branding",
     "Social Media",
     "Identidade Visual",
     "Gestão de Tráfego",
