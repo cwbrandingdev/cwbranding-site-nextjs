@@ -1,7 +1,8 @@
 "use client";
 
-import { ArrowUpRight, MapPin } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
+import { contact } from "../utils/contact";
 import { Reveal } from "./ui/Reveal";
 import {
   Carousel,
@@ -38,7 +39,7 @@ export function SpaceSection() {
                 <div className="relative h-[320px] md:h-[500px] w-full rounded-2xl overflow-hidden shadow-xl">
                   <img
                     src={img}
-                    alt={`Slide ${index + 1}`}
+                    alt={`Sede da CWBranding no Centro de Curitiba — foto ${index + 1}`}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-black/20" />
@@ -57,7 +58,7 @@ export function SpaceSection() {
             <Reveal>
               <Image
                 src="/cwbranding/cwbnossolocal.png"
-                alt="Foto de perfil da CWBranding"
+                alt="Sede da CWBranding no Centro de Curitiba, em frente ao Palácio Avenida"
                 width={100}
                 height={100}
                 className="rounded-full"
@@ -66,9 +67,9 @@ export function SpaceSection() {
           </div>
 
           <Reveal delay={0.1}>
-            <h3 className="font-display text-3xl py-4 md:text-5xl text-white font-semibold leading-tight text-center lg:text-left">
+            <h2 className="font-display text-3xl py-4 md:text-5xl text-white font-semibold leading-tight text-center lg:text-left">
               {t.spaceTitle}
-            </h3>
+            </h2>
           </Reveal>
 
           <Reveal delay={0.2}>
@@ -80,7 +81,9 @@ export function SpaceSection() {
           <Reveal delay={0.3}>
             <div className="mt-8 flex justify-center lg:justify-start">
               <a
-                href="http://wa.me/41996250984"
+                href={contact.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 border border-emerald-400 rounded-full px-7 py-3 text-sm tracking-[0.2em] uppercase text-emerald-300 hover:bg-emerald-400 hover:text-[#004A4A] transition font-medium"
               >
                 {t.discover} <ArrowUpRight className="size-4" />

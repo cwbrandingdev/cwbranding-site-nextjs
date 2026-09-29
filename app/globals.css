@@ -48,10 +48,10 @@ html,
 body {
   background: var(--sand-soft);
   color: var(--brand-ink);
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-sans), "Inter", sans-serif;
 }
 .font-display {
-  font-family: "Fraunces", serif;
+  font-family: var(--font-display), "Fraunces", serif;
 }
 
 @keyframes marqueeLeft {

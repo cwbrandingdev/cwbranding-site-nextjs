@@ -12,7 +12,7 @@ export function ServicesSection() {
   return (
     <section
       id="servicos"
-      className="relative overflow-hidden bg-[#004A4A] py-28 md:py-40 pl-6 md:pl-12 pr-4 md:pr-5"
+      className="relative overflow-hidden bg-[#004A4A] py-28 md:py-40 pl-6 md:pl-12 pr-4 md:pr-5 scroll-mt-16"
     >
       <div className="mx-auto max-w-[1600px]">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] lg:gap-14 xl:gap-16">
@@ -44,7 +44,7 @@ export function ServicesSection() {
           <div className="flex h-[300px] w-full items-center justify-center md:h-[450px] lg:h-[620px] xl:mr-64 xl:h-[700px] lg:justify-end lg:w-full mb-36">
             <img
               src={t.serviceMainImage}
-              alt="Processo Criativo CWBranding"
+              alt="Processo criativo da CWBranding, agência de branding em Curitiba"
               className="h-full w-full object-contain lg:object-right"
             />
           </div>

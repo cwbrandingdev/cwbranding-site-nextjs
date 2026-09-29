@@ -66,7 +66,7 @@ export function Footer() {
               <ul className="space-y-3 text-sm">
                 <li>
                   <a
-                    href="#servicos"
+                    href="/servicos"
                     className="transition-colors hover:text-[color:var(--sand-soft)]"
                   >
                     {t.services}
@@ -74,7 +74,7 @@ export function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#sobre"
+                    href="/#sobre"
                     className="transition-colors hover:text-[color:var(--sand-soft)]"
                   >
                     {t.about}
@@ -82,7 +82,7 @@ export function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#espaco"
+                    href="/#espaco"
                     className="transition-colors hover:text-[color:var(--sand-soft)]"
                   >
                     {t.navSpace}
@@ -90,7 +90,7 @@ export function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#clientes"
+                    href="/#clientes"
                     className="transition-colors hover:text-[color:var(--sand-soft)]"
                   >
                     {t.navClients}
@@ -98,10 +98,18 @@ export function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#planos"
+                    href="/#planos"
                     className="transition-colors hover:text-[color:var(--sand-soft)]"
                   >
                     {t.navPlans}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/#faq"
+                    className="transition-colors hover:text-[color:var(--sand-soft)]"
+                  >
+                    FAQ
                   </a>
                 </li>
                 <li>
@@ -178,7 +186,8 @@ export function Footer() {
         <div className="border-t border-white/10">
           <div className="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-3 px-6 py-6 text-xs opacity-60 md:flex-row md:px-12">
             <p>
-              © {new Date().getFullYear()} CWBranding. {t.footerRights}
+              © {new Date().getFullYear()} CWBranding Ltda. CNPJ 46.292.260/0001-89.{" "}
+              {t.footerRights}
             </p>
             <p className="tracking-[0.15em] uppercase">CWB / SP / TOR</p>
           </div>

@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useLanguage } from "../context/LanguageContext";
+import { contact } from "../utils/contact";
 
 export default function PricingSection() {
   const { t, language } = useLanguage();
@@ -109,7 +110,9 @@ export default function PricingSection() {
                   </div>
 
                   <a
-                    href="http://wa.me/41996250984"
+                    href={contact.whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`w-full py-4 text-center block text-xs uppercase tracking-widest transition-all duration-300 border font-semibold ${
                       highlighted
                         ? "bg-[#E8C39E] text-[#004d4c] border-[#E8C39E] hover:bg-white hover:text-[#004d4c] hover:border-white"

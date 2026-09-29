@@ -37,6 +37,7 @@ export function Hero() {
         loop
         muted
         playsInline
+        poster="/og-image.jpg"
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
         <source src="/cwbranding/videofundo.mp4" type="video/mp4" />
@@ -70,6 +71,9 @@ export function Hero() {
             <br />
             {t.heroTitleLine3}
           </h1>
+          <p className="font-display font-medium text-[color:var(--sand-soft)]/80 text-sm md:text-lg tracking-[0.12em] mt-5 pl-1 md:pl-2">
+            {t.heroTagline}
+          </p>
           <p className="font-display font-medium text-[color:var(--sand-soft)]/60 text-base md:text-2xl tracking-[0.3em] mt-3 pl-1 md:pl-2">
             CWB / SP / TOR
           </p>

@@ -55,7 +55,7 @@ function PartnerMarquee({
           <PartnerLogo
             key={`${url}-${i}`}
             url={url}
-            alt={`${partnerLabel} ${(i % images.length) + 1}`}
+            alt={`${partnerLabel} da CWBranding ${(i % images.length) + 1}`}
           />
         ))}
       </div>

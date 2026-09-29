@@ -14,6 +14,7 @@ export const translations = {
     heroTitleLine2: "POR TRÁS DA",
     heroTitleLine3: "SUA EMPRESA",
     heroSubtitle: "CWB / SP / TOR",
+    heroTagline: "Agência de branding e marketing digital em Curitiba",
     marqueeA: [
       "#SejaAUTÊNTICO",
       "#SejaESTRATÉGICO",
@@ -33,6 +34,14 @@ export const translations = {
       "A CWBranding nasceu com um propósito simples: ajudar marcas a se comunicarem melhor, com mais verdade e criatividade. Acreditamos que toda marca tem uma história única pra contar — e o nosso papel é dar vida a essa história.",
     aboutParagraph2:
       "Somos especialistas em criar uma presença digital marcante, que ajuda nossos parceiros a se destacarem no seu setor com estratégia, design e execução impecável.",
+    aboutParagraph3:
+      "A CWBranding Ltda. foi fundada em 2022 e tem sede no Centro de Curitiba, na Rua Ébano Pereira, 11, em frente ao Palácio Avenida. Atendemos empresas em Curitiba, São Paulo e Toronto com branding, social media, identidade visual e geração de demanda.",
+    aboutFacts: [
+      { label: "Fundação", value: "2022" },
+      { label: "Sede", value: "Centro de Curitiba" },
+      { label: "Atuação", value: "CWB · SP · TOR" },
+      { label: "CNPJ", value: "46.292.260/0001-89" },
+    ],
 
     partnersTitleLine1: "Nossos",
     partnersTitleLine2: "Parceiros",
@@ -166,6 +175,35 @@ export const translations = {
       "Rua Ébano Pereira, 11, Conj. 1401\nCentro — Curitiba, PR — 80410-240",
     footerViewMap: "Ver no mapa",
     footerRights: "Todos os direitos reservados.",
+    faqTitleLine1: "Perguntas",
+    faqTitleLine2: "frequentes",
+    faqItems: [
+      {
+        question: "A CWBranding é uma agência de branding em Curitiba?",
+        answer:
+          "Sim. A CWBranding é uma agência de branding e marketing digital com sede no Centro de Curitiba, na Rua Ébano Pereira, 11, Conj. 1401, em frente ao Palácio Avenida. Atendemos também São Paulo e Toronto.",
+      },
+      {
+        question: "Quais serviços a CWBranding oferece?",
+        answer:
+          "Social media, identidade visual, gestão de tráfego pago, landing pages, assessoria de marketing, ensaios fotográficos, materiais gráficos e cobertura de eventos.",
+      },
+      {
+        question: "Quanto custa um plano da CWBranding?",
+        answer:
+          "Os planos mensais começam em R$ 5.699 (Posicionamento), R$ 7.999 (Escala) e R$ 9.999 (Liderança). O escopo de cada plano está descrito na seção de planos do site.",
+      },
+      {
+        question: "Como contratar a CWBranding?",
+        answer:
+          "Fale pelo WhatsApp +55 (41) 99625-0984 ou pelo e-mail contato@cwbranding.com.br. Combinamos um diagnóstico da marca e indicamos o plano ou o serviço mais adequado.",
+      },
+      {
+        question: "A agência atende fora de Curitiba?",
+        answer:
+          "Sim. A sede é em Curitiba, mas a operação cobre São Paulo e Toronto, com atendimento remoto e presencial conforme o projeto.",
+      },
+    ],
   },
 
   EN: {
@@ -183,6 +221,7 @@ export const translations = {
     heroTitleLine2: "BEHIND",
     heroTitleLine3: "YOUR COMPANY",
     heroSubtitle: "CWB / SP / TOR",
+    heroTagline: "Branding and digital marketing agency based in Curitiba",
 
     marqueeA: ["#BeAUTHENTIC", "#BeSTRATEGIC", "#BeCREATIVE", "#BeMEMORABLE"],
     marqueeB: ["#BeDIGITAL", "#BeBOLD", "#BeCONSISTENT", "#BeTRUE"],
@@ -193,6 +232,14 @@ export const translations = {
       "CWBranding was born with a simple purpose: to help brands communicate better, with more truth and creativity. We believe every brand has a unique story to tell — and our role is to bring that story to life.",
     aboutParagraph2:
       "We are specialists in creating a striking digital presence, helping our partners stand out in their industry with strategy, design, and flawless execution.",
+    aboutParagraph3:
+      "CWBranding Ltda. was founded in 2022 and is headquartered in downtown Curitiba, at Rua Ébano Pereira, 11, in front of Palácio Avenida. We serve companies in Curitiba, São Paulo, and Toronto with branding, social media, visual identity, and demand generation.",
+    aboutFacts: [
+      { label: "Founded", value: "2022" },
+      { label: "HQ", value: "Downtown Curitiba" },
+      { label: "Markets", value: "CWB · SP · TOR" },
+      { label: "CNPJ", value: "46.292.260/0001-89" },
+    ],
 
     partnersTitleLine1: "Our",
     partnersTitleLine2: "Partners",
@@ -327,6 +374,35 @@ export const translations = {
       "Rua Ébano Pereira, 11, Suite 1401\nDowntown — Curitiba, PR — 80410-240, Brazil",
     footerViewMap: "View on map",
     footerRights: "All rights reserved.",
+    faqTitleLine1: "Frequently",
+    faqTitleLine2: "asked questions",
+    faqItems: [
+      {
+        question: "Is CWBranding a branding agency in Curitiba?",
+        answer:
+          "Yes. CWBranding is a branding and digital marketing agency headquartered in downtown Curitiba, at Rua Ébano Pereira, 11, Suite 1401, in front of Palácio Avenida. We also serve São Paulo and Toronto.",
+      },
+      {
+        question: "What services does CWBranding offer?",
+        answer:
+          "Social media, visual identity, paid traffic management, landing pages, marketing advisory, photoshoots, graphic materials, and event coverage.",
+      },
+      {
+        question: "How much do CWBranding plans cost?",
+        answer:
+          "Monthly plans start at R$ 5,699 (Positioning), R$ 7,999 (Scale), and R$ 9,999 (Leadership). Each plan's scope is listed in the pricing section.",
+      },
+      {
+        question: "How do I hire CWBranding?",
+        answer:
+          "Reach us on WhatsApp at +55 (41) 99625-0984 or email contato@cwbranding.com.br. We start with a brand diagnosis and recommend the right plan or service.",
+      },
+      {
+        question: "Do you work outside Curitiba?",
+        answer:
+          "Yes. Our headquarters is in Curitiba, and we also operate in São Paulo and Toronto, with remote and on-site work depending on the project.",
+      },
+    ],
   },
 };
 
