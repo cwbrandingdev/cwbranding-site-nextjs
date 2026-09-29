@@ -1,3 +1,5 @@
+import { title } from "process";
+
 export const translations = {
   PT: {
     services: "Serviços",
@@ -80,7 +82,7 @@ export const translations = {
       },
       {
         id: 5,
-        title: "Assessoria de Marketing",
+        title: "Agência de Marketing",
         desc: "Consultoria estratégica para empresas desenvolverem e implementarem planos de marketing eficazes.",
       },
       {
@@ -113,9 +115,17 @@ export const translations = {
     pricingButton: "Quero este plano",
     plans: [
       {
+        title: "Essencial",
+        description:
+          "Para empresas que estão começando e querem organizar sua presença digital com consistência e profissionalismo desde o início.",
+        price: "3.599",
+        features: ["45 conteúdos", "30 Stories", "15 feed", "Sem tráfego pago"],
+        tagline: "Pacote",
+      },
+      {
         title: "Posicionamento",
         description:
-        "Para empresas que precisam estruturar sua presença e posicionamento no mercado.Sua empresa passa a ser percebida pelo valor que entrega.",
+          "Para empresas que precisam estruturar sua presença e posicionamento no mercado.Sua empresa passa a ser percebida pelo valor que entrega.",
         price: "5.699",
         features: [
           "Diagnóstico estratégico de marca",
@@ -125,14 +135,14 @@ export const translations = {
           "Gestão de mídia paga",
           "Landing page",
           "Encontro estratégico mensal",
-          "Assessoria de Branding e Posicionamento",
+          "Agência de Branding e Posicionamento",
         ],
-        tagline: "Projeto",
+        tagline: "Pacote",
       },
       {
         title: "Escala",
         description:
-        "Para empresas que já possuem operação e querem acelerar crescimento e aquisição. Sua comunicação começa a gerar crescimento consistente. ",
+          "Para empresas que já possuem operação e querem acelerar crescimento e aquisição. Sua comunicação começa a gerar crescimento consistente. ",
         price: "7.999",
         features: [
           "Inteligência de demanda",
@@ -144,14 +154,14 @@ export const translations = {
           "Planejamento comercial integrado",
           "10 Horas semanais de SDR",
         ],
-        tagline: "Projeto",
-        subHeader: "Projeto Posicionamento +",
+        tagline: "Pacote",
+        subHeader: "Pacote Posicionamento +",
       },
       {
         title: "Liderança",
         description:
           "Para empresas que precisam de uma estrutura completa de marketing e geração de demanda. Sua marca se torna referência no mercado.",
-       
+
         price: "9.999",
         features: [
           "Qualificação ativa de oportunidades",
@@ -163,12 +173,12 @@ export const translations = {
           "Funil de vendas",
           "20 Horas semanais de SDR",
         ],
-        tagline: "Projeto",
+        tagline: "Pacote",
         subHeader: "Projeto Escala +",
         highlighted: true,
       },
     ],
-    footerDescription: "A sua agência de marketing. Curitiba — PR.",
+    footerDescription: "A sua agência  de marketing. Curitiba — PR.",
     footerNavTitle: "Navegação",
     footerContactTitle: "Contato",
     footerAddress:
@@ -312,6 +322,19 @@ export const translations = {
     pricingButton: "I want this plan",
     plans: [
       {
+        title: "Essential",
+        description:
+          "For companies that are just starting out and want to organize their digital presence with consistency and professionalism from day one.",
+        price: "3,599",
+        features: [
+          "45 pieces of content",
+          "30 Stories",
+          "15 feed posts",
+          "No paid traffic",
+        ],
+        tagline: "Package",
+      },
+      {
         title: "Positioning",
         description:
           "For companies that need to structure their presence and market positioning. Your company starts to be perceived for the value it delivers.",
@@ -326,12 +349,12 @@ export const translations = {
           "Monthly strategic meeting",
           "Branding and positioning advisory",
         ],
-        tagline: "Project",
+        tagline: "Package",
       },
       {
         title: "Scale",
         description:
-        "For companies that already have operations and want to accelerate growth and acquisition. Your communication starts generating consistent growth.",
+          "For companies that already have operations and want to accelerate growth and acquisition. Your communication starts generating consistent growth.",
         price: "7,999",
         features: [
           "Demand intelligence",
@@ -343,13 +366,13 @@ export const translations = {
           "Integrated commercial planning",
           "10 weekly hours of SDR",
         ],
-        tagline: "Project",
+        tagline: "Package",
         subHeader: "Positioning Project +",
       },
       {
         title: "Leadership",
         description:
-        "For companies that need a complete marketing and demand generation structure. Your brand becomes a market reference.",
+          "For companies that need a complete marketing and demand generation structure. Your brand becomes a market reference.",
         price: "9,999",
         features: [
           "Active opportunity qualification",
@@ -361,7 +384,7 @@ export const translations = {
           "Sales funnel",
           "20 weekly hours of SDR",
         ],
-        tagline: "Project",
+        tagline: "Package",
         subHeader: "Scale Project +",
         highlighted: true,
       },
