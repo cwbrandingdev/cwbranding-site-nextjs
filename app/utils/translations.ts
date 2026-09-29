@@ -14,9 +14,9 @@ export const translations = {
 
     heroTitleLine1: "A ESTRATÉGIA",
     heroTitleLine2: "POR TRÁS DA",
-    heroTitleLine3: "SUA EMPRESA",
+    heroTitleLine3: "SUA EMP digitalRESA",
     heroSubtitle: "CWB / SP / TOR",
-    heroTagline: "Agência de branding e marketing digital em Curitiba",
+    heroTagline: "Agência de branding em Curitiba",
     marqueeA: [
       "#SejaAUTÊNTICO",
       "#SejaESTRATÉGICO",
@@ -80,8 +80,8 @@ export const translations = {
       },
       {
         id: 5,
-        title: "Agência de Marketing",
-        desc: "Consultoria estratégica para empresas desenvolverem e implementarem planos de marketing eficazes.",
+        title: "Agência de Branding",
+        desc: "Consultoria estratégica para empresas desenvolverem e implementarem planos de branding eficazes.",
       },
       {
         id: 6,
