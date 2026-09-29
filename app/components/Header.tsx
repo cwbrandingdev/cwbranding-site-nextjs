@@ -21,17 +21,18 @@ export function Header() {
   };
 
   const navItems = [
-            { href: "/#servicos", label: t.services },
+    { href: "/#servicos", label: t.services },
     { href: "/#sobre", label: t.about },
-    { href: "/#espaco", label: t.navSpace },
     { href: "/#planos", label: t.navPlans },
-    { href: "/#faq", label: "FAQ" },
   ];
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-gradient-to-b from-[#006867] to-[#004A4A] text-[color:var(--sand-soft)]">
       <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between px-6 md:px-10 text-[13px] tracking-[0.18em] uppercase">
-        <nav className="hidden lg:flex items-center gap-8" aria-label="Principal">
+        <nav
+          className="hidden lg:flex items-center gap-8"
+          aria-label="Principal"
+        >
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -53,7 +54,10 @@ export function Header() {
           {isMenuOpen ? <X className="size-6" /> : <Menu className="size-6" />}
         </button>
 
-        <Link href="/" className="font-display text-2xl tracking-[0.35em] font-medium">
+        <Link
+          href="/"
+          className="font-display text-2xl tracking-[0.35em] font-medium"
+        >
           <Image
             src="/cwbranding/cwbrandinglogo.png"
             alt="CWBranding — agência de branding em Curitiba"
@@ -110,7 +114,10 @@ export function Header() {
 
       {isMenuOpen && (
         <div className="fixed inset-0 top-16 z-40 bg-[#004A4A] lg:hidden transition-all duration-300 ease-in-out border-t border-white/5">
-          <nav className="flex flex-col p-6 gap-6 text-[14px] tracking-[0.18em] uppercase" aria-label="Mobile">
+          <nav
+            className="flex flex-col p-6 gap-6 text-[14px] tracking-[0.18em] uppercase"
+            aria-label="Mobile"
+          >
             {navItems.map((item) => (
               <Link
                 key={item.href}

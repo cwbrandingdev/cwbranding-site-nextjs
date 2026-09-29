@@ -186,8 +186,8 @@ export function Footer() {
         <div className="border-t border-white/10">
           <div className="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-3 px-6 py-6 text-xs opacity-60 md:flex-row md:px-12">
             <p>
-              © {new Date().getFullYear()} CWBranding Ltda. CNPJ 46.292.260/0001-89.{" "}
-              {t.footerRights}
+              © {new Date().getFullYear()} CWBranding Ltda. CNPJ
+              46.292.260/0001-89. {t.footerRights}
             </p>
             <p className="tracking-[0.15em] uppercase">CWB / SP / TOR</p>
           </div>

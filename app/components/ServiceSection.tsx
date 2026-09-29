@@ -26,14 +26,8 @@ export function ServicesSection() {
               </h2>
             </Reveal>
 
-            <div className="mt-10 space-y-6 max-w-xl">
+            <div className="mt-10 max-w-xl">
               <Reveal delay={0.1}>
-                <p className="font-display text-2xl md:text-3xl leading-snug text-white font-medium">
-                  {t.servicesHeadline}
-                </p>
-              </Reveal>
-
-              <Reveal delay={0.2}>
                 <p className="text-base md:text-lg leading-relaxed text-zinc-300">
                   {t.servicesDescription}
                 </p>

@@ -55,8 +55,6 @@ export const translations = {
     servicesTitleLine1: "Nossos",
     servicesTitleLine2: "Serviços",
     serviceMainImage: "/cwbranding/mainservicesimagept.png",
-    servicesHeadline:
-      "Transformamos sua visão em resultados concretos por meio da união entre estratégia, design e presença digital.",
     servicesDescription:
       "A CWBranding combina criatividade, dados e execução para entregar soluções completas de marketing e branding, ajudando marcas a se destacarem no seu setor com verdade e consistência.",
     servicesList: [
@@ -201,7 +199,7 @@ export const translations = {
       {
         question: "Quanto custa um plano da CWBranding?",
         answer:
-          "Os planos mensais começam em R$ 5.699 (Posicionamento), R$ 7.999 (Escala) e R$ 9.999 (Liderança). O escopo de cada plano está descrito na seção de planos do site.",
+          "Os planos mensais começam em R$ 3.599 (Essencial — 45 conteúdos, 30 Stories, 15 feed, sem tráfego pago), R$ 5.699 (Posicionamento), R$ 7.999 (Escala) e R$ 9.999 (Liderança). O escopo completo de cada plano está descrito na seção de planos do site.",
       },
       {
         question: "Como contratar a CWBranding?",
@@ -261,9 +259,6 @@ export const translations = {
     servicesTitleLine1: "Our",
     servicesTitleLine2: "Services",
     serviceMainImage: "/cwbranding/mainservicesimageen.png",
-
-    servicesHeadline:
-      "We transform your vision into concrete results by uniting strategy, design, and digital presence.",
     servicesDescription:
       "CWBranding combines creativity, data, and execution to deliver complete marketing and branding solutions, helping brands stand out in their industry with truth and consistency.",
     servicesList: [
@@ -413,7 +408,7 @@ export const translations = {
       {
         question: "How much do CWBranding plans cost?",
         answer:
-          "Monthly plans start at R$ 5,699 (Positioning), R$ 7,999 (Scale), and R$ 9,999 (Leadership). Each plan's scope is listed in the pricing section.",
+          "Monthly plans start at R$ 3,599 (Essential — 45 pieces of content, 30 Stories, 15 feed posts, no paid traffic), R$ 5,699 (Positioning), R$ 7,999 (Scale), and R$ 9,999 (Leadership). Each plan's full scope is listed in the pricing section.",
       },
       {
         question: "How do I hire CWBranding?",
