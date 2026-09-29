@@ -28,27 +28,12 @@ export const metadata: Metadata = {
     default: site.title,
     template: "%s | CWBranding",
   },
-<<<<<<< HEAD
   description: site.description,
   keywords: [...site.keywords],
   authors: [{ name: site.name, url: site.url }],
   creator: site.name,
   publisher: site.name,
   category: "marketing",
-=======
-  description:
-    "A sua agência de estratégia. Especialistas em Social Media, Identidade Visual, Gestão de Tráfego Pago e Branding.",
-  keywords: [
-    "agência de Branding",
-    "Social Media",
-    "Identidade Visual",
-    "Gestão de Tráfego",
-    "Branding",
-  ],
-  authors: [{ name: "CWBranding" }],
-  creator: "CWBranding",
-  publisher: "CWBranding",
->>>>>>> 33fddbf0f9ce31781651742d11fc2491170381c0
   formatDetection: {
     email: false,
     address: false,
