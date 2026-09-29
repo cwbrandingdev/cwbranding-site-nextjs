@@ -50,18 +50,7 @@ export function AboutSection() {
           <Reveal delay={0.25}>
             <p className="opacity-85">{t.aboutParagraph3}</p>
           </Reveal>
-          <Reveal delay={0.3}>
-            <dl className="grid grid-cols-2 gap-4 pt-2 text-sm tracking-wide">
-              {t.aboutFacts.map((fact) => (
-                <div key={fact.label}>
-                  <dt className="uppercase text-[#E8C39E] text-xs tracking-[0.2em] mb-1">
-                    {fact.label}
-                  </dt>
-                  <dd className="text-white/90">{fact.value}</dd>
-                </div>
-              ))}
-            </dl>
-          </Reveal>
+          <Reveal delay={0.3}></Reveal>
           <Reveal delay={0.35}>
             <a
               href={contact.instagram}
