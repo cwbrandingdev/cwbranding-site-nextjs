@@ -23,6 +23,8 @@ jobs:
 
     - name: Build Project
       run: npm run build
+      env:
+        STATIC_EXPORT: "true"
 
     - name: Sync files to Hostgator
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
