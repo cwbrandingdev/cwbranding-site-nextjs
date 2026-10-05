@@ -9,6 +9,7 @@ import { contact } from "../utils/contact";
 import { submitContact } from "../actions/contact";
 import {
   HONEYPOT_FIELD,
+  REQUIRED_FIELDS,
   REVENUE_OPTIONS,
   TRAFFIC_OPTIONS,
   formatPhone,
@@ -54,6 +55,11 @@ export function ContactSection() {
       className="mb-2 block text-[10px] font-medium uppercase tracking-[0.25em] text-white/85"
     >
       {t.contactLabels[field]}
+      {REQUIRED_FIELDS.includes(field) && (
+        <span aria-hidden className="ml-1 text-sm leading-none text-[#E8C39E]">
+          *
+        </span>
+      )}
     </label>
   );
 

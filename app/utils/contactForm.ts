@@ -51,7 +51,7 @@ const MAX_LENGTH: Record<ContactField, number> = {
   objective: 2000,
 };
 
-const REQUIRED_FIELDS: readonly ContactField[] = ["name", "phone", "objective"];
+export const REQUIRED_FIELDS: readonly ContactField[] = ["name", "phone", "objective"];
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
