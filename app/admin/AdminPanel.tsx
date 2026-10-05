@@ -106,6 +106,8 @@ export function AdminPanel({ email, initial }: { email: string; initial: Submiss
             setStatus("live");
           },
           (error) => {
+            // No logout o Firebase desconecta antes do painel desmontar: não é erro.
+            if (!auth.currentUser) return;
             console.error("[admin] tempo real:", error);
             setStatus("offline");
           },
