@@ -83,9 +83,7 @@ export const websiteJsonLd = {
   publisher: { "@id": `${site.url}/#organization` },
 };
 
-export function faqJsonLd(
-  items: { question: string; answer: string }[],
-) {
+export function faqJsonLd(items: { question: string; answer: string }[]) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",

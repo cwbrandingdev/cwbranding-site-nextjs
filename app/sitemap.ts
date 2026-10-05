@@ -21,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     ...services.map((service) => ({
-      url: `${site.url}/servicos/${service.slug}`,
+      url: `${site.url}/sevicos/${service.slug}`,
       lastModified,
       changeFrequency: "monthly" as const,
       priority: 0.7,

@@ -181,5 +181,5 @@ export function getServiceById(id: string | number) {
 }
 
 export function getServicePath(service: Pick<ServiceContent, "slug">) {
-  return `/servicos/${service.slug}`;
+  return `/`;
 }
