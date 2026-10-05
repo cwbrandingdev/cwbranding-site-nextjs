@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { LanguageProvider } from "./context/LanguageContext";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
+import { HideOnAdmin } from "./components/HideOnAdmin";
 import { JsonLd } from "./components/JsonLd";
 import { organizationJsonLd, websiteJsonLd } from "./utils/jsonld";
 import { site } from "./utils/site";
@@ -114,9 +115,13 @@ export default function RootLayout({
         </noscript>
         <JsonLd data={[organizationJsonLd, websiteJsonLd]} />
         <LanguageProvider>
-          <Header />
+          <HideOnAdmin>
+            <Header />
+          </HideOnAdmin>
           {children}
-          <Footer />
+          <HideOnAdmin>
+            <Footer />
+          </HideOnAdmin>
         </LanguageProvider>
       </body>
     </html>
