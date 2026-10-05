@@ -50,7 +50,6 @@ export function AboutSection() {
           <Reveal delay={0.25}>
             <p className="opacity-85">{t.aboutParagraph3}</p>
           </Reveal>
-          <Reveal delay={0.3}></Reveal>
           <Reveal delay={0.35}>
             <a
               href={contact.instagram}
