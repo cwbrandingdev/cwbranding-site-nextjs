@@ -6,6 +6,7 @@ import { JsonLd } from "./components/JsonLd";
 import { Marquee } from "./components/Marquee";
 import { PartnersSection } from "./components/PartnerSection";
 import PricingSection from "./components/PricingSection";
+import { ContactSection } from "./components/ContactSection";
 import { ServicesSection } from "./components/ServiceSection";
 import { SpaceSection } from "./components/SpaceSection";
 import { faqJsonLd, homeFaqItems } from "./utils/jsonld";
@@ -35,6 +36,7 @@ export default function Home() {
       <SpaceSection />
       <PartnersSection />
       <PricingSection />
+      <ContactSection />
       <FaqSection />
     </div>
   );

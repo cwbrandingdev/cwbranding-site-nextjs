@@ -212,6 +212,56 @@ export const translations = {
           "Sim. A sede é em Curitiba, mas a operação cobre São Paulo e Toronto, com atendimento remoto e presencial conforme o projeto.",
       },
     ],
+    contactTitleLine1: "Fale",
+    contactTitleLine2: "conosco",
+    contactParagraph1:
+      "Entre em contato com a CWBranding, agência de branding e marketing digital em Curitiba que pode transformar a presença online do seu negócio. Nossa equipe está pronta para entender suas necessidades, esclarecer dúvidas e desenvolver uma estratégia personalizada para impulsionar seus resultados no digital.",
+    contactParagraph2:
+      "Seja para atrair mais clientes, fortalecer sua marca ou aumentar suas vendas, temos as soluções ideais para você. Vamos criar juntos campanhas eficazes e inovadoras que fazem a diferença. Fale conosco e descubra como podemos levar sua empresa ao próximo nível.",
+    contactWhatsappButton: "Entrar em contato",
+    contactLabels: {
+      name: "Nome",
+      phone: "Telefone WhatsApp",
+      email: "E-mail",
+      instagram: "Seu Instagram ou site",
+      revenue: "Qual seu faturamento mensal?",
+      traffic: "Já investiu em tráfego pago?",
+      objective: "Qual é seu principal objetivo com o marketing?",
+    },
+    contactPlaceholders: {
+      name: "Digite seu nome completo",
+      phone: "(XX) XXXXX-XXXX",
+      email: "Digite seu e-mail",
+      instagram: "@minhaempresa",
+      objective: "Digite seu objetivo",
+    },
+    contactSelectPlaceholder: "Selecione",
+    contactRevenueOptions: {
+      "ate-10k": "Até R$ 10 mil",
+      "10k-50k": "De R$ 10 mil a R$ 50 mil",
+      "50k-100k": "De R$ 50 mil a R$ 100 mil",
+      "100k-500k": "De R$ 100 mil a R$ 500 mil",
+      "acima-500k": "Acima de R$ 500 mil",
+    },
+    contactTrafficOptions: {
+      "sim-atualmente": "Sim, invisto atualmente",
+      "sim-parou": "Sim, mas parei",
+      nunca: "Não, nunca investi",
+    },
+    contactSubmit: "Enviar mensagem",
+    contactSubmitting: "Enviando...",
+    contactFieldErrors: {
+      required: "Campo obrigatório.",
+      invalid: "Valor inválido.",
+      tooLong: "Texto muito longo.",
+    },
+    contactErrors: {
+      validation: "Confira os campos destacados.",
+      rateLimit: "Muitos envios seguidos. Aguarde alguns minutos e tente de novo.",
+      server: "Não foi possível enviar agora. Tente novamente ou fale pelo WhatsApp.",
+    },
+    contactSuccessTitle: "Mensagem enviada!",
+    contactSuccessText: "Entraremos em contato o mais breve possível.",
   },
 
   EN: {
@@ -421,6 +471,56 @@ export const translations = {
           "Yes. Our headquarters is in Curitiba, and we also operate in São Paulo and Toronto, with remote and on-site work depending on the project.",
       },
     ],
+    contactTitleLine1: "Get in",
+    contactTitleLine2: "touch",
+    contactParagraph1:
+      "Get in touch with CWBranding, a branding and digital marketing agency in Curitiba that can transform your business's online presence. Our team is ready to understand your needs, answer your questions, and build a tailored strategy to boost your digital results.",
+    contactParagraph2:
+      "Whether you want to attract more clients, strengthen your brand, or increase sales, we have the right solutions for you. Let's create effective, innovative campaigns that make a difference. Talk to us and discover how we can take your business to the next level.",
+    contactWhatsappButton: "Contact us",
+    contactLabels: {
+      name: "Name",
+      phone: "WhatsApp number",
+      email: "E-mail",
+      instagram: "Your Instagram or website",
+      revenue: "What is your monthly revenue?",
+      traffic: "Have you invested in paid traffic?",
+      objective: "What is your main marketing goal?",
+    },
+    contactPlaceholders: {
+      name: "Enter your full name",
+      phone: "(XX) XXXXX-XXXX",
+      email: "Enter your e-mail",
+      instagram: "@mycompany",
+      objective: "Describe your goal",
+    },
+    contactSelectPlaceholder: "Select",
+    contactRevenueOptions: {
+      "ate-10k": "Up to R$ 10k",
+      "10k-50k": "R$ 10k to R$ 50k",
+      "50k-100k": "R$ 50k to R$ 100k",
+      "100k-500k": "R$ 100k to R$ 500k",
+      "acima-500k": "Over R$ 500k",
+    },
+    contactTrafficOptions: {
+      "sim-atualmente": "Yes, I currently invest",
+      "sim-parou": "Yes, but I stopped",
+      nunca: "No, never",
+    },
+    contactSubmit: "Send message",
+    contactSubmitting: "Sending...",
+    contactFieldErrors: {
+      required: "Required field.",
+      invalid: "Invalid value.",
+      tooLong: "Text is too long.",
+    },
+    contactErrors: {
+      validation: "Please check the highlighted fields.",
+      rateLimit: "Too many submissions. Please wait a few minutes and try again.",
+      server: "We couldn't send it right now. Please try again or reach us on WhatsApp.",
+    },
+    contactSuccessTitle: "Message sent!",
+    contactSuccessText: "We'll get back to you as soon as possible.",
   },
 };
 
