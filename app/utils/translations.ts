@@ -14,7 +14,7 @@ export const translations = {
 
     heroTitleLine1: "A ESTRATÉGIA",
     heroTitleLine2: "POR TRÁS DA",
-    heroTitleLine3: "SUA EMP digitalRESA",
+    heroTitleLine3: "SUA EMPRESA",
     heroSubtitle: "CWB / SP / TOR",
     heroTagline: "Agência de branding em Curitiba",
     marqueeA: [
@@ -257,8 +257,10 @@ export const translations = {
     },
     contactErrors: {
       validation: "Confira os campos destacados.",
-      rateLimit: "Muitos envios seguidos. Aguarde alguns minutos e tente de novo.",
-      server: "Não foi possível enviar agora. Tente novamente ou fale pelo WhatsApp.",
+      rateLimit:
+        "Muitos envios seguidos. Aguarde alguns minutos e tente de novo.",
+      server:
+        "Não foi possível enviar agora. Tente novamente ou fale pelo WhatsApp.",
     },
     contactSuccessTitle: "Mensagem enviada!",
     contactSuccessText: "Entraremos em contato o mais breve possível.",
@@ -516,8 +518,10 @@ export const translations = {
     },
     contactErrors: {
       validation: "Please check the highlighted fields.",
-      rateLimit: "Too many submissions. Please wait a few minutes and try again.",
-      server: "We couldn't send it right now. Please try again or reach us on WhatsApp.",
+      rateLimit:
+        "Too many submissions. Please wait a few minutes and try again.",
+      server:
+        "We couldn't send it right now. Please try again or reach us on WhatsApp.",
     },
     contactSuccessTitle: "Message sent!",
     contactSuccessText: "We'll get back to you as soon as possible.",
