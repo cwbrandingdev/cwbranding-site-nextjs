@@ -41,6 +41,19 @@ export async function createAdminSession(idToken: string): Promise<LoginResult> 
   }
 }
 
+// Token para o navegador ler contact_submissions em tempo real.
+// A claim `admin` é o que firestore.rules exige; só sai daqui com sessão válida.
+export async function getRealtimeToken(): Promise<string | null> {
+  const session = await verifyAdminSession();
+  if (!session) return null;
+  try {
+    return await (await getAdminAuth()).createCustomToken(session.uid, { admin: true });
+  } catch (error) {
+    console.error("[admin] falha ao gerar token de tempo real:", error);
+    return null;
+  }
+}
+
 export async function logoutAdmin() {
   const session = await verifyAdminSession();
   if (session) {
