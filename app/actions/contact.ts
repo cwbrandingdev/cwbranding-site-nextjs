@@ -2,8 +2,7 @@
 
 import { createHash } from "node:crypto";
 import { headers } from "next/headers";
-import { FieldValue, Timestamp } from "firebase-admin/firestore";
-import { adminDb } from "@/lib/firebase-admin";
+import type { Firestore } from "firebase-admin/firestore";
 import {
   CONTACT_FIELDS,
   HONEYPOT_FIELD,
@@ -22,8 +21,11 @@ async function getClientIp() {
 }
 
 // Máx. RATE_LIMIT_MAX envios por IP na janela. Guarda só o hash do IP (LGPD).
-async function isRateLimited(ip: string) {
-  const db = adminDb();
+async function isRateLimited(
+  db: Firestore,
+  Timestamp: typeof import("firebase-admin/firestore").Timestamp,
+  ip: string,
+) {
   const ref = db
     .collection("rate_limits")
     .doc(createHash("sha256").update(ip).digest("hex"));
@@ -31,7 +33,7 @@ async function isRateLimited(ip: string) {
   return db.runTransaction(async (tx) => {
     const now = Date.now();
     const snap = await tx.get(ref);
-    const hits = ((snap.get("hits") as Timestamp[] | undefined) ?? []).filter(
+    const hits = ((snap.get("hits") as InstanceType<typeof Timestamp>[] | undefined) ?? []).filter(
       (t) => now - t.toMillis() < RATE_LIMIT_WINDOW_MS,
     );
     if (hits.length >= RATE_LIMIT_MAX) return true;
@@ -57,20 +59,26 @@ export async function submitContact(
   }
 
   try {
-    if (await isRateLimited(await getClientIp())) {
+    // Import dinâmico: se o Firebase falhar ao carregar, cai no catch e o
+    // visitante vê a mensagem de erro do formulário, não a tela de erro do Next.
+    const [{ adminDb }, { FieldValue, Timestamp }] = await Promise.all([
+      import("@/lib/firebase-admin"),
+      import("firebase-admin/firestore"),
+    ]);
+    const db = adminDb();
+
+    if (await isRateLimited(db, Timestamp, await getClientIp())) {
       return { status: "error", reason: "rateLimit" };
     }
 
-    await adminDb()
-      .collection("contact_submissions")
-      .add({
-        ...values,
-        phone: onlyDigits(values.phone),
-        email: values.email.toLowerCase(),
-        language: formData.get("language") === "EN" ? "EN" : "PT",
-        status: "new",
-        createdAt: FieldValue.serverTimestamp(),
-      });
+    await db.collection("contact_submissions").add({
+      ...values,
+      phone: onlyDigits(values.phone),
+      email: values.email.toLowerCase(),
+      language: formData.get("language") === "EN" ? "EN" : "PT",
+      status: "new",
+      createdAt: FieldValue.serverTimestamp(),
+    });
 
     return { status: "success" };
   } catch (error) {

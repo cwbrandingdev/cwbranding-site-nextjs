@@ -2,8 +2,9 @@
 // Ignora as Security Rules, por isso nunca pode ser importado no cliente:
 // o `server-only` faz o build falhar se isso acontecer.
 import "server-only";
+// Não importar "firebase-admin/auth" aqui: ele puxa dependências ESM que exigem
+// Node >= 22.12 e quebrariam o formulário. O Auth do admin fica em módulo próprio.
 import { cert, getApp, getApps, initializeApp } from "firebase-admin/app";
-import { getAuth } from "firebase-admin/auth";
 import { getFirestore } from "firebase-admin/firestore";
 
 function requireEnv(name: string): string {
@@ -12,7 +13,7 @@ function requireEnv(name: string): string {
   return value;
 }
 
-function getAdminApp() {
+export function getAdminApp() {
   if (getApps().length) return getApp();
 
   return initializeApp({
@@ -26,4 +27,3 @@ function getAdminApp() {
 }
 
 export const adminDb = () => getFirestore(getAdminApp());
-export const adminAuth = () => getAuth(getAdminApp());
