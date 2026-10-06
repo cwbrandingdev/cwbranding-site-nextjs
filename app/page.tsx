@@ -18,11 +18,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  openGraph: {
-    url: site.url,
-    title: site.title,
-    description: site.description,
-  },
+  // Sem openGraph aqui: o da página substituiria o do layout inteiro e
+  // a home perderia og:image, siteName e locale.
 };
 
 export default function Home() {

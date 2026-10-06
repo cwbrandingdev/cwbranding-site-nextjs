@@ -67,7 +67,6 @@ export const organizationJsonLd = {
       "@type": "Service",
       name: service.title,
       description: service.shortDesc,
-      url: `${site.url}/servicos/${service.slug}`,
     },
   })),
 };

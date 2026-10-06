@@ -1,30 +1,16 @@
 import type { MetadataRoute } from "next";
-import { services } from "@/app/data/services";
 import { site } from "@/app/utils/site";
 
 export const dynamic = "force-static";
 
+// As páginas /servicos ficam fora do sitemap (estão com noindex).
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
-
   return [
     {
       url: site.url,
-      lastModified,
+      lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
     },
-    {
-      url: `${site.url}/servicos`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    ...services.map((service) => ({
-      url: `${site.url}/sevicos/${service.slug}`,
-      lastModified,
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    })),
   ];
 }

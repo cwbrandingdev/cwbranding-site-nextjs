@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/servicos",
   },
+  // Página mantida para links diretos, mas fora do Google.
+  robots: { index: false, follow: true },
   openGraph: {
     url: `${site.url}/servicos`,
     title: "Serviços | CWBranding",

@@ -43,9 +43,8 @@ export async function generateMetadata({
   return {
     title: service.seoTitle,
     description: service.seoDescription,
-    alternates: {
-      canonical: getServicePath(service),
-    },
+    // Página mantida para links diretos, mas fora do Google.
+    robots: { index: false, follow: true },
     openGraph: {
       title: `${service.title} | CWBranding`,
       description: service.seoDescription,
