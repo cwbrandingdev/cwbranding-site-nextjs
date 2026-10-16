@@ -41,5 +41,8 @@ export default async function BlogPostPage({ params }: PageProps) {
   const post = await getPublishedPost(slug);
   if (!post) notFound();
 
-  return <BlogPost post={post} />;
+  // "Leia também": os 3 posts mais recentes, sem o atual.
+  const related = (await getPublishedPosts()).filter((item) => item.slug !== post.slug).slice(0, 3);
+
+  return <BlogPost post={post} related={related} />;
 }

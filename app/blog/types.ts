@@ -26,6 +26,12 @@ export function getPostText(post: Post, language: Language): PostText {
   return post.pt;
 }
 
+// Tempo de leitura estimado (200 palavras por minuto, mínimo 1).
+export function readingMinutes(content: string) {
+  const words = content.trim().split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.round(words / 200));
+}
+
 // "Meu Primeiro Post!" -> "meu-primeiro-post"
 export function slugify(text: string) {
   return text

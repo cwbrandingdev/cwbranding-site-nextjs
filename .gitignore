@@ -40,3 +40,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ferramentas locais de design (seletor de designs) — não vão para o repositório
+/app/components/dev/
