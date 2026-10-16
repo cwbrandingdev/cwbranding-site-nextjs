@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft, House } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { useLanguage } from "../context/LanguageContext";
 import { contact } from "../utils/contact";
@@ -18,12 +18,20 @@ export function BlogPost({ post }: { post: Post }) {
   return (
     <article className="min-h-screen bg-white px-6 pb-20 pt-28 md:px-12 md:pt-36">
       <div className="mx-auto max-w-3xl">
-        <Link
-          href="/blog"
-          className="inline-flex items-center gap-1 text-sm text-[#004d4c]/70 transition-colors hover:text-[#004d4c]"
-        >
-          <ChevronLeft className="size-4" /> {t.blogBack}
-        </Link>
+        <nav className="flex flex-wrap items-center gap-x-6 gap-y-2">
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-1 text-sm text-[#004d4c]/70 transition-colors hover:text-[#004d4c]"
+          >
+            <ChevronLeft className="size-4" /> {t.blogBack}
+          </Link>
+          <Link
+            href="/"
+            className="inline-flex items-center gap-1.5 text-sm text-[#004d4c]/70 transition-colors hover:text-[#004d4c]"
+          >
+            <House className="size-4" /> {t.blogBackHome}
+          </Link>
+        </nav>
 
         <p className="mt-8 text-xs uppercase tracking-[0.2em] text-[#004d4c]/60">
           {formatPostDate(post.createdAt, language)}
@@ -34,13 +42,14 @@ export function BlogPost({ post }: { post: Post }) {
         {text.excerpt && <p className="mt-5 text-lg text-[#004d4c]/75">{text.excerpt}</p>}
 
         {post.coverUrl && (
-          <div className="relative mt-10 aspect-[16/9] overflow-hidden rounded-2xl">
+          // Capa no formato 1080x1350 (4:5, o mesmo das artes do Instagram).
+          <div className="relative mx-auto mt-10 aspect-[4/5] max-w-xl overflow-hidden rounded-2xl">
             <Image
-              src={optimizeImage(post.coverUrl, 1400)}
+              src={optimizeImage(post.coverUrl, 1080)}
               alt={text.title}
               fill
               priority
-              sizes="768px"
+              sizes="576px"
               className="object-cover"
             />
           </div>
