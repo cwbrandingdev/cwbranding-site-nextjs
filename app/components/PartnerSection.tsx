@@ -28,6 +28,8 @@ function PartnerLogo({
         alt={alt}
         className="max-w-full max-h-full w-auto h-auto object-contain block"
         draggable={false}
+        loading="lazy"
+        decoding="async"
       />
     </div>
   );

@@ -6,7 +6,7 @@ import { ChevronLeft, House } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { useLanguage } from "../context/LanguageContext";
 import { contact } from "../utils/contact";
-import { optimizeImage } from "./optimizeImage";
+import { IMAGE_WIDTHS, optimizeImage } from "./optimizeImage";
 import { PostContent } from "./PostContent";
 import { formatPostDate, getPostText, type Post } from "./types";
 
@@ -45,7 +45,7 @@ export function BlogPost({ post }: { post: Post }) {
           // Capa no formato 1080x1350 (4:5, o mesmo das artes do Instagram).
           <div className="relative mx-auto mt-10 aspect-[4/5] max-w-xl overflow-hidden rounded-2xl">
             <Image
-              src={optimizeImage(post.coverUrl, 1080)}
+              src={optimizeImage(post.coverUrl, IMAGE_WIDTHS.cover)}
               alt={text.title}
               fill
               priority

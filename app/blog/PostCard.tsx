@@ -3,11 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "../context/LanguageContext";
-import { optimizeImage } from "./optimizeImage";
+import { IMAGE_WIDTHS, optimizeImage } from "./optimizeImage";
 import { formatPostDate, getPostText, type Post } from "./types";
 
 // Card de um post: capa, data, título e resumo. Usado na home e em /blog.
-export function PostCard({ post }: { post: Post }) {
+// priority: carrega a imagem logo de cara (para os cards que aparecem no topo da página).
+export function PostCard({ post, priority = false }: { post: Post; priority?: boolean }) {
   const { language, t } = useLanguage();
   const text = getPostText(post, language);
 
@@ -16,9 +17,10 @@ export function PostCard({ post }: { post: Post }) {
       <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-[#004d4c]/10">
         {post.coverUrl && (
           <Image
-            src={optimizeImage(post.coverUrl, 800)}
+            src={optimizeImage(post.coverUrl, IMAGE_WIDTHS.card)}
             alt={text.title}
             fill
+            priority={priority}
             sizes="(max-width: 768px) 100vw, 33vw"
             className="object-cover transition-transform duration-500 group-hover:scale-105"
           />

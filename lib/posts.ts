@@ -1,5 +1,6 @@
 // Leitura dos posts do blog no Firestore — SOMENTE servidor.
 import "server-only";
+import { cache } from "react";
 import type { DocumentSnapshot } from "firebase-admin/firestore";
 import { adminDb } from "./firebase-admin";
 import { emptyText, type Post, type PostText } from "@/app/blog/types";
@@ -50,7 +51,9 @@ export async function getPublishedPosts(): Promise<Post[]> {
   }
 }
 
-export async function getPublishedPost(slug: string): Promise<Post | null> {
+// cache(): o título da aba (generateMetadata) e o conteúdo da página
+// usam a mesma consulta, em vez de ir ao Firebase duas vezes.
+export const getPublishedPost = cache(async (slug: string): Promise<Post | null> => {
   try {
     const doc = await adminDb().collection(POSTS_COLLECTION).doc(slug).get();
     if (!doc.exists) return null;
@@ -60,4 +63,4 @@ export async function getPublishedPost(slug: string): Promise<Post | null> {
     console.error("[blog] falha ao carregar post:", error);
     return null;
   }
-}
+});

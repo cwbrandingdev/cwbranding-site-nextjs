@@ -41,6 +41,8 @@ export function SpaceSection() {
                     src={img}
                     alt={`Sede da CWBranding no Centro de Curitiba — foto ${index + 1}`}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-black/20" />
                 </div>

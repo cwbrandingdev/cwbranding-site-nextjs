@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getPublishedPost } from "@/lib/posts";
+import { getPublishedPost, getPublishedPosts } from "@/lib/posts";
 import { BlogPost } from "../BlogPost";
-import { optimizeImage } from "../optimizeImage";
+import { IMAGE_WIDTHS, optimizeImage } from "../optimizeImage";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
+}
+
+// Deixa as páginas dos posts prontas antecipadamente (abrem na hora, sem consultar o Firebase).
+// Posts criados depois são montados na primeira visita e guardados.
+// Ao salvar no painel, revalidatePath (app/admin/blog-actions.ts) refaz as páginas.
+export async function generateStaticParams() {
+  const posts = await getPublishedPosts();
+  return posts.map((post) => ({ slug: post.slug }));
 }
 
 // Título e descrição para o Google e para compartilhamento (versão em português).
@@ -23,7 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: post.pt.excerpt,
       type: "article",
       // Em JPG: WhatsApp e LinkedIn nem sempre mostram WebP no compartilhamento.
-      images: post.coverUrl ? [{ url: optimizeImage(post.coverUrl, 1200, "jpg") }] : undefined,
+      images: post.coverUrl ? [{ url: optimizeImage(post.coverUrl, IMAGE_WIDTHS.share, "jpg") }] : undefined,
     },
   };
 }

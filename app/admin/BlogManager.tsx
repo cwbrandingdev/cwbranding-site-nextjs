@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { Archive, ArchiveRestore, ExternalLink, Pencil, Plus, Trash2 } from "lucide-react";
-import { optimizeImage } from "../blog/optimizeImage";
+import { IMAGE_WIDTHS, optimizeImage } from "../blog/optimizeImage";
 import { emptyText, formatPostDate, type Post } from "../blog/types";
 import { deletePost, setPostArchived } from "./blog-actions";
 import { PostEditor } from "./PostEditor";
@@ -99,7 +99,7 @@ export function BlogManager({ posts }: { posts: Post[] }) {
                 <div className="h-16 w-24 shrink-0 overflow-hidden rounded-lg bg-white/5">
                   {post.coverUrl && (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={optimizeImage(post.coverUrl, 200)} alt="" className="h-full w-full object-cover" />
+                    <img src={optimizeImage(post.coverUrl, IMAGE_WIDTHS.thumb)} alt="" className="h-full w-full object-cover" />
                   )}
                 </div>
 

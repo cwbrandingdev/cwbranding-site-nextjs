@@ -28,8 +28,9 @@ export function BlogList({ posts }: { posts: Post[] }) {
           <p className="py-20 text-center text-[#004d4c]/60">{t.blogEmpty}</p>
         ) : (
           <div className="mt-14 grid gap-x-10 gap-y-14 md:grid-cols-3">
-            {posts.map((post) => (
-              <PostCard key={post.slug} post={post} />
+            {posts.map((post, index) => (
+              // Os 3 primeiros aparecem logo no topo: a imagem carrega com prioridade.
+              <PostCard key={post.slug} post={post} priority={index < 3} />
             ))}
           </div>
         )}

@@ -14,7 +14,7 @@ import {
   Quote,
   Trash2,
 } from "lucide-react";
-import { optimizeImage } from "../blog/optimizeImage";
+import { IMAGE_WIDTHS, optimizeImage } from "../blog/optimizeImage";
 import { PostContent } from "../blog/PostContent";
 import { slugify, type Post, type PostText } from "../blog/types";
 import { deletePost, savePost, uploadImage, type PostInput } from "./blog-actions";
@@ -225,7 +225,7 @@ export function PostEditor({
               {form.coverUrl && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={optimizeImage(form.coverUrl, 600)}
+                  src={optimizeImage(form.coverUrl, IMAGE_WIDTHS.card)}
                   alt=""
                   className="mb-3 aspect-[4/3] w-full rounded-xl object-cover"
                 />

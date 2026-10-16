@@ -94,6 +94,8 @@ export default function RootLayout({
       className={cn("font-sans", inter.variable, fraunces.variable)}
     >
       <head>
+        {/* Abre a conexão com o ImageKit (imagens do blog) antes de as imagens serem pedidas. */}
+        <link rel="preconnect" href="https://ik.imagekit.io" />
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
