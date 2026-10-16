@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import { translations } from "../utils/translations";
 import { formatPhone } from "../utils/contactForm";
 import { getRealtimeToken } from "./actions";
-import { LogoutButton } from "./LogoutButton";
 import { MAX_ROWS, toSubmission, type Submission } from "./submissions";
 
 type LiveStatus = "connecting" | "live" | "offline";
@@ -147,7 +146,6 @@ export function AdminPanel({ email, initial }: { email: string; initial: Submiss
               {STATUS_LABEL[status]}
             </p>
           </div>
-          <LogoutButton />
         </header>
 
         {rows.length === 0 ? (
