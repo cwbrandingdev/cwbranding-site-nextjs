@@ -8,6 +8,12 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  experimental: {
+    // Envio de imagens do blog pelo painel (padrão é 1MB). A Vercel aceita até 4.5MB.
+    serverActions: {
+      bodySizeLimit: "4.5mb",
+    },
+  },
 };
 
 export default nextConfig;

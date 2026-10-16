@@ -3,7 +3,10 @@
 import type { Metadata } from "next";
 import { verifyAdminSession } from "@/lib/admin-session";
 import { adminDb } from "@/lib/firebase-admin";
+import { getAllPosts } from "@/lib/posts";
 import { AdminPanel } from "./AdminPanel";
+import { AdminTabs } from "./AdminTabs";
+import { BlogManager } from "./BlogManager";
 import { LoginForm } from "./LoginForm";
 import { MAX_ROWS, toSubmission, type Submission } from "./submissions";
 
@@ -27,5 +30,12 @@ export default async function AdminPage() {
   const session = await verifyAdminSession();
   if (!session) return <LoginForm />;
 
-  return <AdminPanel email={session.email} initial={await getSubmissions()} />;
+  const [submissions, posts] = await Promise.all([getSubmissions(), getAllPosts()]);
+
+  return (
+    <AdminTabs
+      leads={<AdminPanel email={session.email} initial={submissions} />}
+      blog={<BlogManager posts={posts} />}
+    />
+  );
 }

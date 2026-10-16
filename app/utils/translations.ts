@@ -7,6 +7,7 @@ export const translations = {
     contact: "Fale com a gente",
     navSpace: "Nosso Espaço",
     navPlans: "Planos",
+    navBlog: "Blog",
     navClients: "Clientes",
     search: "Buscar",
     country: "BRASIL",
@@ -54,51 +55,9 @@ export const translations = {
 
     servicesTitleLine1: "Nossos",
     servicesTitleLine2: "Serviços",
-    serviceMainImage: "/cwbranding/mainservicesimagept.png",
+    serviceMainImage: "/cwbranding/mainservicesimagept.webp",
     servicesDescription:
       "A CWBranding combina criatividade, dados e execução para entregar soluções completas de marketing e branding, ajudando marcas a se destacarem no seu setor com verdade e consistência.",
-    servicesList: [
-      {
-        id: 1,
-        title: "Social Media",
-        desc: "Criação e gestão de conteúdo para redes sociais, incluindo estratégias de engajamento e crescimento de audiência.",
-      },
-      {
-        id: 2,
-        title: "Identidade Visual",
-        desc: "Conjunto de elementos gráficos que representam visualmente uma marca — logo, cores, tipografia e padrões visuais.",
-      },
-      {
-        id: 3,
-        title: "Gestão de Tráfego",
-        desc: "Planejamento e execução de campanhas de mídia paga para direcionar visitantes qualificados para a empresa.",
-      },
-      {
-        id: 4,
-        title: "Landing Pages",
-        desc: "Páginas web específicas criadas para converter visitantes em leads ou clientes através de uma ação desejada.",
-      },
-      {
-        id: 5,
-        title: "Agência de Branding",
-        desc: "Consultoria estratégica para empresas desenvolverem e implementarem planos de branding eficazes.",
-      },
-      {
-        id: 6,
-        title: "Ensaios Fotográficos",
-        desc: "Produção de fotografias profissionais para materiais de marketing, redes sociais e comunicação corporativa.",
-      },
-      {
-        id: 7,
-        title: "Materiais Gráficos",
-        desc: "Peças visuais impressas ou digitais — folders, banners, cartões, apresentações e demais materiais de apoio.",
-      },
-      {
-        id: 8,
-        title: "Cobertura de Eventos",
-        desc: "Planejamento e execução da cobertura de eventos institucionais ou promocionais da marca.",
-      },
-    ],
 
     spaceTitle: "Nosso Espaço",
     spaceDescription:
@@ -264,6 +223,33 @@ export const translations = {
     },
     contactSuccessTitle: "Mensagem enviada!",
     contactSuccessText: "Entraremos em contato o mais breve possível.",
+
+    blogTitleLine1: "Nosso",
+    blogTitleLine2: "blog",
+    blogDescription:
+      "Conteúdos sobre branding, marketing digital e tráfego pago para fazer sua marca crescer.",
+    blogSeeAll: "Ver todos os posts",
+    blogReadMore: "Ler post",
+    blogBack: "Voltar para o blog",
+    blogEmpty: "Nenhum post publicado ainda.",
+    blogCtaTitle: "Quer aplicar isso na sua marca?",
+    blogCtaButton: "Fale com a gente",
+
+    serviceBack: "Todos os serviços",
+    serviceEyebrow: "Serviço em Curitiba",
+    serviceWhatsapp: "Falar no WhatsApp",
+    serviceQuote: "Solicitar orçamento",
+    serviceBenefitsTitle: "Por que investir",
+    serviceIncludesTitle: "O que está incluso",
+    serviceFaqTitle: "Perguntas frequentes",
+    serviceCtaTitle: "Vamos conversar sobre o seu projeto?",
+    serviceCtaText: "Conte o que a sua empresa precisa e montamos uma proposta sob medida.",
+    serviceOthersTitle: "Outros serviços",
+    portfolioTitleSites: ["Sites já", "desenvolvidos"],
+    portfolioTitleLanding: ["Landing pages", "já desenvolvidas"],
+    portfolioText:
+      "Confira alguns projetos que já criamos para empresas que querem se destacar no digital, com design alinhado à marca e pensados para gerar contatos.",
+    portfolioViewProject: "Ver projeto",
   },
 
   EN: {
@@ -272,6 +258,7 @@ export const translations = {
     contact: "Get in touch",
     navSpace: "Our Space",
     navPlans: "Plans",
+    navBlog: "Blog",
     navClients: "Clients",
     search: "Search",
     country: "CANADA",
@@ -310,51 +297,9 @@ export const translations = {
 
     servicesTitleLine1: "Our",
     servicesTitleLine2: "Services",
-    serviceMainImage: "/cwbranding/mainservicesimageen.png",
+    serviceMainImage: "/cwbranding/mainservicesimageen.webp",
     servicesDescription:
       "CWBranding combines creativity, data, and execution to deliver complete marketing and branding solutions, helping brands stand out in their industry with truth and consistency.",
-    servicesList: [
-      {
-        id: 1,
-        title: "Social Media",
-        desc: "Creation and management of social media content, including engagement and audience growth strategies.",
-      },
-      {
-        id: 2,
-        title: "Visual Identity",
-        desc: "A set of graphic elements that visually represent a brand — logo, colors, typography, and visual patterns.",
-      },
-      {
-        id: 3,
-        title: "Traffic Management",
-        desc: "Planning and execution of paid media campaigns to drive qualified visitors to your business.",
-      },
-      {
-        id: 4,
-        title: "Landing Pages",
-        desc: "Specific web pages created to convert visitors into leads or clients through a desired action.",
-      },
-      {
-        id: 5,
-        title: "Marketing Advisory",
-        desc: "Strategic consulting for businesses to develop and implement effective marketing plans.",
-      },
-      {
-        id: 6,
-        title: "Photoshoots",
-        desc: "Professional photo production for marketing materials, social networks, and corporate communication.",
-      },
-      {
-        id: 7,
-        title: "Graphic Materials",
-        desc: "Printed or digital visual pieces — folders, banners, business cards, presentations, and other supporting materials.",
-      },
-      {
-        id: 8,
-        title: "Event Coverage",
-        desc: "Planning and execution of institutional or promotional event coverage for the brand.",
-      },
-    ],
 
     spaceTitle: "Our Space",
     spaceDescription:
@@ -525,6 +470,33 @@ export const translations = {
     },
     contactSuccessTitle: "Message sent!",
     contactSuccessText: "We'll get back to you as soon as possible.",
+
+    blogTitleLine1: "Our",
+    blogTitleLine2: "blog",
+    blogDescription:
+      "Insights on branding, digital marketing and paid traffic to help your brand grow.",
+    blogSeeAll: "See all posts",
+    blogReadMore: "Read post",
+    blogBack: "Back to blog",
+    blogEmpty: "No posts published yet.",
+    blogCtaTitle: "Want to apply this to your brand?",
+    blogCtaButton: "Get in touch",
+
+    serviceBack: "All services",
+    serviceEyebrow: "Service",
+    serviceWhatsapp: "Chat on WhatsApp",
+    serviceQuote: "Request a quote",
+    serviceBenefitsTitle: "Why invest",
+    serviceIncludesTitle: "What's included",
+    serviceFaqTitle: "Frequently asked questions",
+    serviceCtaTitle: "Shall we talk about your project?",
+    serviceCtaText: "Tell us what your company needs and we'll put together a tailored proposal.",
+    serviceOthersTitle: "Other services",
+    portfolioTitleSites: ["Websites", "we've built"],
+    portfolioTitleLanding: ["Landing pages", "we've built"],
+    portfolioText:
+      "Check out some of the projects we've created for companies that want to stand out online, with brand-aligned design built to generate leads.",
+    portfolioViewProject: "View project",
   },
 };
 

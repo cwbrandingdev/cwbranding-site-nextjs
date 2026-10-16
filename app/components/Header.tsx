@@ -24,6 +24,7 @@ export function Header() {
     { href: "/#servicos", label: t.services },
     { href: "/#sobre", label: t.about },
     { href: "/#planos", label: t.navPlans },
+    { href: "/blog", label: t.navBlog },
   ];
 
   return (
@@ -59,7 +60,7 @@ export function Header() {
           className="font-display text-2xl tracking-[0.35em] font-medium"
         >
           <Image
-            src="/cwbranding/cwbrandinglogo.png"
+            src="/cwbranding/cwbrandinglogo.webp"
             alt="CWBranding — agência de branding em Curitiba"
             width={200}
             height={200}

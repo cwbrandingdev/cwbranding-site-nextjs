@@ -65,8 +65,8 @@ export const organizationJsonLd = {
     "@type": "Offer",
     itemOffered: {
       "@type": "Service",
-      name: service.title,
-      description: service.shortDesc,
+      name: service.pt.title,
+      description: service.pt.shortDesc,
     },
   })),
 };
@@ -103,7 +103,7 @@ export function serviceJsonLd(service: (typeof services)[number]) {
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      name: service.title,
+      name: service.pt.title,
       description: service.seoDescription,
       url,
       provider: { "@id": `${site.url}/#organization` },
@@ -111,7 +111,7 @@ export function serviceJsonLd(service: (typeof services)[number]) {
         "@type": "City",
         name,
       })),
-      serviceType: service.title,
+      serviceType: service.pt.title,
     },
     {
       "@context": "https://schema.org",
@@ -132,7 +132,7 @@ export function serviceJsonLd(service: (typeof services)[number]) {
         {
           "@type": "ListItem",
           position: 3,
-          name: service.title,
+          name: service.pt.title,
           item: url,
         },
       ],

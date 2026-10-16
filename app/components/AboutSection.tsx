@@ -20,7 +20,7 @@ export function AboutSection() {
             <div className="flex flex-row items-center gap-4">
               <div>
                 <Image
-                  src="/cwbranding/pinhao.png"
+                  src="/cwbranding/pinhao.webp"
                   alt="Símbolo do pinhão da CWBranding, marca de Curitiba"
                   width={130}
                   height={200}

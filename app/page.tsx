@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { getPublishedPosts } from "@/lib/posts";
 import { AboutSection } from "./components/AboutSection";
+import { BlogSection } from "./components/BlogSection";
 import { FaqSection } from "./components/FaqSection";
 import { Hero } from "./components/Hero";
 import { JsonLd } from "./components/JsonLd";
@@ -22,7 +24,10 @@ export const metadata: Metadata = {
   // a home perderia og:image, siteName e locale.
 };
 
-export default function Home() {
+export default async function Home() {
+  // Os 3 posts mais recentes para a seção do blog.
+  const latestPosts = (await getPublishedPosts()).slice(0, 3);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <JsonLd data={faqJsonLd(homeFaqItems)} />
@@ -34,6 +39,7 @@ export default function Home() {
       <PartnersSection />
       <PricingSection />
       <ContactSection />
+      <BlogSection posts={latestPosts} />
       <FaqSection />
     </div>
   );

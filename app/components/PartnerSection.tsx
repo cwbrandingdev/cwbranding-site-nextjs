@@ -5,7 +5,7 @@ import { Reveal } from "./ui/Reveal";
 
 const partnerImages = Array.from(
   { length: 24 },
-  (_, i) => `/parceiros-cwbranding/${i + 1}.png`,
+  (_, i) => `/parceiros-cwbranding/${i + 1}.webp`,
 );
 
 const CARDS_PER_ROW = 6;

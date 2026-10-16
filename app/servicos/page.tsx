@@ -7,12 +7,10 @@ import { JsonLd } from "@/app/components/JsonLd";
 export const metadata: Metadata = {
   title: "Serviços de branding e marketing digital em Curitiba",
   description:
-    "Conheça os serviços da CWBranding em Curitiba: social media, identidade visual, tráfego pago, landing pages, assessoria, ensaios, materiais gráficos e eventos.",
+    "Conheça os serviços da CWBranding em Curitiba: social media, identidade visual, tráfego pago, landing pages, SEO, sites institucionais, branding, ensaios, materiais gráficos e eventos.",
   alternates: {
     canonical: "/servicos",
   },
-  // Página mantida para links diretos, mas fora do Google.
-  robots: { index: false, follow: true },
   openGraph: {
     url: `${site.url}/servicos`,
     title: "Serviços | CWBranding",
@@ -28,7 +26,7 @@ const listJsonLd = {
   itemListElement: services.map((service, index) => ({
     "@type": "ListItem",
     position: index + 1,
-    name: service.title,
+    name: service.pt.title,
     url: `${site.url}${getServicePath(service)}`,
   })),
 };
@@ -57,10 +55,10 @@ export default function ServicesIndexPage() {
                 className="block rounded-2xl border border-white/10 bg-white/[0.03] p-6 hover:border-[#E8C39E]/50 hover:bg-white/[0.06] transition-colors"
               >
                 <h2 className="font-display text-2xl text-[#E8C39E] mb-2">
-                  {service.title}
+                  {service.pt.title}
                 </h2>
                 <p className="text-sm text-white/75 leading-relaxed">
-                  {service.shortDesc}
+                  {service.pt.shortDesc}
                 </p>
               </Link>
             </li>
