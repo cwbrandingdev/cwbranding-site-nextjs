@@ -19,8 +19,6 @@ import { PostContent } from "../blog/PostContent";
 import { slugify, type Post, type PostText } from "../blog/types";
 import { deletePost, savePost, uploadImage, type PostInput } from "./blog-actions";
 
-type Lang = "pt" | "en";
-
 const MAX_IMAGE_MB = 4;
 
 const fieldClass =
@@ -61,21 +59,21 @@ export function PostEditor({
     pt: post.pt,
     en: post.en,
   });
-  const [lang, setLang] = useState<Lang>("pt");
   const [preview, setPreview] = useState(false);
   const [slugEdited, setSlugEdited] = useState(!isNew);
   const [uploadingCover, setUploadingCover] = useState(false);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
 
-  const text = form[lang];
+  // Só a versão em português é editada (a versão em inglês do site foi desativada).
+  const text = form.pt;
 
-  // Atualiza um campo do texto no idioma aberto (título, resumo ou conteúdo).
+  // Atualiza um campo do texto (título, resumo ou conteúdo).
   function setText(field: keyof PostText, value: string) {
     setForm((f) => {
-      const next = { ...f, [lang]: { ...f[lang], [field]: value } };
-      // Em post novo, o endereço acompanha o título em português até ser editado à mão.
-      if (lang === "pt" && field === "title" && !slugEdited) next.slug = slugify(value);
+      const next = { ...f, pt: { ...f.pt, [field]: value } };
+      // Em post novo, o endereço acompanha o título até ser editado à mão.
+      if (field === "title" && !slugEdited) next.slug = slugify(value);
       return next;
     });
   }
@@ -121,17 +119,9 @@ export function PostEditor({
         </h1>
 
         <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_320px]">
-          {/* Coluna principal: textos em PT e EN */}
+          {/* Coluna principal: textos do post */}
           <div className="space-y-5">
             <div className="flex flex-wrap items-center justify-between gap-3">
-              <div className="flex gap-2">
-                <LangButton active={lang === "pt"} onClick={() => setLang("pt")}>
-                  🇧🇷 Português
-                </LangButton>
-                <LangButton active={lang === "en"} onClick={() => setLang("en")}>
-                  🇨🇦 English
-                </LangButton>
-              </div>
               <div className="flex gap-2">
                 <LangButton active={!preview} onClick={() => setPreview(false)}>
                   Escrever
@@ -142,12 +132,6 @@ export function PostEditor({
               </div>
             </div>
 
-            {lang === "en" && (
-              <p className="text-xs text-white/60">
-                Se a versão em inglês ficar vazia, o site mostra a versão em português.
-              </p>
-            )}
-
             {preview ? (
               <div className="rounded-2xl bg-white p-6 md:p-10">
                 <h2 className="font-display text-4xl text-[#004d4c]">{text.title || "Sem título"}</h2>
@@ -157,15 +141,14 @@ export function PostEditor({
                 </div>
               </div>
             ) : (
-              // key={lang}: troca os campos ao mudar de idioma, para o corretor usar o idioma certo.
-              <div key={lang} className="space-y-5">
+              <div className="space-y-5">
                 <div>
                   <label htmlFor="post-title" className={labelClass}>
                     Título
                   </label>
                   <input
                     id="post-title"
-                    lang={lang === "pt" ? "pt-BR" : "en"}
+                    lang="pt-BR"
                     spellCheck
                     value={text.title}
                     onChange={(e) => setText("title", e.target.value)}
@@ -178,7 +161,7 @@ export function PostEditor({
                   </label>
                   <textarea
                     id="post-excerpt"
-                    lang={lang === "pt" ? "pt-BR" : "en"}
+                    lang="pt-BR"
                     spellCheck
                     rows={2}
                     value={text.excerpt}
@@ -189,7 +172,6 @@ export function PostEditor({
                 <div>
                   <span className={labelClass}>Texto</span>
                   <MarkdownEditor
-                    lang={lang}
                     value={text.content}
                     onChange={(value) => setText("content", value)}
                   />
@@ -321,11 +303,9 @@ const TOOLBAR = [
 
 // Caixa de texto com botões que inserem a formatação (Markdown) no ponto do cursor.
 function MarkdownEditor({
-  lang,
   value,
   onChange,
 }: {
-  lang: Lang;
   value: string;
   onChange: (value: string) => void;
 }) {
@@ -387,7 +367,7 @@ function MarkdownEditor({
       </div>
       <textarea
         ref={textareaRef}
-        lang={lang === "pt" ? "pt-BR" : "en"}
+        lang="pt-BR"
         spellCheck
         rows={20}
         value={value}

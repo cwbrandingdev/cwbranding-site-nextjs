@@ -42,7 +42,7 @@ export const organizationJsonLd = {
     telephone: site.contact.phone,
     contactType: "sales",
     areaServed: "BR",
-    availableLanguage: ["Portuguese", "English"],
+    availableLanguage: ["Portuguese"],
   },
   hasOfferCatalog: {
     "@type": "OfferCatalog",

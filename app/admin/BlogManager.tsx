@@ -113,7 +113,6 @@ export function BlogManager({ posts }: { posts: Post[] }) {
                     >
                       {post.published ? "Publicado" : "Rascunho"}
                     </span>
-                    {!post.en.title && <span className="text-yellow-300/80">Sem versão em inglês</span>}
                     <span>{formatPostDate(post.createdAt, "PT")}</span>
                     <span>/blog/{post.slug}</span>
                   </p>

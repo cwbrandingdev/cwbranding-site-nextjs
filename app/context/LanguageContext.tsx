@@ -1,11 +1,14 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext } from "react";
 import { Language, translations } from "../utils/translations";
+
+// O site está só em português. A versão em inglês foi desativada, mas os
+// textos continuam em translations.ts caso ela volte um dia.
+const LANGUAGE: Language = "PT";
 
 interface LanguageContextType {
   language: Language;
-  setLanguage: (lang: Language) => void;
   t: typeof translations.PT;
 }
 
@@ -14,24 +17,10 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 );
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<Language>("PT");
-
-  useEffect(() => {
-    const savedLang = localStorage.getItem("lang") as Language;
-    if (savedLang && (savedLang === "PT" || savedLang === "EN")) {
-      setLanguageState(savedLang);
-    }
-  }, []);
-
-  const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
-    localStorage.setItem("lang", lang);
-  };
-
-  const t = translations[language];
+  const t = translations[LANGUAGE];
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language: LANGUAGE, t }}>
       {children}
     </LanguageContext.Provider>
   );
