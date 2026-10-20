@@ -42,7 +42,7 @@ export const organizationJsonLd = {
     telephone: site.contact.phone,
     contactType: "sales",
     areaServed: "BR",
-    availableLanguage: ["Portuguese", "English"],
+    availableLanguage: ["Portuguese"],
   },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
@@ -65,9 +65,8 @@ export const organizationJsonLd = {
     "@type": "Offer",
     itemOffered: {
       "@type": "Service",
-      name: service.title,
-      description: service.shortDesc,
-      url: `${site.url}/servicos/${service.slug}`,
+      name: service.pt.title,
+      description: service.pt.shortDesc,
     },
   })),
 };
@@ -83,9 +82,7 @@ export const websiteJsonLd = {
   publisher: { "@id": `${site.url}/#organization` },
 };
 
-export function faqJsonLd(
-  items: { question: string; answer: string }[],
-) {
+export function faqJsonLd(items: { question: string; answer: string }[]) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -106,7 +103,7 @@ export function serviceJsonLd(service: (typeof services)[number]) {
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      name: service.title,
+      name: service.pt.title,
       description: service.seoDescription,
       url,
       provider: { "@id": `${site.url}/#organization` },
@@ -114,7 +111,7 @@ export function serviceJsonLd(service: (typeof services)[number]) {
         "@type": "City",
         name,
       })),
-      serviceType: service.title,
+      serviceType: service.pt.title,
     },
     {
       "@context": "https://schema.org",
@@ -135,7 +132,7 @@ export function serviceJsonLd(service: (typeof services)[number]) {
         {
           "@type": "ListItem",
           position: 3,
-          name: service.title,
+          name: service.pt.title,
           item: url,
         },
       ],

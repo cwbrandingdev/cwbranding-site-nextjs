@@ -14,16 +14,16 @@ import {
 import Image from "next/image";
 
 const carouselImages = [
-  "/fotos-espaco/1.png",
-  "/fotos-espaco/2.png",
-  "/fotos-espaco/3.png",
-  "/fotos-espaco/4.png",
-  "/fotos-espaco/5.png",
-  "/fotos-espaco/6.png",
-  "/fotos-espaco/7.png",
-  "/fotos-espaco/8.png",
-  "/fotos-espaco/9.png",
-  "/fotos-espaco/10.png",
+  "/fotos-espaco/1.webp",
+  "/fotos-espaco/2.webp",
+  "/fotos-espaco/3.webp",
+  "/fotos-espaco/4.webp",
+  "/fotos-espaco/5.webp",
+  "/fotos-espaco/6.webp",
+  "/fotos-espaco/7.webp",
+  "/fotos-espaco/8.webp",
+  "/fotos-espaco/9.webp",
+  "/fotos-espaco/10.webp",
 ];
 
 export function SpaceSection() {
@@ -41,6 +41,8 @@ export function SpaceSection() {
                     src={img}
                     alt={`Sede da CWBranding no Centro de Curitiba — foto ${index + 1}`}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-black/20" />
                 </div>
@@ -57,7 +59,7 @@ export function SpaceSection() {
           <div className="flex justify-center lg:justify-start">
             <Reveal>
               <Image
-                src="/cwbranding/cwbnossolocal.png"
+                src="/cwbranding/cwbnossolocal.webp"
                 alt="Sede da CWBranding no Centro de Curitiba, em frente ao Palácio Avenida"
                 width={100}
                 height={100}

@@ -3,7 +3,7 @@ import { contact } from "./contact";
 export const site = {
   name: "CWBranding",
   legalName: "CWBranding Ltda",
-  url: "https://cwbranding.com.br",
+  url: "https://www.cwbranding.com.br",
   locale: "pt_BR",
   lang: "pt-BR",
   foundingDate: "2022-05-06",

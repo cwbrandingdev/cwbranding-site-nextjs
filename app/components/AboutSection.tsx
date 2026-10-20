@@ -20,7 +20,7 @@ export function AboutSection() {
             <div className="flex flex-row items-center gap-4">
               <div>
                 <Image
-                  src="/cwbranding/pinhao.png"
+                  src="/cwbranding/pinhao.webp"
                   alt="Símbolo do pinhão da CWBranding, marca de Curitiba"
                   width={130}
                   height={200}
@@ -50,7 +50,6 @@ export function AboutSection() {
           <Reveal delay={0.25}>
             <p className="opacity-85">{t.aboutParagraph3}</p>
           </Reveal>
-          <Reveal delay={0.3}></Reveal>
           <Reveal delay={0.35}>
             <a
               href={contact.instagram}

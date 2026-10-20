@@ -23,7 +23,7 @@ export default function NotFound() {
 
       <div className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-6 py-20 text-center">
         <Image
-          src="/cwbranding/pinhao.png"
+          src="/cwbranding/pinhao.webp"
           alt=""
           width={80}
           height={120}

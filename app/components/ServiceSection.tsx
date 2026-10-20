@@ -1,13 +1,12 @@
 "use client";
 
 import { useLanguage } from "../context/LanguageContext";
+import { getServiceText, services } from "../data/services";
 import { Reveal } from "./ui/Reveal";
 import { ServiceCard } from "./ui/ServiceCard";
 
 export function ServicesSection() {
-  const { t } = useLanguage();
-
-  const services = t.servicesList || [];
+  const { t, language } = useLanguage();
 
   return (
     <section
@@ -44,16 +43,19 @@ export function ServicesSection() {
           </div>
         </div>
 
-        <div className="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((s, i) => (
-            <ServiceCard
-              key={s.title}
-              index={i}
-              title={s.title}
-              desc={s.desc}
-              id={s.id}
-            />
-          ))}
+        <div className="mt-24 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6">
+          {services.map((service, i) => {
+            const text = getServiceText(service, language);
+            return (
+              <ServiceCard
+                key={service.slug}
+                index={i}
+                title={text.title}
+                desc={text.shortDesc}
+                id={service.id}
+              />
+            );
+          })}
         </div>
       </div>
     </section>

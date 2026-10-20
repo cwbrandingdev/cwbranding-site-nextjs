@@ -5,7 +5,7 @@ import { Reveal } from "./ui/Reveal";
 
 const partnerImages = Array.from(
   { length: 24 },
-  (_, i) => `/parceiros-cwbranding/${i + 1}.png`,
+  (_, i) => `/parceiros-cwbranding/${i + 1}.webp`,
 );
 
 const CARDS_PER_ROW = 6;
@@ -28,6 +28,8 @@ function PartnerLogo({
         alt={alt}
         className="max-w-full max-h-full w-auto h-auto object-contain block"
         draggable={false}
+        loading="lazy"
+        decoding="async"
       />
     </div>
   );

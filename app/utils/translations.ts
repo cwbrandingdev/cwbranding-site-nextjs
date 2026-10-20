@@ -7,6 +7,7 @@ export const translations = {
     contact: "Fale com a gente",
     navSpace: "Nosso Espaço",
     navPlans: "Planos",
+    navBlog: "Blog",
     navClients: "Clientes",
     search: "Buscar",
     country: "BRASIL",
@@ -14,7 +15,7 @@ export const translations = {
 
     heroTitleLine1: "A ESTRATÉGIA",
     heroTitleLine2: "POR TRÁS DA",
-    heroTitleLine3: "SUA EMP digitalRESA",
+    heroTitleLine3: "SUA EMPRESA",
     heroSubtitle: "CWB / SP / TOR",
     heroTagline: "Agência de branding em Curitiba",
     marqueeA: [
@@ -54,51 +55,9 @@ export const translations = {
 
     servicesTitleLine1: "Nossos",
     servicesTitleLine2: "Serviços",
-    serviceMainImage: "/cwbranding/mainservicesimagept.png",
+    serviceMainImage: "/cwbranding/mainservicesimagept.webp",
     servicesDescription:
       "A CWBranding combina criatividade, dados e execução para entregar soluções completas de marketing e branding, ajudando marcas a se destacarem no seu setor com verdade e consistência.",
-    servicesList: [
-      {
-        id: 1,
-        title: "Social Media",
-        desc: "Criação e gestão de conteúdo para redes sociais, incluindo estratégias de engajamento e crescimento de audiência.",
-      },
-      {
-        id: 2,
-        title: "Identidade Visual",
-        desc: "Conjunto de elementos gráficos que representam visualmente uma marca — logo, cores, tipografia e padrões visuais.",
-      },
-      {
-        id: 3,
-        title: "Gestão de Tráfego",
-        desc: "Planejamento e execução de campanhas de mídia paga para direcionar visitantes qualificados para a empresa.",
-      },
-      {
-        id: 4,
-        title: "Landing Pages",
-        desc: "Páginas web específicas criadas para converter visitantes em leads ou clientes através de uma ação desejada.",
-      },
-      {
-        id: 5,
-        title: "Agência de Branding",
-        desc: "Consultoria estratégica para empresas desenvolverem e implementarem planos de branding eficazes.",
-      },
-      {
-        id: 6,
-        title: "Ensaios Fotográficos",
-        desc: "Produção de fotografias profissionais para materiais de marketing, redes sociais e comunicação corporativa.",
-      },
-      {
-        id: 7,
-        title: "Materiais Gráficos",
-        desc: "Peças visuais impressas ou digitais — folders, banners, cartões, apresentações e demais materiais de apoio.",
-      },
-      {
-        id: 8,
-        title: "Cobertura de Eventos",
-        desc: "Planejamento e execução da cobertura de eventos institucionais ou promocionais da marca.",
-      },
-    ],
 
     spaceTitle: "Nosso Espaço",
     spaceDescription:
@@ -212,6 +171,91 @@ export const translations = {
           "Sim. A sede é em Curitiba, mas a operação cobre São Paulo e Toronto, com atendimento remoto e presencial conforme o projeto.",
       },
     ],
+    contactTitleLine1: "Fale",
+    contactTitleLine2: "conosco",
+    contactParagraph1:
+      "Entre em contato com a CWBranding, agência de branding e marketing digital em Curitiba que pode transformar a presença online do seu negócio. Nossa equipe está pronta para entender suas necessidades, esclarecer dúvidas e desenvolver uma estratégia personalizada para impulsionar seus resultados no digital.",
+    contactParagraph2:
+      "Seja para atrair mais clientes, fortalecer sua marca ou aumentar suas vendas, temos as soluções ideais para você. Vamos criar juntos campanhas eficazes e inovadoras que fazem a diferença. Fale conosco e descubra como podemos levar sua empresa ao próximo nível.",
+    contactWhatsappButton: "Entrar em contato",
+    contactLabels: {
+      name: "Nome",
+      phone: "Telefone WhatsApp",
+      email: "E-mail",
+      instagram: "Seu Instagram ou site",
+      revenue: "Qual seu faturamento mensal?",
+      traffic: "Já investiu em tráfego pago?",
+      objective: "Qual é seu principal objetivo com o marketing?",
+    },
+    contactPlaceholders: {
+      name: "Digite seu nome completo",
+      phone: "(XX) XXXXX-XXXX",
+      email: "Digite seu e-mail",
+      instagram: "@minhaempresa",
+      objective: "Digite seu objetivo",
+    },
+    contactSelectPlaceholder: "Selecione",
+    contactRevenueOptions: {
+      "ate-10k": "Até R$ 10 mil",
+      "10k-50k": "De R$ 10 mil a R$ 50 mil",
+      "50k-100k": "De R$ 50 mil a R$ 100 mil",
+      "100k-500k": "De R$ 100 mil a R$ 500 mil",
+      "acima-500k": "Acima de R$ 500 mil",
+    },
+    contactTrafficOptions: {
+      "sim-atualmente": "Sim, invisto atualmente",
+      "sim-parou": "Sim, mas parei",
+      nunca: "Não, nunca investi",
+    },
+    contactSubmit: "Enviar mensagem",
+    contactSubmitting: "Enviando...",
+    contactFieldErrors: {
+      required: "Campo obrigatório.",
+      invalid: "Valor inválido.",
+      tooLong: "Texto muito longo.",
+    },
+    contactErrors: {
+      validation: "Confira os campos destacados.",
+      rateLimit:
+        "Muitos envios seguidos. Aguarde alguns minutos e tente de novo.",
+      server:
+        "Não foi possível enviar agora. Tente novamente ou fale pelo WhatsApp.",
+    },
+    contactSuccessTitle: "Mensagem enviada!",
+    contactSuccessText: "Entraremos em contato o mais breve possível.",
+
+    blogTitleLine1: "Nosso",
+    blogTitleLine2: "blog",
+    blogDescription:
+      "Conteúdos sobre branding, marketing digital e tráfego pago para fazer sua marca crescer.",
+    blogSeeAll: "Ver todos os posts",
+    blogReadMore: "Ler post",
+    blogBack: "Voltar para o blog",
+    blogBackHome: "Voltar para a home",
+    blogReadingTime: "min de leitura",
+    blogShare: "Compartilhar",
+    blogCopyLink: "Copiar link",
+    blogLinkCopied: "Link copiado!",
+    blogRelated: "Leia também",
+    blogEmpty: "Nenhum post publicado ainda.",
+    blogCtaTitle: "Quer aplicar isso na sua marca?",
+    blogCtaButton: "Fale com a gente",
+
+    serviceBack: "Todos os serviços",
+    serviceEyebrow: "Serviço em Curitiba",
+    serviceWhatsapp: "Falar no WhatsApp",
+    serviceQuote: "Solicitar orçamento",
+    serviceBenefitsTitle: "Por que investir",
+    serviceIncludesTitle: "O que está incluso",
+    serviceFaqTitle: "Perguntas frequentes",
+    serviceCtaTitle: "Vamos conversar sobre o seu projeto?",
+    serviceCtaText: "Conte o que a sua empresa precisa e montamos uma proposta sob medida.",
+    serviceOthersTitle: "Outros serviços",
+    portfolioTitleSites: ["Sites já", "desenvolvidos"],
+    portfolioTitleLanding: ["Landing pages", "já desenvolvidas"],
+    portfolioText:
+      "Confira alguns projetos que já criamos para empresas que querem se destacar no digital, com design alinhado à marca e pensados para gerar contatos.",
+    portfolioViewProject: "Ver projeto",
   },
 
   EN: {
@@ -220,6 +264,7 @@ export const translations = {
     contact: "Get in touch",
     navSpace: "Our Space",
     navPlans: "Plans",
+    navBlog: "Blog",
     navClients: "Clients",
     search: "Search",
     country: "CANADA",
@@ -258,51 +303,9 @@ export const translations = {
 
     servicesTitleLine1: "Our",
     servicesTitleLine2: "Services",
-    serviceMainImage: "/cwbranding/mainservicesimageen.png",
+    serviceMainImage: "/cwbranding/mainservicesimageen.webp",
     servicesDescription:
       "CWBranding combines creativity, data, and execution to deliver complete marketing and branding solutions, helping brands stand out in their industry with truth and consistency.",
-    servicesList: [
-      {
-        id: 1,
-        title: "Social Media",
-        desc: "Creation and management of social media content, including engagement and audience growth strategies.",
-      },
-      {
-        id: 2,
-        title: "Visual Identity",
-        desc: "A set of graphic elements that visually represent a brand — logo, colors, typography, and visual patterns.",
-      },
-      {
-        id: 3,
-        title: "Traffic Management",
-        desc: "Planning and execution of paid media campaigns to drive qualified visitors to your business.",
-      },
-      {
-        id: 4,
-        title: "Landing Pages",
-        desc: "Specific web pages created to convert visitors into leads or clients through a desired action.",
-      },
-      {
-        id: 5,
-        title: "Marketing Advisory",
-        desc: "Strategic consulting for businesses to develop and implement effective marketing plans.",
-      },
-      {
-        id: 6,
-        title: "Photoshoots",
-        desc: "Professional photo production for marketing materials, social networks, and corporate communication.",
-      },
-      {
-        id: 7,
-        title: "Graphic Materials",
-        desc: "Printed or digital visual pieces — folders, banners, business cards, presentations, and other supporting materials.",
-      },
-      {
-        id: 8,
-        title: "Event Coverage",
-        desc: "Planning and execution of institutional or promotional event coverage for the brand.",
-      },
-    ],
 
     spaceTitle: "Our Space",
     spaceDescription:
@@ -421,6 +424,91 @@ export const translations = {
           "Yes. Our headquarters is in Curitiba, and we also operate in São Paulo and Toronto, with remote and on-site work depending on the project.",
       },
     ],
+    contactTitleLine1: "Get in",
+    contactTitleLine2: "touch",
+    contactParagraph1:
+      "Get in touch with CWBranding, a branding and digital marketing agency in Curitiba that can transform your business's online presence. Our team is ready to understand your needs, answer your questions, and build a tailored strategy to boost your digital results.",
+    contactParagraph2:
+      "Whether you want to attract more clients, strengthen your brand, or increase sales, we have the right solutions for you. Let's create effective, innovative campaigns that make a difference. Talk to us and discover how we can take your business to the next level.",
+    contactWhatsappButton: "Contact us",
+    contactLabels: {
+      name: "Name",
+      phone: "WhatsApp number",
+      email: "E-mail",
+      instagram: "Your Instagram or website",
+      revenue: "What is your monthly revenue?",
+      traffic: "Have you invested in paid traffic?",
+      objective: "What is your main marketing goal?",
+    },
+    contactPlaceholders: {
+      name: "Enter your full name",
+      phone: "(XX) XXXXX-XXXX",
+      email: "Enter your e-mail",
+      instagram: "@mycompany",
+      objective: "Describe your goal",
+    },
+    contactSelectPlaceholder: "Select",
+    contactRevenueOptions: {
+      "ate-10k": "Up to R$ 10k",
+      "10k-50k": "R$ 10k to R$ 50k",
+      "50k-100k": "R$ 50k to R$ 100k",
+      "100k-500k": "R$ 100k to R$ 500k",
+      "acima-500k": "Over R$ 500k",
+    },
+    contactTrafficOptions: {
+      "sim-atualmente": "Yes, I currently invest",
+      "sim-parou": "Yes, but I stopped",
+      nunca: "No, never",
+    },
+    contactSubmit: "Send message",
+    contactSubmitting: "Sending...",
+    contactFieldErrors: {
+      required: "Required field.",
+      invalid: "Invalid value.",
+      tooLong: "Text is too long.",
+    },
+    contactErrors: {
+      validation: "Please check the highlighted fields.",
+      rateLimit:
+        "Too many submissions. Please wait a few minutes and try again.",
+      server:
+        "We couldn't send it right now. Please try again or reach us on WhatsApp.",
+    },
+    contactSuccessTitle: "Message sent!",
+    contactSuccessText: "We'll get back to you as soon as possible.",
+
+    blogTitleLine1: "Our",
+    blogTitleLine2: "blog",
+    blogDescription:
+      "Insights on branding, digital marketing and paid traffic to help your brand grow.",
+    blogSeeAll: "See all posts",
+    blogReadMore: "Read post",
+    blogBack: "Back to blog",
+    blogBackHome: "Back to home",
+    blogReadingTime: "min read",
+    blogShare: "Share",
+    blogCopyLink: "Copy link",
+    blogLinkCopied: "Link copied!",
+    blogRelated: "Keep reading",
+    blogEmpty: "No posts published yet.",
+    blogCtaTitle: "Want to apply this to your brand?",
+    blogCtaButton: "Get in touch",
+
+    serviceBack: "All services",
+    serviceEyebrow: "Service",
+    serviceWhatsapp: "Chat on WhatsApp",
+    serviceQuote: "Request a quote",
+    serviceBenefitsTitle: "Why invest",
+    serviceIncludesTitle: "What's included",
+    serviceFaqTitle: "Frequently asked questions",
+    serviceCtaTitle: "Shall we talk about your project?",
+    serviceCtaText: "Tell us what your company needs and we'll put together a tailored proposal.",
+    serviceOthersTitle: "Other services",
+    portfolioTitleSites: ["Websites", "we've built"],
+    portfolioTitleLanding: ["Landing pages", "we've built"],
+    portfolioText:
+      "Check out some of the projects we've created for companies that want to stand out online, with brand-aligned design built to generate leads.",
+    portfolioViewProject: "View project",
   },
 };
 

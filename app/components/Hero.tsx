@@ -19,11 +19,16 @@ export function Hero() {
   const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.35, 0.75]);
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch((error) => {
-        console.log("Autoplay preventivo do navegador bloqueou:", error);
-      });
+    const video = videoRef.current;
+    if (!video) return;
+    // Quem pediu "reduzir movimento" no sistema vê só o poster.
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      video.pause();
+      return;
     }
+    video.play().catch((error) => {
+      console.log("Autoplay preventivo do navegador bloqueou:", error);
+    });
   }, []);
 
   return (
@@ -37,10 +42,25 @@ export function Hero() {
         loop
         muted
         playsInline
-        poster="/og-image.jpg"
+        poster="/cwbranding/hero/hero-poster.webp"
+        aria-hidden
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
-        <source src="/cwbranding/videofundo.mp4" type="video/mp4" />
+        {/* O navegador usa a primeira fonte que suporta: celular → 540p;
+            desktop → AV1 (menor) ou H.264 (compatível). Ver public/cwbranding/hero. */}
+        <source
+          src="/cwbranding/hero/hero-mobile.mp4"
+          type='video/mp4; codecs="avc1.64001F"'
+          media="(max-width: 767px)"
+        />
+        <source
+          src="/cwbranding/hero/hero-desktop.webm"
+          type='video/webm; codecs="av01.0.05M.10"'
+        />
+        <source
+          src="/cwbranding/hero/hero-desktop.mp4"
+          type='video/mp4; codecs="avc1.64001F"'
+        />
         Seu navegador não suporta vídeos.
       </video>
 

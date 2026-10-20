@@ -38,7 +38,7 @@ export function ServiceCard({ id, title, desc, index }: ServiceCardProps) {
         src={imageUrl}
         alt={`${title} — serviço da CWBranding em Curitiba`}
         fill
-        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 20vw"
         className="object-cover transition-transform duration-700 group-hover:scale-110"
       />
 
