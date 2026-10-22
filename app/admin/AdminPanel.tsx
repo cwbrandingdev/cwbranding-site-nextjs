@@ -1,53 +1,78 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { translations } from "../utils/translations";
-import { formatPhone } from "../utils/contactForm";
+import { X } from "lucide-react";
 import { getRealtimeToken } from "./actions";
 import { MAX_ROWS, toSubmission, type Submission } from "./submissions";
+import {
+  EmailLink,
+  formatDate,
+  InstagramOrSite,
+  revenueLabel,
+  trafficLabel,
+  WhatsAppLink,
+} from "./leadFields";
 
 type LiveStatus = "connecting" | "live" | "offline";
 
-const t = translations.PT;
+// Janela com todas as informações do lead, aberta ao clicar na linha da tabela.
+// <dialog> nativo: fecha com Esc, e aqui também ao clicar fora.
+function LeadDialog({ lead, onClose }: { lead: Submission; onClose: () => void }) {
+  const ref = useRef<HTMLDialogElement>(null);
 
-const dateParts = new Intl.DateTimeFormat("pt-BR", {
-  day: "2-digit",
-  month: "2-digit",
-  year: "numeric",
-  hour: "2-digit",
-  minute: "2-digit",
-  hour12: false,
-  timeZone: "America/Sao_Paulo",
-});
+  useEffect(() => {
+    ref.current?.showModal();
+  }, []);
 
-// Montado à mão para servidor e navegador gerarem exatamente o mesmo texto.
-function formatDate(iso: string | null) {
-  if (!iso) return "—";
-  const p = Object.fromEntries(
-    dateParts.formatToParts(new Date(iso)).map((part) => [part.type, part.value]),
-  );
-  return `${p.day}/${p.month}/${p.year} ${p.hour}:${p.minute}`;
-}
+  const fields = [
+    { label: "WhatsApp", value: <WhatsAppLink phone={lead.phone} /> },
+    { label: "E-mail", value: <EmailLink email={lead.email} /> },
+    { label: "Instagram / site", value: <InstagramOrSite value={lead.instagram} /> },
+    { label: "Faturamento", value: revenueLabel(lead) },
+    { label: "Tráfego pago", value: trafficLabel(lead) },
+  ];
 
-const Empty = () => <span className="text-white/30">—</span>;
-
-function InstagramOrSite({ value }: { value: string }) {
-  if (!value) return <Empty />;
-  const href = value.startsWith("@")
-    ? `https://instagram.com/${value.slice(1)}`
-    : /^https?:\/\//i.test(value)
-      ? value
-      : null;
-  if (!href) return <>{value}</>;
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer nofollow"
-      className="text-[#E8C39E] hover:underline"
+    <dialog
+      ref={ref}
+      onClose={onClose}
+      // O clique fora do conteúdo cai no próprio <dialog> (a área escura).
+      onClick={(e) => e.target === e.currentTarget && ref.current?.close()}
+      className="m-auto w-[calc(100%-2rem)] max-w-2xl rounded-2xl border border-white/10 bg-[#0A3F3D] text-white shadow-2xl backdrop:bg-black/60"
     >
-      {value}
-    </a>
+      <div className="p-6 sm:p-8">
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <h2 className="font-display text-3xl">{lead.name}</h2>
+            <p className="mt-1 text-sm text-white/60">{formatDate(lead.createdAt)}</p>
+          </div>
+          <button
+            type="button"
+            onClick={() => ref.current?.close()}
+            aria-label="Fechar"
+            className="rounded-full p-2 text-white/70 transition-colors hover:bg-white/10 hover:text-white"
+          >
+            <X className="size-5" />
+          </button>
+        </div>
+
+        <dl className="mt-6 grid gap-4 sm:grid-cols-2">
+          {fields.map((f) => (
+            <div key={f.label}>
+              <dt className="text-[10px] uppercase tracking-[0.2em] text-white/60">{f.label}</dt>
+              <dd className="mt-1 wrap-break-word text-sm">{f.value}</dd>
+            </div>
+          ))}
+        </dl>
+
+        <div className="mt-6 border-t border-white/10 pt-6">
+          <p className="text-[10px] uppercase tracking-[0.2em] text-white/60">Objetivo</p>
+          <p className="mt-2 max-h-[50vh] overflow-y-auto whitespace-pre-wrap wrap-break-word text-sm leading-relaxed text-white/85">
+            {lead.objective}
+          </p>
+        </div>
+      </div>
+    </dialog>
   );
 }
 
@@ -67,6 +92,7 @@ export function AdminPanel({ email, initial }: { email: string; initial: Submiss
   const [rows, setRows] = useState(initial);
   const [status, setStatus] = useState<LiveStatus>("connecting");
   const [newIds, setNewIds] = useState<Set<string>>(new Set());
+  const [selected, setSelected] = useState<Submission | null>(null);
   const knownIds = useRef(new Set(initial.map((s) => s.id)));
 
   useEffect(() => {
@@ -151,7 +177,8 @@ export function AdminPanel({ email, initial }: { email: string; initial: Submiss
         {rows.length === 0 ? (
           <p className="py-20 text-center text-white/60">Nenhum contato recebido ainda.</p>
         ) : (
-          <div className="mt-6 overflow-x-auto rounded-2xl border border-white/10">
+          // Barra de rolagem fina, na cor areia, no lugar da barra branca do sistema.
+          <div className="mt-6 overflow-x-auto rounded-2xl border border-white/10 pb-1 [scrollbar-color:rgba(232,195,158,0.45)_transparent] scrollbar-thin">
             <table className="w-full min-w-[1100px] text-left text-sm">
               <thead className="bg-white/5 text-[10px] uppercase tracking-[0.2em] text-white/70">
                 <tr>
@@ -177,9 +204,13 @@ export function AdminPanel({ email, initial }: { email: string; initial: Submiss
                   return (
                     <tr
                       key={s.id}
-                      data-new={isNew || undefined}
-                      className={`align-top transition-colors ${
-                        isNew ? "bg-[#E8C39E]/10" : "hover:bg-white/[0.03]"
+                      tabIndex={0}
+                      title="Clique para ver tudo"
+                      // Clique em link (WhatsApp, e-mail...) abre o link, não a janela.
+                      onClick={(e) => !(e.target as HTMLElement).closest("a") && setSelected(s)}
+                      onKeyDown={(e) => e.key === "Enter" && setSelected(s)}
+                      className={`cursor-pointer align-top transition-colors focus:outline-none focus-visible:bg-white/6 ${
+                        isNew ? "bg-[#E8C39E]/10" : "hover:bg-white/6"
                       }`}
                     >
                       <td className="whitespace-nowrap px-4 py-3 text-white/70">
@@ -192,39 +223,19 @@ export function AdminPanel({ email, initial }: { email: string; initial: Submiss
                       </td>
                       <td className="px-4 py-3 font-medium">{s.name}</td>
                       <td className="whitespace-nowrap px-4 py-3">
-                        <a
-                          href={`https://wa.me/55${s.phone}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-[#E8C39E] hover:underline"
-                        >
-                          {formatPhone(s.phone)}
-                        </a>
+                        <WhatsAppLink phone={s.phone} />
                       </td>
                       <td className="px-4 py-3">
-                        {s.email ? (
-                          <a href={`mailto:${s.email}`} className="hover:underline">
-                            {s.email}
-                          </a>
-                        ) : (
-                          <Empty />
-                        )}
+                        <EmailLink email={s.email} />
                       </td>
                       <td className="px-4 py-3">
                         <InstagramOrSite value={s.instagram} />
                       </td>
-                      <td className="whitespace-nowrap px-4 py-3">
-                        {t.contactRevenueOptions[s.revenue as keyof typeof t.contactRevenueOptions] ?? (
-                          <Empty />
-                        )}
-                      </td>
-                      <td className="whitespace-nowrap px-4 py-3">
-                        {t.contactTrafficOptions[s.traffic as keyof typeof t.contactTrafficOptions] ?? (
-                          <Empty />
-                        )}
-                      </td>
-                      <td className="max-w-md whitespace-pre-wrap break-words px-4 py-3 text-white/85">
-                        {s.objective}
+                      <td className="whitespace-nowrap px-4 py-3">{revenueLabel(s)}</td>
+                      <td className="whitespace-nowrap px-4 py-3">{trafficLabel(s)}</td>
+                      {/* Só uma prévia; a mensagem inteira aparece na janela do lead. */}
+                      <td className="px-4 py-3 text-white/85">
+                        <p className="line-clamp-2 max-w-xs wrap-break-word">{s.objective}</p>
                       </td>
                     </tr>
                   );
@@ -234,6 +245,10 @@ export function AdminPanel({ email, initial }: { email: string; initial: Submiss
           </div>
         )}
       </div>
+
+      {selected && (
+        <LeadDialog key={selected.id} lead={selected} onClose={() => setSelected(null)} />
+      )}
     </div>
   );
 }
