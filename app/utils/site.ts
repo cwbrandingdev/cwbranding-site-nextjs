@@ -12,8 +12,7 @@ export const site = {
   tagline: "A estratégia por trás da sua empresa",
   description:
     "Agência de branding e marketing digital em Curitiba. Social media, identidade visual, tráfego pago e posicionamento de marca. Sede no Centro, em frente ao Palácio Avenida.",
-  title:
-    "CWBranding | Agência de Branding e Marketing Digital em Curitiba",
+  title: "Agência de Marketing Digital e Branding em Curiitba | CWBranding",
   keywords: [
     "agência de branding Curitiba",
     "agência de marketing digital Curitiba",
