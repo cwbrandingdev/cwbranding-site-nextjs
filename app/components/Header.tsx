@@ -22,7 +22,9 @@ export function Header() {
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-gradient-to-b from-[#006867] to-[#004A4A] text-[color:var(--sand-soft)]">
-      <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between px-6 md:px-10 text-[13px] tracking-[0.18em] uppercase">
+      {/* 3 colunas: as laterais têm a mesma largura (1fr), então o logo fica sempre no centro.
+          grid-rows-1: a linha fica com a altura da barra (h-16), sem crescer com o logo. */}
+      <div className="mx-auto grid h-16 max-w-[1600px] grid-cols-[1fr_auto_1fr] grid-rows-1 items-center px-6 md:px-10 text-[13px] tracking-[0.18em] uppercase">
         <nav
           className="hidden lg:flex items-center gap-8"
           aria-label="Principal"
@@ -40,7 +42,7 @@ export function Header() {
 
         <button
           type="button"
-          className="lg:hidden hover:opacity-70 transition-opacity"
+          className="justify-self-start lg:hidden hover:opacity-70 transition-opacity"
           onClick={toggleMenu}
           aria-expanded={isMenuOpen}
           aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
@@ -60,8 +62,7 @@ export function Header() {
           />
         </Link>
 
-        {/* min-w-6: no celular fica do tamanho do botão de menu, para o logo continuar no centro. */}
-        <div className="flex min-w-6 items-center justify-end gap-6">
+        <div className="flex items-center justify-end gap-6">
           <a
             href={contact.whatsapp}
             target="_blank"
