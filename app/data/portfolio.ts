@@ -36,6 +36,13 @@ export const portfolio: PortfolioProject[] = [
     desktopImage: "/portfolio/nanoskinbio-desktop.webp",
     mobileImage: "/portfolio/nanoskinbio-mobile.webp",
   },
+  {
+    name: "Monica Gobbeti",
+    url: "https://www.monicagobbeti.com.br/",
+    type: "landing-page",
+    desktopImage: "/portfolio/monica-gobbeti-desktop.webp",
+    mobileImage: "/portfolio/monica-gobbeti-mobile.webp",
+  },
 ];
 
 // Qual tipo de projeto aparece em cada página de serviço.
