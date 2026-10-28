@@ -4,6 +4,8 @@ import { useRef, useState } from "react";
 import {
   ArrowLeft,
   Bold,
+  ChevronLeft,
+  ChevronRight,
   Heading2,
   Heading3,
   ImagePlus,
@@ -13,6 +15,7 @@ import {
   ListOrdered,
   Quote,
   Trash2,
+  X,
 } from "lucide-react";
 import { IMAGE_WIDTHS, optimizeImage } from "../blog/optimizeImage";
 import { PostContent } from "../blog/PostContent";
@@ -54,14 +57,14 @@ export function PostEditor({
 }) {
   const [form, setForm] = useState<PostInput>({
     slug: post.slug,
-    coverUrl: post.coverUrl,
+    images: post.images,
     published: post.published,
     pt: post.pt,
     en: post.en,
   });
   const [preview, setPreview] = useState(false);
   const [slugEdited, setSlugEdited] = useState(!isNew);
-  const [uploadingCover, setUploadingCover] = useState(false);
+  const [uploadingImages, setUploadingImages] = useState(false);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
 
@@ -78,12 +81,29 @@ export function PostEditor({
     });
   }
 
-  async function handleCover(file: File | undefined) {
-    if (!file) return;
-    setUploadingCover(true);
-    const url = await sendImage(file);
-    if (url) setForm((f) => ({ ...f, coverUrl: url }));
-    setUploadingCover(false);
+  // Envia as fotos escolhidas, uma por vez, e coloca no fim do carrossel.
+  async function handleImages(files: File[]) {
+    if (files.length === 0) return;
+    setUploadingImages(true);
+    for (const file of files) {
+      const url = await sendImage(file);
+      if (url) setForm((f) => ({ ...f, images: [...f.images, url] }));
+    }
+    setUploadingImages(false);
+  }
+
+  // Troca a foto de lugar com a vizinha (direction -1 = esquerda, 1 = direita).
+  function moveImage(index: number, direction: -1 | 1) {
+    setForm((f) => {
+      const images = [...f.images];
+      const target = index + direction;
+      [images[index], images[target]] = [images[target], images[index]];
+      return { ...f, images };
+    });
+  }
+
+  function removeImage(index: number) {
+    setForm((f) => ({ ...f, images: f.images.filter((_, i) => i !== index) }));
   }
 
   async function handleSave() {
@@ -203,24 +223,68 @@ export function PostEditor({
             </div>
 
             <div>
-              <span className={labelClass}>Imagem de capa</span>
-              {form.coverUrl && (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={optimizeImage(form.coverUrl, IMAGE_WIDTHS.card)}
-                  alt=""
-                  className="mb-3 aspect-[4/3] w-full rounded-xl object-cover"
-                />
+              <span className={labelClass}>Capa / carrossel</span>
+              <p className="mb-3 text-xs text-white/50">
+                A 1ª foto é a capa (cards e compartilhamento). Com mais de uma, vira carrossel.
+              </p>
+              {form.images.length > 0 && (
+                <div className="mb-3 grid grid-cols-3 gap-2">
+                  {form.images.map((url, index) => (
+                    <div key={url} className="relative">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={optimizeImage(url, IMAGE_WIDTHS.thumb)}
+                        alt=""
+                        className="aspect-[4/5] w-full rounded-lg object-cover"
+                      />
+                      <span className="absolute left-1 top-1 rounded-full bg-black/60 px-1.5 text-[10px]">
+                        {index === 0 ? "Capa" : index + 1}
+                      </span>
+                      <button
+                        type="button"
+                        title="Remover"
+                        onClick={() => removeImage(index)}
+                        className="absolute right-1 top-1 rounded-full bg-black/60 p-0.5 hover:bg-red-500"
+                      >
+                        <X className="size-3" />
+                      </button>
+                      <div className="mt-1 flex justify-between">
+                        <button
+                          type="button"
+                          title="Mover para a esquerda"
+                          disabled={index === 0}
+                          onClick={() => moveImage(index, -1)}
+                          className="rounded p-0.5 text-white/70 hover:text-white disabled:opacity-20"
+                        >
+                          <ChevronLeft className="size-4" />
+                        </button>
+                        <button
+                          type="button"
+                          title="Mover para a direita"
+                          disabled={index === form.images.length - 1}
+                          onClick={() => moveImage(index, 1)}
+                          className="rounded p-0.5 text-white/70 hover:text-white disabled:opacity-20"
+                        >
+                          <ChevronRight className="size-4" />
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               )}
               <label className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-xs text-white/85 hover:border-[#E8C39E] hover:text-[#E8C39E]">
                 <ImagePlus className="size-4" />
-                {uploadingCover ? "Enviando..." : form.coverUrl ? "Trocar imagem" : "Escolher imagem"}
+                {uploadingImages ? "Enviando..." : "Adicionar fotos"}
                 <input
                   type="file"
                   accept="image/*"
+                  multiple
                   className="hidden"
-                  disabled={uploadingCover}
-                  onChange={(e) => handleCover(e.target.files?.[0])}
+                  disabled={uploadingImages}
+                  onChange={(e) => {
+                    handleImages(Array.from(e.target.files ?? []));
+                    e.target.value = ""; // permite escolher a mesma foto de novo
+                  }}
                 />
               </label>
             </div>
@@ -244,7 +308,7 @@ export function PostEditor({
             <button
               type="button"
               onClick={handleSave}
-              disabled={saving || uploadingCover}
+              disabled={saving || uploadingImages}
               className="h-11 w-full rounded-full bg-[#E8C39E] text-sm font-semibold text-[#004D4C] transition-colors hover:bg-white disabled:opacity-60"
             >
               {saving ? "Salvando..." : "Salvar"}

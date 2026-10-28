@@ -21,6 +21,8 @@ function toPost(doc: DocumentSnapshot): Post {
   return {
     slug: doc.id,
     coverUrl: d.coverUrl ?? "",
+    // Posts antigos só têm coverUrl: viram um carrossel de uma foto.
+    images: Array.isArray(d.images) ? d.images : d.coverUrl ? [d.coverUrl] : [],
     published: d.published === true,
     archived: d.archived === true,
     createdAt: d.createdAt?.toDate().toISOString() ?? null,

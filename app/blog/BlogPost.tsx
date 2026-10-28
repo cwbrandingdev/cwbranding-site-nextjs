@@ -2,10 +2,10 @@
 
 // Página de um post: visual branco e limpo, título grande e, ao lado do texto,
 // uma coluna com a capa, os botões de compartilhar e o contato, que acompanha a rolagem.
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Check, ChevronLeft, House, Link2 } from "lucide-react";
+import { Check, ChevronLeft, ChevronRight, House, Link2 } from "lucide-react";
 import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { useLanguage } from "../context/LanguageContext";
 import { contact } from "../utils/contact";
@@ -65,18 +65,79 @@ export function BlogPost({ post, related }: { post: Post; related: Post[] }) {
 }
 
 // Capa no formato 1080x1350 (4:5, o mesmo das artes do Instagram).
+// Com mais de uma foto vira carrossel: setas, bolinhas e deslizar com o dedo.
 function Cover({ post, title, className }: { post: Post; title: string; className: string }) {
-  if (!post.coverUrl) return null;
+  const [current, setCurrent] = useState(0);
+  const touchStartX = useRef<number | null>(null);
+  const images = post.images;
+  if (images.length === 0) return null;
+
+  const isCarousel = images.length > 1;
+
+  // Vai para a foto anterior (-1) ou próxima (1), voltando ao início no fim.
+  function go(direction: -1 | 1) {
+    setCurrent((i) => (i + direction + images.length) % images.length);
+  }
+
+  // Deslizar o dedo mais de 40px para o lado troca a foto.
+  function handleTouchEnd(endX: number) {
+    if (touchStartX.current === null) return;
+    const distance = endX - touchStartX.current;
+    if (Math.abs(distance) > 40) go(distance < 0 ? 1 : -1);
+    touchStartX.current = null;
+  }
+
+  const arrowClass =
+    "absolute top-1/2 flex size-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/80 text-[#004d4c] shadow transition-colors hover:bg-white";
+
   return (
-    <div className={`relative aspect-[4/5] overflow-hidden rounded-2xl ${className}`}>
-      <Image
-        src={optimizeImage(post.coverUrl, IMAGE_WIDTHS.cover)}
-        alt={title}
-        fill
-        priority
-        sizes="(max-width: 1024px) 100vw, 380px"
-        className="object-cover"
-      />
+    <div
+      className={`relative aspect-[4/5] overflow-hidden rounded-2xl ${className}`}
+      onTouchStart={(e) => (touchStartX.current = e.touches[0].clientX)}
+      onTouchEnd={(e) => handleTouchEnd(e.changedTouches[0].clientX)}
+    >
+      {/* As fotos ficam lado a lado; a faixa anda para mostrar a foto atual. */}
+      <div
+        className="flex h-full transition-transform duration-500"
+        style={{ transform: `translateX(-${current * 100}%)` }}
+      >
+        {images.map((url, index) => (
+          <div key={url} className="relative h-full w-full shrink-0">
+            <Image
+              src={optimizeImage(url, IMAGE_WIDTHS.cover)}
+              alt={isCarousel ? `${title} (${index + 1}/${images.length})` : title}
+              fill
+              priority={index === 0}
+              sizes="(max-width: 1024px) 100vw, 380px"
+              className="object-cover"
+            />
+          </div>
+        ))}
+      </div>
+
+      {isCarousel && (
+        <>
+          <button type="button" onClick={() => go(-1)} aria-label="Anterior" className={`${arrowClass} left-3`}>
+            <ChevronLeft className="size-5" />
+          </button>
+          <button type="button" onClick={() => go(1)} aria-label="Próxima" className={`${arrowClass} right-3`}>
+            <ChevronRight className="size-5" />
+          </button>
+          <div className="absolute inset-x-0 bottom-3 flex justify-center gap-1.5">
+            {images.map((url, index) => (
+              <button
+                key={url}
+                type="button"
+                onClick={() => setCurrent(index)}
+                aria-label={`Foto ${index + 1}`}
+                className={`h-1.5 rounded-full transition-all ${
+                  index === current ? "w-5 bg-white" : "w-1.5 bg-white/60"
+                }`}
+              />
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 }

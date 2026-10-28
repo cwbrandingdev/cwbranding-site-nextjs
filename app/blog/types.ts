@@ -10,7 +10,8 @@ export type PostText = {
 
 export type Post = {
   slug: string; // endereço do post: /blog/<slug>
-  coverUrl: string; // imagem de capa (ImageKit)
+  coverUrl: string; // imagem de capa (ImageKit) = primeira foto de images
+  images: string[]; // fotos da capa, na ordem do carrossel (1 foto = capa simples)
   published: boolean; // false = rascunho, não aparece no site
   archived: boolean; // true = arquivado: sai do site e da lista principal do painel
   createdAt: string | null; // data em ISO

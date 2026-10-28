@@ -10,6 +10,7 @@ import { PostEditor } from "./PostEditor";
 const newPost: Post = {
   slug: "",
   coverUrl: "",
+  images: [],
   published: false,
   archived: false,
   createdAt: null,

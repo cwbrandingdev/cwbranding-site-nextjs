@@ -13,7 +13,7 @@ export type ActionResult = { ok: true } | { ok: false; error: string };
 
 export type PostInput = {
   slug: string;
-  coverUrl: string;
+  images: string[]; // a primeira é a capa
   published: boolean;
   pt: PostText;
   en: PostText;
@@ -37,6 +37,7 @@ export async function savePost(input: PostInput, isNew: boolean): Promise<Action
     return { ok: false, error: "Preencha pelo menos o título e o texto em português." };
   }
 
+  const coverUrl = input.images[0] ?? "";
   const ref = adminDb().collection(POSTS_COLLECTION).doc(input.slug);
 
   try {
@@ -46,7 +47,8 @@ export async function savePost(input: PostInput, isNew: boolean): Promise<Action
 
     await ref.set(
       {
-        coverUrl: input.coverUrl,
+        coverUrl, // a capa fica gravada à parte para os cards e o compartilhamento
+        images: input.images,
         published: input.published,
         pt: input.pt,
         en: input.en,
@@ -73,15 +75,19 @@ async function warmImages(input: PostInput) {
   const contentImages = [input.pt.content, input.en.content]
     .flatMap((text) => [...text.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g)].map((match) => match[1]));
 
+  const [coverUrl, ...otherImages] = input.images;
+
   const urls = [
-    ...(input.coverUrl
+    ...(coverUrl
       ? [
-          optimizeImage(input.coverUrl, IMAGE_WIDTHS.thumb),
-          optimizeImage(input.coverUrl, IMAGE_WIDTHS.card),
-          optimizeImage(input.coverUrl, IMAGE_WIDTHS.cover),
-          optimizeImage(input.coverUrl, IMAGE_WIDTHS.share, "jpg"),
+          optimizeImage(coverUrl, IMAGE_WIDTHS.thumb),
+          optimizeImage(coverUrl, IMAGE_WIDTHS.card),
+          optimizeImage(coverUrl, IMAGE_WIDTHS.cover),
+          optimizeImage(coverUrl, IMAGE_WIDTHS.share, "jpg"),
         ]
       : []),
+    // As outras fotos do carrossel só aparecem na página do post.
+    ...otherImages.map((url) => optimizeImage(url, IMAGE_WIDTHS.cover)),
     ...contentImages.map((url) => optimizeImage(url, IMAGE_WIDTHS.content)),
   ];
 
