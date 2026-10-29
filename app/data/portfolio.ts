@@ -32,7 +32,7 @@ export const portfolio: PortfolioProject[] = [
   {
     name: "NanoSkinBio",
     url: "https://www.nanoskinbiobrasil.com.br/",
-    type: "site",
+    type: "landing-page",
     desktopImage: "/portfolio/nanoskinbio-desktop.webp",
     mobileImage: "/portfolio/nanoskinbio-mobile.webp",
   },
