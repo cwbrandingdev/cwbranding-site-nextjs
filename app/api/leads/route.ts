@@ -8,7 +8,7 @@ const MAX_LIMIT = 500;
 
 function corsResponse(body: any, init?: ResponseInit) {
   const headers = new Headers(init?.headers);
-  headers.set("Access-Control-Allow-Origin", "https://azuz.cwbranding.com.br");
+  headers.set("Access-Control-Allow-Origin", "*");
   headers.set("Access-Control-Allow-Methods", "GET, OPTIONS");
   headers.set("Access-Control-Allow-Headers", "Authorization, Content-Type");
 
