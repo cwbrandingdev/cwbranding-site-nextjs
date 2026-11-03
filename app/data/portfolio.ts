@@ -43,6 +43,13 @@ export const portfolio: PortfolioProject[] = [
     desktopImage: "/portfolio/monica-gobbeti-desktop.webp",
     mobileImage: "/portfolio/monica-gobbeti-mobile.webp",
   },
+  {
+    name: "Jurix Capital",
+    url: "https://jurixcapital.com.br/",
+    type: "landing-page",
+    desktopImage: "/portfolio/jurix-capital-desktop.webp",
+    mobileImage: "/portfolio/jurix-capital-mobile.webp",
+  },
 ];
 
 // Qual tipo de projeto aparece em cada página de serviço.
@@ -52,7 +59,9 @@ const TYPE_BY_SERVICE: Record<string, PortfolioType> = {
 };
 
 // Projetos para mostrar na página de um serviço (lista vazia = a seção não aparece).
-export function getPortfolioForService(serviceSlug: string): PortfolioProject[] {
+export function getPortfolioForService(
+  serviceSlug: string,
+): PortfolioProject[] {
   const type = TYPE_BY_SERVICE[serviceSlug];
   return portfolio.filter((project) => project.type === type);
 }
