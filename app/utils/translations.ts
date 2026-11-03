@@ -242,8 +242,7 @@ export const translations = {
     blogCtaButton: "Fale com a gente",
 
     cookieTitle: "Aviso de cookies",
-    cookieText:
-      "Usamos cookies para entender como você navega no site (páginas visitadas e tempo em cada uma) e melhorar nosso atendimento.",
+    cookieText: "Usamos cookies para entender como você navega no site ",
     cookieAccept: "Aceitar",
     cookieDecline: "Recusar",
 

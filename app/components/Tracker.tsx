@@ -141,10 +141,10 @@ export function Tracker() {
     <div
       role="dialog"
       aria-label={t.cookieTitle}
-      className="fixed inset-x-4 bottom-4 z-50 mx-auto max-w-xl rounded-2xl bg-[#004D4C] p-5 text-white shadow-2xl"
+      className="fixed inset-x-4 bottom-4 z-50 mx-auto flex max-w-xl flex-col gap-4 rounded-2xl bg-[#004D4C] p-5 text-white shadow-2xl sm:w-fit sm:max-w-3xl sm:flex-row sm:items-center sm:gap-8 sm:py-3 sm:pl-6 sm:pr-3"
     >
       <p className="text-sm leading-relaxed text-white/85">{t.cookieText}</p>
-      <div className="mt-4 flex justify-end gap-2">
+      <div className="flex shrink-0 justify-end gap-2">
         <button
           type="button"
           onClick={() => saveConsent("no")}
