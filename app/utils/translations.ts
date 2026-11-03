@@ -241,6 +241,12 @@ export const translations = {
     blogCtaTitle: "Quer aplicar isso na sua marca?",
     blogCtaButton: "Fale com a gente",
 
+    cookieTitle: "Aviso de cookies",
+    cookieText:
+      "Usamos cookies para entender como você navega no site (páginas visitadas e tempo em cada uma) e melhorar nosso atendimento.",
+    cookieAccept: "Aceitar",
+    cookieDecline: "Recusar",
+
     serviceBack: "Todos os serviços",
     serviceEyebrow: "Serviço em Curitiba",
     serviceWhatsapp: "Falar no WhatsApp",
@@ -249,7 +255,8 @@ export const translations = {
     serviceIncludesTitle: "O que está incluso",
     serviceFaqTitle: "Perguntas frequentes",
     serviceCtaTitle: "Vamos conversar sobre o seu projeto?",
-    serviceCtaText: "Conte o que a sua empresa precisa e montamos uma proposta sob medida.",
+    serviceCtaText:
+      "Conte o que a sua empresa precisa e montamos uma proposta sob medida.",
     serviceOthersTitle: "Outros serviços",
     portfolioTitleSites: ["Sites já", "desenvolvidos"],
     portfolioTitleLanding: ["Landing pages", "já desenvolvidas"],
@@ -494,6 +501,12 @@ export const translations = {
     blogCtaTitle: "Want to apply this to your brand?",
     blogCtaButton: "Get in touch",
 
+    cookieTitle: "Cookie notice",
+    cookieText:
+      "We use cookies to understand how you browse the site (pages visited and time on each) and improve our service.",
+    cookieAccept: "Accept",
+    cookieDecline: "Decline",
+
     serviceBack: "All services",
     serviceEyebrow: "Service",
     serviceWhatsapp: "Chat on WhatsApp",
@@ -502,7 +515,8 @@ export const translations = {
     serviceIncludesTitle: "What's included",
     serviceFaqTitle: "Frequently asked questions",
     serviceCtaTitle: "Shall we talk about your project?",
-    serviceCtaText: "Tell us what your company needs and we'll put together a tailored proposal.",
+    serviceCtaText:
+      "Tell us what your company needs and we'll put together a tailored proposal.",
     serviceOthersTitle: "Other services",
     portfolioTitleSites: ["Websites", "we've built"],
     portfolioTitleLanding: ["Landing pages", "we've built"],

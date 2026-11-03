@@ -5,22 +5,13 @@
 //
 // Para buscar só os novos, o CRM guarda o "next" da resposta e manda como ?desde= na próxima vez.
 // O mesmo lead pode vir duas vezes nessa troca: use o "id" para não duplicar.
-import { createHash, timingSafeEqual } from "node:crypto";
 import { Timestamp } from "firebase-admin/firestore";
 import { toSubmission } from "@/app/admin/submissions";
+import { isAuthorized } from "@/lib/crm-auth";
 import { adminDb } from "@/lib/firebase-admin";
 
 const DEFAULT_LIMIT = 100;
 const MAX_LIMIT = 500;
-
-// Compara os hashes para não vazar a chave pelo tempo de resposta.
-function isAuthorized(request: Request) {
-  const key = process.env.CRM_API_KEY;
-  const sent = request.headers.get("authorization")?.replace(/^Bearer\s+/i, "");
-  if (!key || !sent) return false;
-  const hash = (value: string) => createHash("sha256").update(value).digest();
-  return timingSafeEqual(hash(key), hash(sent));
-}
 
 export async function GET(request: Request) {
   if (!isAuthorized(request)) return Response.json({ error: "Não autorizado" }, { status: 401 });

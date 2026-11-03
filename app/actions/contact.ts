@@ -1,7 +1,7 @@
 "use server";
 
 import { createHash } from "node:crypto";
-import { headers } from "next/headers";
+import { cookies, headers } from "next/headers";
 import type { Firestore } from "firebase-admin/firestore";
 import {
   CONTACT_FIELDS,
@@ -11,6 +11,7 @@ import {
   type ContactFormState,
   type ContactValues,
 } from "../utils/contactForm";
+import { ID_PATTERN, VISITOR_COOKIE } from "../utils/tracking";
 
 const RATE_LIMIT_MAX = 3;
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
@@ -71,12 +72,17 @@ export async function submitContact(
       return { status: "error", reason: "rateLimit" };
     }
 
+    // Identificador do rastreio (só existe se a pessoa aceitou os cookies).
+    // Liga o lead às páginas que ele visitou: ver /api/leads/<id>/jornada.
+    const visitorId = (await cookies()).get(VISITOR_COOKIE)?.value ?? "";
+
     await db.collection("contact_submissions").add({
       ...values,
       phone: onlyDigits(values.phone),
       email: values.email.toLowerCase(),
       language: formData.get("language") === "EN" ? "EN" : "PT",
       status: "new",
+      visitorId: ID_PATTERN.test(visitorId) ? visitorId : null,
       createdAt: FieldValue.serverTimestamp(),
     });
 
