@@ -7,6 +7,7 @@ import { LanguageProvider } from "./context/LanguageContext";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { HideOnAdmin } from "./components/HideOnAdmin";
+import { PromoBar } from "./components/PromoPopup";
 import { Tracker } from "./components/Tracker";
 import { JsonLd } from "./components/JsonLd";
 import { organizationJsonLd, websiteJsonLd } from "./utils/jsonld";
@@ -120,6 +121,8 @@ export default function RootLayout({
         <LanguageProvider>
           <HideOnAdmin>
             <Header />
+            {/* Black November: faixa em todas as páginas (ver components/PromoPopup.tsx). */}
+            <PromoBar />
           </HideOnAdmin>
           {children}
           <HideOnAdmin>

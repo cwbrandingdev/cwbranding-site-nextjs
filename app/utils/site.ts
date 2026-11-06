@@ -37,7 +37,8 @@ export const site = {
   priceRange: "R$ 5.699 – R$ 9.999",
   contact,
   sameAs: [contact.instagram, contact.linkedin],
-  ogImage: "/og-image.jpg",
+  // Imagem da prévia ao compartilhar o link (WhatsApp, LinkedIn...), 1200x630.
+  ogImage: "/compartilhamento/og-image.jpg",
   logo: "/cwbranding/cwbrandinglogo.png",
 } as const;
 

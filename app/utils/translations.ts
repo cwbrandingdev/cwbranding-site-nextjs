@@ -69,6 +69,7 @@ export const translations = {
     pricingSubtitle:
       "Escolha a assinatura ideal para elevar o posicionamento da sua marca",
     pricingPeriod: "/mês",
+    pricingFrom: "De",
     pricingButton: "Quero este plano",
     plans: [
       {
@@ -100,7 +101,10 @@ export const translations = {
         title: "Escala",
         description:
           "Para empresas que já possuem operação e querem acelerar crescimento e aquisição. Sua comunicação começa a gerar crescimento consistente. ",
-        price: "7.999",
+        // Black November: para encerrar, veja o passo a passo em components/PromoPopup.tsx.
+        price: "4.799",
+        oldPrice: "7.999",
+        promo: "Black November · 40% OFF",
         features: [
           "Inteligência de demanda",
           "Estrutura inicial de geração de leads",
@@ -158,7 +162,7 @@ export const translations = {
       {
         question: "Quanto custa um plano da CWBranding?",
         answer:
-          "Os planos mensais começam em R$ 3.599 (Essencial — 45 conteúdos, 30 Stories, 15 feed, sem tráfego pago), R$ 5.699 (Posicionamento), R$ 7.999 (Escala) e R$ 9.999 (Liderança). O escopo completo de cada plano está descrito na seção de planos do site.",
+          "Os planos mensais começam em R$ 3.599 (Essencial — 45 conteúdos, 30 Stories, 15 feed, sem tráfego pago), R$ 5.699 (Posicionamento), R$ 7.999 (Escala — na Black November, R$ 4.799 com 40% de desconto) e R$ 9.999 (Liderança). O escopo completo de cada plano está descrito na seção de planos do site.",
       },
       {
         question: "Como contratar a CWBranding?",
@@ -323,6 +327,7 @@ export const translations = {
     pricingSubtitle:
       "Choose the ideal subscription to elevate your brand's positioning",
     pricingPeriod: "/month",
+    pricingFrom: "From",
     pricingButton: "I want this plan",
     plans: [
       {
@@ -359,7 +364,9 @@ export const translations = {
         title: "Scale",
         description:
           "For companies that already have operations and want to accelerate growth and acquisition. Your communication starts generating consistent growth.",
-        price: "7,999",
+        price: "4,799",
+        oldPrice: "7,999",
+        promo: "Black November · 40% OFF",
         features: [
           "Demand intelligence",
           "Initial lead generation structure",
@@ -417,7 +424,7 @@ export const translations = {
       {
         question: "How much do CWBranding plans cost?",
         answer:
-          "Monthly plans start at R$ 3,599 (Essential — 45 pieces of content, 30 Stories, 15 feed posts, no paid traffic), R$ 5,699 (Positioning), R$ 7,999 (Scale), and R$ 9,999 (Leadership). Each plan's full scope is listed in the pricing section.",
+          "Monthly plans start at R$ 3,599 (Essential — 45 pieces of content, 30 Stories, 15 feed posts, no paid traffic), R$ 5,699 (Positioning), R$ 7,999 (Scale — R$ 4,799 with 40% off during Black November), and R$ 9,999 (Leadership). Each plan's full scope is listed in the pricing section.",
       },
       {
         question: "How do I hire CWBranding?",
