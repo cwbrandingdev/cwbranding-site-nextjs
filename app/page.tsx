@@ -37,7 +37,7 @@ export default async function Home() {
       <Marquee />
       <SpaceSection />
       <PartnersSection />
-      <PricingSection />
+      {/* <PricingSection /> */}
       <ContactSection />
       <BlogSection posts={latestPosts} />
       <FaqSection />
