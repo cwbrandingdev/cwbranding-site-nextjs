@@ -11,7 +11,10 @@ export default function PricingSection() {
   const plans = t.plans || [];
 
   return (
-    <section id="planos" className="scroll-mt-16 overflow-x-clip bg-[#EBF5F5] py-16 px-6 md:px-12">
+    <section
+      id="planos"
+      className="scroll-mt-16 overflow-x-clip bg-[#EBF5F5] py-16 px-6 md:px-12"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display tracking-tight text-[#004d4c]">
@@ -63,7 +66,6 @@ export default function PricingSection() {
                   >
                     {plan.description}
                   </p>
-                 
 
                   {"subHeader" in plan && plan.subHeader && (
                     <p className="text-xs italic text-[#E8C39E] mb-4">
@@ -105,7 +107,8 @@ export default function PricingSection() {
                           highlighted ? "text-white/60" : "text-[#004d4c]/60"
                         }`}
                       >
-                        {t.pricingFrom} <span className="line-through">R$ {plan.oldPrice}</span>
+                        {t.pricingFrom}{" "}
+                        <span className="line-through">R$ {plan.oldPrice}</span>
                       </p>
                     )}
                     <div className="flex items-baseline">
@@ -146,7 +149,6 @@ export default function PricingSection() {
         </div>
 
         {/* Black November (ver components/PromoPopup.tsx). */}
-        <PromoPricingBanner />
       </div>
     </section>
   );

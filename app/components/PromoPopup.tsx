@@ -20,7 +20,8 @@ import { AnimatePresence, motion } from "motion/react";
 import { ArrowRight, X } from "lucide-react";
 import { contact } from "../utils/contact";
 
-const WHATSAPP_MESSAGE = "Olá! Quero o Plano Escala da Black November com 40% OFF.";
+const WHATSAPP_MESSAGE =
+  "Olá! Quero o Plano Escala da Black November com 40% OFF.";
 export const PROMO_WHATSAPP = `${contact.whatsapp}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 // Guarda que o pop-up já apareceu nesta visita.
@@ -33,7 +34,12 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 function BannerPicture() {
   return (
     <picture>
-      <source media="(min-width: 768px)" srcSet="/promocoes/black-november/banner-desktop.webp" width={1920} height={400} />
+      <source
+        media="(min-width: 768px)"
+        srcSet="/promocoes/black-november/banner-desktop.webp"
+        width={1920}
+        height={400}
+      />
       <img
         src="/promocoes/black-november/banner-mobile.webp"
         alt="Black November: Plano Escala com 40% OFF, de R$ 7.999 por R$ 4.799 por mês"
@@ -75,7 +81,8 @@ export function PromoPopup() {
   // Esc fecha.
   useEffect(() => {
     if (!open) return;
-    const close = (event: KeyboardEvent) => event.key === "Escape" && setOpen(false);
+    const close = (event: KeyboardEvent) =>
+      event.key === "Escape" && setOpen(false);
     window.addEventListener("keydown", close);
     return () => window.removeEventListener("keydown", close);
   }, [open]);
@@ -158,20 +165,23 @@ export function PromoBar() {
       {/* Reserva a altura da faixa (h-11) para ela não cobrir o começo das páginas. */}
       <div aria-hidden className="h-11" />
       <motion.div
-        className="fixed inset-x-0 top-16 z-40 border-b border-[#E8C39E]/30 bg-[#032826] text-white shadow-lg"
+        className="fixed inset-x-0 top-16 z-40 overflow-hidden border-b border-[#E8C39E]/30 bg-[#032826] text-white shadow-lg"
         initial={{ y: -48, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.5, ease: EASE }}
       >
-        <div className="mx-auto flex h-11 max-w-[1600px] items-center justify-center gap-3 px-9 text-xs md:gap-5 md:text-sm">
-          <span className="whitespace-nowrap rounded-full bg-[#E8C39E] px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest text-[#004D4C] md:text-[11px]">
+        <div className="mx-auto flex h-11 min-w-0 max-w-[1600px] items-center justify-center gap-2 px-8 text-xs sm:gap-3 md:gap-5 md:px-10 md:text-sm">
+          <span className="shrink-0 rounded-full bg-[#E8C39E] px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest text-[#004D4C] md:text-[11px]">
             Black November
           </span>
-          <span className="whitespace-nowrap">
+          <span className="min-w-0 truncate">
             <span className="hidden md:inline">Plano Escala com </span>
             <strong className="text-[#E8C39E]">40% OFF</strong>
             <span className="hidden sm:inline">
-              {" "}· de <span className="line-through opacity-60">R$ 7.999</span> por <strong>R$ 4.799/mês</strong>
+              {" "}
+              · de <span className="line-through opacity-60">
+                R$ 7.999
+              </span> por <strong>R$ 4.799/mês</strong>
             </span>
           </span>
           <a
@@ -198,12 +208,10 @@ export function PromoBar() {
   );
 }
 
-// Banner de borda a borda abaixo dos cards de preço, encostado na seção de contato.
-// Fica dentro do conteúdo da seção de planos: as margens negativas o levam até as bordas
-// da tela (a seção usa overflow-x-clip para não criar rolagem lateral).
+// Banner de borda a borda, encostado na seção de contato.
 export function PromoPricingBanner() {
   return (
-    <div className="mt-16 -mb-16 -mx-6 md:mx-[calc(50%-50vw)]">
+    <div className="overflow-x-clip">
       <motion.a
         href={PROMO_WHATSAPP}
         target="_blank"

@@ -46,6 +46,8 @@
 
 html,
 body {
+  overflow-x: clip;
+  max-width: 100%;
   background: var(--sand-soft);
   color: var(--brand-ink);
   font-family: var(--font-sans), "Inter", sans-serif;
@@ -233,4 +235,3 @@ body {
   width: 100%;
   border-radius: 1rem;
 }
-

@@ -7,7 +7,7 @@ import { Hero } from "./components/Hero";
 import { JsonLd } from "./components/JsonLd";
 import { Marquee } from "./components/Marquee";
 import { PartnersSection } from "./components/PartnerSection";
-import { PromoPopup } from "./components/PromoPopup";
+import { PromoPopup, PromoPricingBanner } from "./components/PromoPopup";
 import PricingSection from "./components/PricingSection";
 import { ContactSection } from "./components/ContactSection";
 import { ServicesSection } from "./components/ServiceSection";
@@ -30,7 +30,7 @@ export default async function Home() {
   const latestPosts = (await getPublishedPosts()).slice(0, 3);
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen overflow-x-clip bg-background text-foreground">
       <JsonLd data={faqJsonLd(homeFaqItems)} />
       {/* Black November: para encerrar, veja o passo a passo em components/PromoPopup.tsx. */}
       <PromoPopup />
@@ -41,6 +41,7 @@ export default async function Home() {
       <SpaceSection />
       <PartnersSection />
       {/* <PricingSection /> */}
+      <PromoPricingBanner />
       <ContactSection />
       <BlogSection posts={latestPosts} />
       <FaqSection />
