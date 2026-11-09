@@ -3,6 +3,7 @@
 import React from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { contact } from "../utils/contact";
+import { PromoPricingBanner } from "./PromoPopup";
 
 export default function PricingSection() {
   const { t, language } = useLanguage();
@@ -10,7 +11,7 @@ export default function PricingSection() {
   const plans = t.plans || [];
 
   return (
-    <section id="planos" className="scroll-mt-16 bg-[#EBF5F5] py-16 px-6 md:px-12">
+    <section id="planos" className="scroll-mt-16 overflow-x-clip bg-[#EBF5F5] py-16 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display tracking-tight text-[#004d4c]">
@@ -36,6 +37,13 @@ export default function PricingSection() {
                     : "bg-white text-[#004d4c]"
                 }`}
               >
+                {/* Selo de promoção (ex.: Black November) */}
+                {"promo" in plan && plan.promo && (
+                  <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-[#004d4c] px-4 py-1.5 text-[10px] font-semibold uppercase tracking-widest text-[#E8C39E] ring-2 ring-[#E8C39E]">
+                    {plan.promo}
+                  </span>
+                )}
+
                 <div>
                   <span className="text-xs uppercase tracking-widest text-[#E8C39E] font-medium">
                     {plan.tagline}
@@ -90,6 +98,16 @@ export default function PricingSection() {
 
                 <div>
                   <div className="mb-6">
+                    {/* Preço antigo riscado ("De R$ 7.999") quando o plano está em promoção */}
+                    {"oldPrice" in plan && plan.oldPrice && (
+                      <p
+                        className={`mb-1 text-sm ${
+                          highlighted ? "text-white/60" : "text-[#004d4c]/60"
+                        }`}
+                      >
+                        {t.pricingFrom} <span className="line-through">R$ {plan.oldPrice}</span>
+                      </p>
+                    )}
                     <div className="flex items-baseline">
                       <span className="text-lg font-light font-display text-[#E8C39E]">
                         {language === "PT" ? "R$ " : "$ "}
@@ -126,6 +144,9 @@ export default function PricingSection() {
             );
           })}
         </div>
+
+        {/* Black November (ver components/PromoPopup.tsx). */}
+        <PromoPricingBanner />
       </div>
     </section>
   );
