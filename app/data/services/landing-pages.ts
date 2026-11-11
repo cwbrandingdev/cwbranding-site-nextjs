@@ -3,9 +3,9 @@ import type { ServiceContent } from "./types";
 export const landingPages: ServiceContent = {
   id: 4,
   slug: "landing-pages",
-  seoTitle: "Landing Pages em Curitiba",
+  seoTitle: "Criação de Landing Pages em Curitiba e no Brasil",
   seoDescription:
-    "Criação de landing pages em Curitiba para converter tráfego em leads e clientes, com oferta clara, design e chamada para ação alinhados à marca.",
+    "Criação de landing pages em Curitiba e para todo o Brasil: página de vendas e página de captura rápidas, pensadas para o celular e feitas para gerar clientes.",
   pt: {
     title: "Landing Pages",
     shortDesc:

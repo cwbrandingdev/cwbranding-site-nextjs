@@ -3,9 +3,9 @@ import type { ServiceContent } from "./types";
 export const identidadeVisual: ServiceContent = {
   id: 2,
   slug: "identidade-visual",
-  seoTitle: "Identidade Visual em Curitiba",
+  seoTitle: "Identidade Visual em Curitiba e todo o Brasil",
   seoDescription:
-    "Identidade visual para empresas em Curitiba: logo, cores, tipografia e sistema gráfico para a marca ser reconhecida em qualquer ponto de contato.",
+    "Criação de logo e identidade visual para empresas de Curitiba e de todo o Brasil: cores, tipografia e manual de marca para ser reconhecida em qualquer lugar.",
   pt: {
     title: "Identidade Visual",
     shortDesc:
