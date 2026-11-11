@@ -3,9 +3,9 @@ import type { ServiceContent } from "./types";
 export const ensaiosFotograficos: ServiceContent = {
   id: 6,
   slug: "ensaios-fotograficos",
-  seoTitle: "Ensaios Fotográficos para Marcas em Curitiba",
+  seoTitle: "Ensaios Fotográficos para Empresas em Curitiba",
   seoDescription:
-    "Ensaios fotográficos profissionais em Curitiba para marcas: fotos de produto, equipe e ambiente para redes sociais, site e materiais comerciais.",
+    "Ensaio fotográfico profissional para empresas em Curitiba e região: fotos de produto, equipe e ambiente para redes sociais, site e materiais comerciais.",
   pt: {
     title: "Ensaios Fotográficos",
     shortDesc:

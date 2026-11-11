@@ -98,14 +98,6 @@ export function Footer() {
                 </li>
                 <li>
                   <a
-                    href="/#planos"
-                    className="transition-colors hover:text-[color:var(--sand-soft)]"
-                  >
-                    {t.navPlans}
-                  </a>
-                </li>
-                <li>
-                  <a
                     href="/#faq"
                     className="transition-colors hover:text-[color:var(--sand-soft)]"
                   >

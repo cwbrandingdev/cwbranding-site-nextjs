@@ -3,9 +3,9 @@ import type { ServiceContent } from "./types";
 export const socialMedia: ServiceContent = {
   id: 1,
   slug: "social-media",
-  seoTitle: "Social Media em Curitiba",
+  seoTitle: "Social Media em Curitiba e todo o Brasil",
   seoDescription:
-    "Gestão de social media em Curitiba: planejamento, conteúdo e crescimento de audiência para marcas que querem presença digital consistente.",
+    "Agência de social media em Curitiba que atende todo o Brasil: planejamento, criação de conteúdo e gestão de redes sociais como Instagram e LinkedIn.",
   pt: {
     title: "Social Media",
     shortDesc:

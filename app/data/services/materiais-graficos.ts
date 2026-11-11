@@ -3,9 +3,9 @@ import type { ServiceContent } from "./types";
 export const materiaisGraficos: ServiceContent = {
   id: 7,
   slug: "materiais-graficos",
-  seoTitle: "Materiais Gráficos e Design em Curitiba",
+  seoTitle: "Materiais Gráficos em Curitiba e todo o Brasil",
   seoDescription:
-    "Materiais gráficos em Curitiba: folders, banners, cartões, apresentações e peças digitais com a identidade da sua marca aplicada com consistência.",
+    "Design gráfico e materiais gráficos em Curitiba e todo o Brasil: cartão de visita, folder, flyer, catálogo, banner e papelaria corporativa com a sua marca.",
   pt: {
     title: "Materiais Gráficos",
     shortDesc:

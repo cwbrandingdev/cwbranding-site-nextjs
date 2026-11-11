@@ -3,9 +3,9 @@ import type { ServiceContent } from "./types";
 export const seo: ServiceContent = {
   id: 9,
   slug: "seo",
-  seoTitle: "Agência de SEO em Curitiba",
+  seoTitle: "Agência de SEO em Curitiba e todo o Brasil",
   seoDescription:
-    "SEO para empresas em Curitiba: otimização do site para aparecer no Google, atrair visitantes qualificados e gerar demanda orgânica.",
+    "Agência de SEO em Curitiba que atende todo o Brasil: otimização de sites para aparecer no Google, atrair visitantes qualificados e gerar novos clientes.",
   pt: {
     title: "SEO",
     shortDesc:

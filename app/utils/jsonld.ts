@@ -11,11 +11,18 @@ const address = {
   addressCountry: site.address.addressCountry,
 };
 
+// Onde a CWBranding atende: as cidades e o Brasil inteiro (online).
+const areaServed = [
+  ...site.areasServed.map((name) => ({ "@type": "City", name })),
+  { "@type": "Country", name: site.countryServed },
+];
+
 export const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": ["ProfessionalService", "LocalBusiness", "Organization"],
   "@id": `${site.url}/#organization`,
   name: site.name,
+  alternateName: site.alternateNames,
   legalName: site.legalName,
   url: site.url,
   logo: `${site.url}${site.logo}`,
@@ -32,10 +39,7 @@ export const organizationJsonLd = {
     latitude: site.geo.latitude,
     longitude: site.geo.longitude,
   },
-  areaServed: site.areasServed.map((name) => ({
-    "@type": "City",
-    name,
-  })),
+  areaServed,
   sameAs: site.sameAs,
   contactPoint: {
     "@type": "ContactPoint",
@@ -77,6 +81,7 @@ export const websiteJsonLd = {
   "@id": `${site.url}/#website`,
   url: site.url,
   name: site.name,
+  alternateName: site.alternateNames,
   description: site.description,
   inLanguage: "pt-BR",
   publisher: { "@id": `${site.url}/#organization` },
@@ -107,10 +112,7 @@ export function serviceJsonLd(service: (typeof services)[number]) {
       description: service.seoDescription,
       url,
       provider: { "@id": `${site.url}/#organization` },
-      areaServed: site.areasServed.map((name) => ({
-        "@type": "City",
-        name,
-      })),
+      areaServed,
       serviceType: service.pt.title,
     },
     {

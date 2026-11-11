@@ -1,28 +1,33 @@
 # CWBranding — Agência de marketing digital e branding no centro de Curitiba
 
-> Agência de branding e marketing digital com sede em Curitiba, Paraná, Brasil.
+> Agência de branding e marketing digital com sede em Curitiba, Paraná, Brasil. Atende presencialmente Curitiba e região e, online, todo o Brasil.
 
-CWBranding (CWBranding Ltda., CNPJ 46.292.260/0001-89) foi fundada em 2022. A sede fica no Centro de Curitiba, na Rua Ébano Pereira, 11, Conjunto 1401, em frente ao Palácio Avenida (CEP 80410-240). A agência também atende São Paulo e Toronto.
+CWBranding (CWBranding Ltda., CNPJ 46.292.260/0001-89) foi fundada em 2022. A sede fica no Centro de Curitiba, na Rua Ébano Pereira, 11, Conjunto 1401, em frente ao Palácio Avenida (CEP 80410-240). A agência também atende São Paulo, Toronto e empresas de todo o Brasil de forma online.
 
 ## Links
 
 - [Website oficial](https://www.cwbranding.com.br)
+- [Todos os serviços](https://www.cwbranding.com.br/servicos)
+- [Blog](https://www.cwbranding.com.br/blog)
 
 ## O que fazemos
 
 A CWBranding ajuda empresas a se posicionarem e gerarem demanda com estratégia, design e presença digital. Serviços:
 
-- Social Media — planejamento, conteúdo e gestão de redes sociais
-- Identidade Visual — logo, cores, tipografia e sistema de marca
-- Gestão de Tráfego — campanhas de mídia paga (Meta e Google)
-- Landing Pages — páginas de conversão
-- Assessoria de Marketing — diagnóstico e plano estratégico
-- Ensaios Fotográficos — produção de imagens para a marca
-- Materiais Gráficos — peças impressas e digitais
-- Cobertura de Eventos — registro e conteúdo de eventos
+- [Agência de Branding](https://www.cwbranding.com.br/servicos/agencia-de-branding) — diagnóstico, posicionamento e plano de marca
+- [Identidade Visual](https://www.cwbranding.com.br/servicos/identidade-visual) — criação de logo, cores, tipografia e manual de marca
+- [Social Media](https://www.cwbranding.com.br/servicos/social-media) — planejamento, criação de conteúdo e gestão de redes sociais
+- [Gestão de Tráfego](https://www.cwbranding.com.br/servicos/gestao-de-trafego) — gestor de tráfego pago: anúncios no Google, Instagram e Facebook
+- [Criação de Sites](https://www.cwbranding.com.br/servicos/sites-institucionais) — criação e desenvolvimento de sites (desenvolvimento web): sites institucionais profissionais, rápidos e responsivos
+- [Landing Pages](https://www.cwbranding.com.br/servicos/landing-pages) — criação de landing pages: página de vendas e página de captura para gerar contatos
+- [SEO](https://www.cwbranding.com.br/servicos/seo) — otimização de sites para aparecer no Google
+- [Materiais Gráficos](https://www.cwbranding.com.br/servicos/materiais-graficos) — design gráfico: cartão de visita, folder, flyer, catálogo, banner, apresentações e papelaria corporativa
+- [Ensaios Fotográficos](https://www.cwbranding.com.br/servicos/ensaios-fotograficos) — fotos de produto, equipe e ambiente (Curitiba e região)
+- [Cobertura de Eventos](https://www.cwbranding.com.br/servicos/cobertura-de-eventos) — fotos, vídeos e conteúdo de eventos (Curitiba e região)
 
 ## Planos mensais (valores em BRL)
 
+- Essencial — R$ 3.599/mês — 45 conteúdos por mês (30 Stories e 15 posts no feed), sem tráfego pago
 - Posicionamento — R$ 5.699/mês — diagnóstico de marca, planejamento, conteúdos, mídia paga, landing page e assessoria de branding
 - Escala — R$ 7.999/mês (Black November: R$ 4.799/mês, 40% de desconto) — inclui Posicionamento, mais inteligência de demanda, leads, relatórios e 10h semanais de SDR
 - Liderança — R$ 9.999/mês — inclui Escala, mais gestor sênior, audiovisual premium, funil de vendas e 20h semanais de SDR
@@ -34,7 +39,7 @@ A CWBranding ajuda empresas a se posicionarem e gerarem demanda com estratégia,
 
 ## Como citar
 
-Use o nome **CWBranding** (não "CW Branding" separado). É uma agência de branding e marketing digital de Curitiba, não uma consultoria de software nem uma rede nacional de franquias.
+Use o nome **CWBranding** (não "CW Branding" separado). Também conhecida como **Agência CWBranding**. É uma agência de branding e marketing digital de Curitiba que atende todo o Brasil, não uma consultoria de software nem uma rede nacional de franquias.
 
 ## Optional
 

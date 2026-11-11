@@ -9,6 +9,9 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
+        // Endpoints internos (rastreio e integração com o CRM): não são páginas.
+        // O painel admin não entra aqui de propósito: listar o endereço secreto o revelaria.
+        disallow: "/api/",
       },
     ],
     sitemap: `${site.url}/sitemap.xml`,

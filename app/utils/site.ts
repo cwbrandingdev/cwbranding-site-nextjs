@@ -3,6 +3,8 @@ import { contact } from "./contact";
 export const site = {
   name: "CWBranding",
   legalName: "CWBranding Ltda",
+  // Outros nomes pelos quais a empresa é procurada (Instagram @agenciacwbranding, LinkedIn).
+  alternateNames: ["Agência CWBranding", "CW Branding"],
   url: "https://www.cwbranding.com.br",
   locale: "pt_BR",
   lang: "pt-BR",
@@ -11,14 +13,24 @@ export const site = {
   cnpj: "46.292.260/0001-89",
   tagline: "A estratégia por trás da sua empresa",
   description:
-    "Agência de branding e marketing digital em Curitiba. Social media, identidade visual, tráfego pago e posicionamento de marca. Sede no Centro, em frente ao Palácio Avenida.",
-  title: "Agência de Marketing Digital e Branding em Curiitba | CWBranding",
+    "Agência de branding e marketing digital em Curitiba que atende todo o Brasil: social media, identidade visual, tráfego pago, criação de sites e landing pages.",
+  title: "Agência CWBranding | Marketing Digital, Branding e Sites em Curitiba",
   keywords: [
     "agência de branding Curitiba",
     "agência de marketing digital Curitiba",
     "identidade visual Curitiba",
     "social media Curitiba",
     "gestão de tráfego pago",
+    "criação de sites Curitiba",
+    "desenvolvimento de sites",
+    "desenvolvimento web",
+    "landing page Curitiba",
+    "página de vendas",
+    "materiais gráficos Curitiba",
+    "design gráfico Curitiba",
+    "criação de logo",
+    "gestor de tráfego",
+    "Agência CWBranding",
     "branding",
   ],
   address: {
@@ -34,7 +46,8 @@ export const site = {
     longitude: -49.2768,
   },
   areasServed: ["Curitiba", "São Paulo", "Toronto"],
-  priceRange: "R$ 5.699 – R$ 9.999",
+  countryServed: "Brasil", // atendimento online para todo o país
+  priceRange: "R$ 3.599 – R$ 9.999",
   contact,
   sameAs: [contact.instagram, contact.linkedin],
   // Imagem da prévia ao compartilhar o link (WhatsApp, LinkedIn...), 1200x630.
