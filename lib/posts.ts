@@ -26,6 +26,7 @@ function toPost(doc: DocumentSnapshot): Post {
     published: d.published === true,
     archived: d.archived === true,
     createdAt: d.createdAt?.toDate().toISOString() ?? null,
+    updatedAt: d.updatedAt?.toDate().toISOString() ?? null,
     pt: toText(d.pt),
     en: toText(d.en),
   };

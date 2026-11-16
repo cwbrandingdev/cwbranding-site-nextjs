@@ -14,6 +14,7 @@ const newPost: Post = {
   published: false,
   archived: false,
   createdAt: null,
+  updatedAt: null,
   pt: emptyText,
   en: emptyText,
 };

@@ -15,6 +15,7 @@ export type Post = {
   published: boolean; // false = rascunho, não aparece no site
   archived: boolean; // true = arquivado: sai do site e da lista principal do painel
   createdAt: string | null; // data em ISO
+  updatedAt: string | null; // última vez que foi salvo no painel (ISO)
   pt: PostText;
   en: PostText;
 };
@@ -25,6 +26,24 @@ export const emptyText: PostText = { title: "", excerpt: "", content: "" };
 export function getPostText(post: Post, language: Language): PostText {
   if (language === "EN" && post.en.title) return post.en;
   return post.pt;
+}
+
+// Descrição para o Google: o resumo do post ou, se ele estiver vazio,
+// o começo do texto sem a formatação Markdown (até ~155 caracteres).
+export function postDescription(text: PostText) {
+  if (text.excerpt.trim()) return text.excerpt.trim();
+
+  const plain = text.content
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, "") // imagens
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1") // links: fica só o texto
+    .replace(/[#>*_`~-]/g, " ") // títulos, citações, negrito, listas...
+    .replace(/[\p{Extended_Pictographic}️]/gu, "") // emojis
+    .replace(/\s+/g, " ")
+    .trim();
+
+  if (plain.length <= 155) return plain;
+  // Corta no último espaço (sem deixar palavra pela metade) e tira a pontuação do fim antes do "…".
+  return plain.slice(0, plain.lastIndexOf(" ", 152)).replace(/[\s.,;:!?]+$/, "") + "…";
 }
 
 // Tempo de leitura estimado (200 palavras por minuto, mínimo 1).

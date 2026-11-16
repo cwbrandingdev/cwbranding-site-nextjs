@@ -1,6 +1,7 @@
 import { services } from "@/app/data/services";
 import { translations } from "@/app/utils/translations";
 import { site } from "@/app/utils/site";
+import { postDescription, type Post } from "@/app/blog/types";
 
 const address = {
   "@type": "PostalAddress",
@@ -140,6 +141,25 @@ export function serviceJsonLd(service: (typeof services)[number]) {
       ],
     },
   ];
+}
+
+// Dados de um post do blog: título, datas, imagem e quem publicou.
+export function blogPostingJsonLd(post: Post) {
+  const url = `${site.url}/blog/${post.slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.pt.title.trim(),
+    description: postDescription(post.pt),
+    url,
+    mainEntityOfPage: url,
+    image: post.coverUrl || `${site.url}${site.ogImage}`,
+    datePublished: post.createdAt ?? undefined,
+    dateModified: post.updatedAt ?? post.createdAt ?? undefined,
+    inLanguage: "pt-BR",
+    author: { "@id": `${site.url}/#organization` },
+    publisher: { "@id": `${site.url}/#organization` },
+  };
 }
 
 export const homeFaqItems = translations.PT.faqItems;
