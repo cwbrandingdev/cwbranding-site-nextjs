@@ -106,28 +106,8 @@ export default function PricingSection() {
                         className={`mb-1 text-sm ${
                           highlighted ? "text-white/60" : "text-[#004d4c]/60"
                         }`}
-                      >
-                        {t.pricingFrom}{" "}
-                        <span className="line-through">R$ {plan.oldPrice}</span>
-                      </p>
+                      ></p>
                     )}
-                    <div className="flex items-baseline">
-                      <span className="text-lg font-light font-display text-[#E8C39E]">
-                        {language === "PT" ? "R$ " : "$ "}
-                      </span>
-
-                      <span className="text-4xl md:text-5xl font-display tracking-tight text-[#E8C39E]">
-                        {plan.price}
-                      </span>
-
-                      <span
-                        className={`text-xs ml-2 ${
-                          highlighted ? "text-white/60" : "opacity-60"
-                        }`}
-                      >
-                        {t.pricingPeriod}
-                      </span>
-                    </div>
                   </div>
 
                   <a
